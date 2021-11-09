@@ -1,4 +1,4 @@
-# This is a template .gitignore file for git-managed WordPress projects.
+# This is a template .gitignore file for git-managed WordPress plugin.
 #
 # Fact: you don't want WordPress core files, or your server-specific
 # configuration files etc., in your project's repository. You just don't.
@@ -11,28 +11,6 @@
 # content. Or see git's documentation for more info on .gitignore files:
 # http://kernel.org/pub/software/scm/git/docs/gitignore.html
 
-# Ignore everything in the root except the "wp-content" directory.
-/*
-!.gitignore
-!composer.json
-!.env.example
-!wp-content/
-
-# Ignore everything in the "wp-content" directory, except the "plugins"
-# and "themes" directories.
-wp-content/*
-!wp-content/plugins/
-!wp-content/themes/
-
-# Ignore everything in the "plugins" directory, except the plugins you
-# specify (see the commented-out examples for hints on how to do this.)
-wp-content/plugins/*
-!/wp-content/plugins/site-functionality/
-
-# Ignore everything in the "themes" directory, except the themes you
-# specify (see the commented-out example for a hint on how to do this.)
-wp-content/themes/*
-!/wp-content/themes/debtcollective/
 
 # ignore OS generated files
 ehthumbs.db
@@ -68,6 +46,5 @@ Thumbs.db
 *.zip
 
 # ignore node/grunt dependency directories
-node_modules/
-/vendor/
-wp-content/plugins/site-functionality/vendor
+node_modules
+vendor
