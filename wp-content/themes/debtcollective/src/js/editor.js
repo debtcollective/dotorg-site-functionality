@@ -1,4 +1,0 @@
-/**
- * Site JS
- */
-import './blocks';
