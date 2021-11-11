@@ -67,10 +67,10 @@ class UserFields extends Base {
 				),
 				array(
 					'key' => 'field_is_public',
-					'label' => __( 'Public', 'site-functionality' ),
+					'label' => __( 'Display on Site', 'site-functionality' ),
 					'name' => 'is_public',
 					'type' => 'true_false',
-					'instructions' => '',
+					'instructions' => __( 'If selected, person will display on team listings.', 'site-functionality' ),
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
@@ -79,10 +79,10 @@ class UserFields extends Base {
 						'id' => '',
 					),
 					'message' => '',
-					'default_value' => 1,
+					'default_value' => 0,
 					'ui' => 1,
-					'ui_on_text' => __( 'Public', 'site-functionality' ),
-					'ui_off_text' => __( 'Private', 'site-functionality' ),
+					'ui_on_text' => __( 'Show', 'site-functionality' ),
+					'ui_off_text' => __( 'Hide', 'site-functionality' ),
 				),
 			),
 			'location' => array(
@@ -102,6 +102,7 @@ class UserFields extends Base {
 			'hide_on_screen' => '',
 			'active' => true,
 			'description' => '',
+			'show_in_rest' => 1
 		));
 	}
 
