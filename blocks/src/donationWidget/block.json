@@ -1,0 +1,37 @@
+{
+    "apiVersion": 2,
+    "version": "1.0.0",
+    "textdomain": "site-functionality",
+    "name": "site-functionality/donation-widget",
+    "title": "Donations",
+    "category": "components",
+    "collection": "site-functionality",
+    "icon": "money-alt",
+    "className": "donation-widget",
+    "description": "Display a donation widget.",
+    "keywords": [
+        "donation",
+        "form"
+    ],
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "color": { 
+            "background": false,
+            "text": false,
+            "gradients": false,
+            "link": false
+        },
+        "customClassName": true,
+        "defaultStylePicker": false,
+        "__experimentalLayout": false
+    },
+    "attributes": {},
+    "variations": [],
+    "styles": [],
+    "example": {},
+    "script": "site-functionality",
+    "style": "file:../../build/style-index.css",
+    "editorScript": "file:../../build/index.js",
+	"editorStyle": "file:../../build/index.css"
+}
