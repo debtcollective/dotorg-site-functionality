@@ -29,6 +29,7 @@ function render( $attributes, $content, $block ) {
 		'orderby'		=> 'display_name'
 	];
 
+	
 	$args = array_merge(
 		$attributes['query'],
 		$attributes['display'],
@@ -45,6 +46,12 @@ function render( $attributes, $content, $block ) {
 		'paged'         => $args['paged'],
 		'order'			=> $args['order'],
 		'orderby'		=> $args['orderby'],
+		'meta_query' => [
+			[
+				'key'     => 'is_public',
+				'value'   => true,
+			]
+		]
 	];
 
 	if( $roles = $args['roles'] ) {

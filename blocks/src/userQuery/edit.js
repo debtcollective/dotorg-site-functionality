@@ -63,7 +63,11 @@ const Edit = ( props ) => {
 	const people = useSelect(
 		( select ) => {
 			const { getUsers } = select( coreStore );
-			return getUsers( query );
+			const userQuery = {
+				...query,
+				is_public: true
+			};
+			return getUsers( userQuery );
 		},
 		[ query ]
 	);
