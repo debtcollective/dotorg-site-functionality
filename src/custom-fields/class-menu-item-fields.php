@@ -88,7 +88,7 @@ class MenuItemFields extends Base {
 			'hide_on_screen' => '',
 			'active' => true,
 			'description' => '',
-			'show_in_rest' => true
+			'show_in_rest' => 1
 		));
 		
 	}
