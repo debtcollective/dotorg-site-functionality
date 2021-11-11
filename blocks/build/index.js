@@ -2746,7 +2746,7 @@ const Save = props => {
 /*! exports provided: apiVersion, name, title, category, description, textdomain, attributes, providesContext, supports, script, style, editorScript, editorStyle, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"apiVersion\":2,\"name\":\"site-functionality/user-query\",\"title\":\"People Query\",\"category\":\"components\",\"description\":\"Display a List of People\",\"textdomain\":\"site-functionality\",\"attributes\":{\"queryId\":{\"type\":\"number\"},\"query\":{\"type\":\"object\",\"default\":{\"per_page\":6,\"roles\":[],\"order\":\"asc\",\"orderby\":\"name\"}},\"per_page\":{\"type\":\"number\",\"default\":6},\"roles\":{\"type\":\"string\",\"default\":\"\"},\"order\":{\"type\":\"string\",\"default\":\"asc\"},\"orderby\":{\"type\":\"string\",\"default\":\"name\"},\"linkWrap\":{\"type\":\"boolean\",\"default\":false},\"display\":{\"type\":\"object\",\"default\":{\"showAvatar\":true,\"showName\":true,\"showTitle\":true,\"showBio\":false}}},\"providesContext\":{\"queryId\":\"queryId\",\"query\":\"query\"},\"supports\":{\"html\":false,\"color\":{\"gradients\":false,\"link\":false,\"text\":false,\"background\":false},\"typography\":{\"fontSize\":false,\"lineHeight\":false,\"__experimentalFontWeight\":false}},\"script\":\"site-functionality\",\"style\":\"file:../../build/style-index.css\",\"editorScript\":\"file:../../build/index.js\",\"editorStyle\":\"file:../../build/index.css\"}");
+module.exports = JSON.parse("{\"apiVersion\":2,\"name\":\"site-functionality/user-query\",\"title\":\"People Query\",\"category\":\"components\",\"description\":\"Display a List of People\",\"textdomain\":\"site-functionality\",\"attributes\":{\"queryId\":{\"type\":\"number\"},\"query\":{\"type\":\"object\",\"default\":{\"per_page\":6,\"roles\":[],\"order\":\"asc\",\"orderby\":\"name\",\"is_public\":true}},\"per_page\":{\"type\":\"number\",\"default\":6},\"roles\":{\"type\":\"string\",\"default\":\"\"},\"order\":{\"type\":\"string\",\"default\":\"asc\"},\"orderby\":{\"type\":\"string\",\"default\":\"name\"},\"linkWrap\":{\"type\":\"boolean\",\"default\":false},\"display\":{\"type\":\"object\",\"default\":{\"showAvatar\":true,\"showName\":true,\"showTitle\":true,\"showBio\":false}}},\"providesContext\":{\"queryId\":\"queryId\",\"query\":\"query\"},\"supports\":{\"html\":false,\"color\":{\"gradients\":false,\"link\":false,\"text\":false,\"background\":false},\"typography\":{\"fontSize\":false,\"lineHeight\":false,\"__experimentalFontWeight\":false}},\"script\":\"site-functionality\",\"style\":\"file:../../build/style-index.css\",\"editorScript\":\"file:../../build/index.js\",\"editorStyle\":\"file:../../build/index.css\"}");
 
 /***/ }),
 
@@ -2836,7 +2836,10 @@ const Edit = props => {
     const {
       getUsers
     } = select(_wordpress_core_data__WEBPACK_IMPORTED_MODULE_8__["store"]);
-    return getUsers(query);
+    const userQuery = { ...query,
+      is_public: true
+    };
+    return getUsers(userQuery);
   }, [query]);
 
   const setRole = value => {
