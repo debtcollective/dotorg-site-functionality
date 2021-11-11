@@ -11,6 +11,7 @@ use Site_Functionality\Abstracts\Base;
 use Site_Functionality\CustomFields\UserFields as UserFields;
 use Site_Functionality\CustomFields\PurchaseAgreementFields as PurchaseAgreementFields;
 use Site_Functionality\CustomFields\PageFields as PageFields;
+use Site_Functionality\CustomFields\MenuItemFields as MenuItemFields;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -39,14 +40,15 @@ class CustomFields extends Base {
 	public function __construct( $version, $plugin_name ) {
 		parent::__construct( $version, $plugin_name );
 
-		include_once( SITE_CORE_DIR . '/src/custom-fields/class-user-fields.php' 						);
-		include_once( SITE_CORE_DIR . '/src/custom-fields/class-page-fields.php' 			);
-		include_once( SITE_CORE_DIR . '/src/custom-fields/class-purchase-agreement-fields.php' 			);
+		include_once( SITE_CORE_DIR . '/src/custom-fields/class-user-fields.php' 					);
+		include_once( SITE_CORE_DIR . '/src/custom-fields/class-page-fields.php' 					);
+		include_once( SITE_CORE_DIR . '/src/custom-fields/class-purchase-agreement-fields.php' 		);
+		include_once( SITE_CORE_DIR . '/src/custom-fields/class-menu-item-fields.php' 				);
 
 		$userFields = new UserFields( $version, $plugin_name );
 		$pageFields = new PageFields( $version, $plugin_name );
 		$purchaseAggrementFields = new PurchaseAgreementFields( $version, $plugin_name );
-
+		$menuFields = new MenuItemFields( $version, $plugin_name );
 
 		\add_action( 'acf/init', 		[ $this, 'acf_settings' ] );
 		\add_action( 'acfe/init', 		[ $this, 'acfe_settings' ] );
