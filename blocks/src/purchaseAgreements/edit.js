@@ -8,32 +8,30 @@ import classNames from 'classnames';
  * WordPress dependencies
  */
 import {
-	InnerBlocks,
 	InspectorControls,
 	useBlockProps,
 	store as blockEditorStore,
 } from '@wordpress/block-editor';
 import {
-	CustomSelectControl,
-	Panel,
 	PanelBody,
 	PanelRow,
 	RangeControl,
-	QueryControls,
 	SelectControl,
 	Spinner,
 	ToggleControl,
 } from '@wordpress/components';
-import { useEffect, useState, useMemo } from '@wordpress/element';
+import { 
+	Fragment,
+	useEffect
+} from '@wordpress/element';
 import { useDispatch, useSelect } from '@wordpress/data';
-import { useInstanceId, withState } from '@wordpress/compose';
-import { useEntityProp, store as coreStore } from '@wordpress/core-data';
+import { useInstanceId } from '@wordpress/compose';
 import { __experimentalGetSettings, dateI18n } from '@wordpress/date';
 import { __, sprintf } from '@wordpress/i18n';
 
 //  Import CSS.
 import './editor.scss';
-import './style.scss';
+// import './style.scss';
 
 const MAX_ITEMS = 50;
 
@@ -408,7 +406,9 @@ const Edit = ( props ) => {
 								<dd className="purchase-agreement__type entry-value">
 
 									{ types.map( ( type, index ) =>
-										<>
+										<Fragment
+											key={ type?.id }
+										>
 											<a
 												href={ type?.link }
 												id={ type?.id }
@@ -420,7 +420,7 @@ const Edit = ( props ) => {
 											{ ( types.length - 1 !== index ) && (
 												<span className="separator">/</span>
 											) }
-										</>
+										</Fragment>
 									) }
 								</dd>
 							</>

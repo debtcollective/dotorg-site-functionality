@@ -6,7 +6,7 @@ import classNames from 'classnames';
 
 //  Import CSS.
 import './editor.scss';
-import './style.scss';
+// import './style.scss';
 
 const TEMPLATE = [
 	[
