@@ -25,6 +25,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 define( 'SITE_CORE_DIR', dirname( __FILE__ ) );
 define( 'SITE_CORE_DIR_URI', plugin_dir_url( __FILE__ ) );
 
+$dotenv = \Dotenv\Dotenv::createImmutable( __DIR__ );
+$dotenv->safeLoad();
+
 const PLUGIN = 'site-functionality';
 const VERSION = '1.0.0';
 
