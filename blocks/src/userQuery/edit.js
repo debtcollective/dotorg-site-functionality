@@ -35,11 +35,9 @@ import {
 import { __experimentalGetSettings, dateI18n } from '@wordpress/date';
 import { __, sprintf } from '@wordpress/i18n';
 
-// import '../data/user-roles';
-
 //  Import CSS.
 import './editor.scss';
-import './style.scss';
+// import './style.scss';
 
 const MAX_ITEMS = 24;
 
