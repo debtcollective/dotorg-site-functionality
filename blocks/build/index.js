@@ -1,126 +1,6 @@
-(window["webpackJsonp_example_blocks"] = window["webpackJsonp_example_blocks"] || []).push([["style-index"],{
-
-/***/ "./src/faqs/style.scss":
-/*!*****************************!*\
-  !*** ./src/faqs/style.scss ***!
-  \*****************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./src/purchaseAgreements/style.scss":
-/*!*******************************************!*\
-  !*** ./src/purchaseAgreements/style.scss ***!
-  \*******************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./src/tout/style.scss":
-/*!*****************************!*\
-  !*** ./src/tout/style.scss ***!
-  \*****************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./src/userQuery/style.scss":
-/*!**********************************!*\
-  !*** ./src/userQuery/style.scss ***!
-  \**********************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ })
-
-}]);
-
 /******/ (function(modules) { // webpackBootstrap
-/******/ 	// install a JSONP callback for chunk loading
-/******/ 	function webpackJsonpCallback(data) {
-/******/ 		var chunkIds = data[0];
-/******/ 		var moreModules = data[1];
-/******/ 		var executeModules = data[2];
-/******/
-/******/ 		// add "moreModules" to the modules object,
-/******/ 		// then flag all "chunkIds" as loaded and fire callback
-/******/ 		var moduleId, chunkId, i = 0, resolves = [];
-/******/ 		for(;i < chunkIds.length; i++) {
-/******/ 			chunkId = chunkIds[i];
-/******/ 			if(Object.prototype.hasOwnProperty.call(installedChunks, chunkId) && installedChunks[chunkId]) {
-/******/ 				resolves.push(installedChunks[chunkId][0]);
-/******/ 			}
-/******/ 			installedChunks[chunkId] = 0;
-/******/ 		}
-/******/ 		for(moduleId in moreModules) {
-/******/ 			if(Object.prototype.hasOwnProperty.call(moreModules, moduleId)) {
-/******/ 				modules[moduleId] = moreModules[moduleId];
-/******/ 			}
-/******/ 		}
-/******/ 		if(parentJsonpFunction) parentJsonpFunction(data);
-/******/
-/******/ 		while(resolves.length) {
-/******/ 			resolves.shift()();
-/******/ 		}
-/******/
-/******/ 		// add entry modules from loaded chunk to deferred list
-/******/ 		deferredModules.push.apply(deferredModules, executeModules || []);
-/******/
-/******/ 		// run deferred modules when all chunks ready
-/******/ 		return checkDeferredModules();
-/******/ 	};
-/******/ 	function checkDeferredModules() {
-/******/ 		var result;
-/******/ 		for(var i = 0; i < deferredModules.length; i++) {
-/******/ 			var deferredModule = deferredModules[i];
-/******/ 			var fulfilled = true;
-/******/ 			for(var j = 1; j < deferredModule.length; j++) {
-/******/ 				var depId = deferredModule[j];
-/******/ 				if(installedChunks[depId] !== 0) fulfilled = false;
-/******/ 			}
-/******/ 			if(fulfilled) {
-/******/ 				deferredModules.splice(i--, 1);
-/******/ 				result = __webpack_require__(__webpack_require__.s = deferredModule[0]);
-/******/ 			}
-/******/ 		}
-/******/
-/******/ 		return result;
-/******/ 	}
-/******/
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
-/******/
-/******/ 	// object to store loaded and loading chunks
-/******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
-/******/ 	// Promise = chunk loading, 0 = chunk loaded
-/******/ 	var installedChunks = {
-/******/ 		"index": 0
-/******/ 	};
-/******/
-/******/ 	var deferredModules = [];
 /******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -199,18 +79,9 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
 /******/
-/******/ 	var jsonpArray = window["webpackJsonp_example_blocks"] = window["webpackJsonp_example_blocks"] || [];
-/******/ 	var oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
-/******/ 	jsonpArray.push = webpackJsonpCallback;
-/******/ 	jsonpArray = jsonpArray.slice();
-/******/ 	for(var i = 0; i < jsonpArray.length; i++) webpackJsonpCallback(jsonpArray[i]);
-/******/ 	var parentJsonpFunction = oldJsonpFunction;
 /******/
-/******/
-/******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push(["./src/index.js","style-index"]);
-/******/ 	// run deferred modules when ready
-/******/ 	return checkDeferredModules();
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1164,6 +1035,108 @@ module.exports = g;
 
 /***/ }),
 
+/***/ "./src/donationWidget/block.json":
+/*!***************************************!*\
+  !*** ./src/donationWidget/block.json ***!
+  \***************************************/
+/*! exports provided: apiVersion, version, textdomain, name, title, category, collection, icon, className, description, keywords, attributes, supports, variations, styles, example, style, editorScript, editorStyle, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"apiVersion\":2,\"version\":\"1.0.0\",\"textdomain\":\"site-functionality\",\"name\":\"site-functionality/donation-widget\",\"title\":\"Donations\",\"category\":\"components\",\"collection\":\"site-functionality\",\"icon\":\"money-alt\",\"className\":\"donation-widget\",\"description\":\"Display a donation widget.\",\"keywords\":[\"donation\",\"form\"],\"attributes\":{},\"supports\":{\"align\":true,\"anchor\":true,\"color\":{\"background\":false,\"text\":false,\"gradients\":false,\"link\":false},\"customClassName\":true,\"defaultStylePicker\":false,\"__experimentalLayout\":false},\"variations\":[],\"styles\":[],\"example\":{},\"style\":\"file:../../build/style-index.css\",\"editorScript\":\"file:../../build/index.js\",\"editorStyle\":\"file:../../build/index.css\"}");
+
+/***/ }),
+
+/***/ "./src/donationWidget/edit.js":
+/*!************************************!*\
+  !*** ./src/donationWidget/edit.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./src/donationWidget/editor.scss");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+
+const Edit = props => {
+  const {
+    className
+  } = props;
+  const blockProps = Object(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["useBlockProps"])({
+    className: classnames__WEBPACK_IMPORTED_MODULE_4___default()(className, 'donation-widget'),
+    id: 'donation-widget'
+  });
+  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", blockProps, "Component Placeholder - Donation Widget");
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Edit);
+
+/***/ }),
+
+/***/ "./src/donationWidget/editor.scss":
+/*!****************************************!*\
+  !*** ./src/donationWidget/editor.scss ***!
+  \****************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/donationWidget/index.js":
+/*!*************************************!*\
+  !*** ./src/donationWidget/index.js ***!
+  \*************************************/
+/*! exports provided: name, category, settings */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "name", function() { return name; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "category", function() { return category; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "settings", function() { return settings; });
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./block.json */ "./src/donationWidget/block.json");
+var _block_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./block.json */ "./src/donationWidget/block.json", 1);
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/donationWidget/edit.js");
+/**
+ * WordPress dependencies
+ */
+
+/**
+ * Internal dependencies
+ */
+
+
+
+const {
+  name,
+  category
+} = _block_json__WEBPACK_IMPORTED_MODULE_1__;
+const settings = {
+  edit: _edit__WEBPACK_IMPORTED_MODULE_2__["default"]
+};
+
+
+/***/ }),
+
 /***/ "./src/faq/block.json":
 /*!****************************!*\
   !*** ./src/faq/block.json ***!
@@ -1376,13 +1349,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./editor.scss */ "./src/faqs/editor.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.scss */ "./src/faqs/style.scss");
 
 
 
  //  Import CSS.
 
-
+ // import './style.scss';
 
 const TEMPLATE = [['site-functionality/faq', {
   placeholder: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Add FAQ...', 'site-functionality'),
@@ -1673,13 +1645,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./patterns */ "./src/patterns/index.js");
 /* harmony import */ var _patterns__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_patterns__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles */ "./src/styles/index.js");
-/* harmony import */ var _faqs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./faqs */ "./src/faqs/index.js");
-/* harmony import */ var _faq__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./faq */ "./src/faq/index.js");
-/* harmony import */ var _impactfulCallout__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./impactfulCallout */ "./src/impactfulCallout/index.js");
-/* harmony import */ var _postmeta__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./postmeta */ "./src/postmeta/index.js");
-/* harmony import */ var _purchaseAgreements__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./purchaseAgreements */ "./src/purchaseAgreements/index.js");
-/* harmony import */ var _tout__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./tout */ "./src/tout/index.js");
-/* harmony import */ var _userQuery__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./userQuery */ "./src/userQuery/index.js");
+/* harmony import */ var _donationWidget__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./donationWidget */ "./src/donationWidget/index.js");
+/* harmony import */ var _membershipWidget__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./membershipWidget */ "./src/membershipWidget/index.js");
+/* harmony import */ var _faqs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./faqs */ "./src/faqs/index.js");
+/* harmony import */ var _faq__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./faq */ "./src/faq/index.js");
+/* harmony import */ var _impactfulCallout__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./impactfulCallout */ "./src/impactfulCallout/index.js");
+/* harmony import */ var _postmeta__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./postmeta */ "./src/postmeta/index.js");
+/* harmony import */ var _purchaseAgreements__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./purchaseAgreements */ "./src/purchaseAgreements/index.js");
+/* harmony import */ var _tout__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./tout */ "./src/tout/index.js");
+/* harmony import */ var _userQuery__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./userQuery */ "./src/userQuery/index.js");
 
 
 Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockCollection"])('site-functionality', {
@@ -1694,7 +1668,9 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockCollection"]
 
 
 
-const blocks = [_faqs__WEBPACK_IMPORTED_MODULE_4__, _faq__WEBPACK_IMPORTED_MODULE_5__, _impactfulCallout__WEBPACK_IMPORTED_MODULE_6__, _postmeta__WEBPACK_IMPORTED_MODULE_7__, _purchaseAgreements__WEBPACK_IMPORTED_MODULE_8__, _tout__WEBPACK_IMPORTED_MODULE_9__, _userQuery__WEBPACK_IMPORTED_MODULE_10__];
+
+
+const blocks = [_donationWidget__WEBPACK_IMPORTED_MODULE_4__, _membershipWidget__WEBPACK_IMPORTED_MODULE_5__, _faqs__WEBPACK_IMPORTED_MODULE_6__, _faq__WEBPACK_IMPORTED_MODULE_7__, _impactfulCallout__WEBPACK_IMPORTED_MODULE_8__, _postmeta__WEBPACK_IMPORTED_MODULE_9__, _purchaseAgreements__WEBPACK_IMPORTED_MODULE_10__, _tout__WEBPACK_IMPORTED_MODULE_11__, _userQuery__WEBPACK_IMPORTED_MODULE_12__];
 /**
  * Function to register an individual block.
  *
@@ -1723,6 +1699,108 @@ const registerBlocks = () => {
   blocks.forEach(registerBlock);
 };
 registerBlocks();
+
+/***/ }),
+
+/***/ "./src/membershipWidget/block.json":
+/*!*****************************************!*\
+  !*** ./src/membershipWidget/block.json ***!
+  \*****************************************/
+/*! exports provided: apiVersion, version, textdomain, name, title, category, collection, icon, className, description, keywords, attributes, supports, variations, styles, example, style, editorScript, editorStyle, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"apiVersion\":2,\"version\":\"1.0.0\",\"textdomain\":\"site-functionality\",\"name\":\"site-functionality/membership-widget\",\"title\":\"Join Us\",\"category\":\"components\",\"collection\":\"site-functionality\",\"icon\":\"buddicons-groups\",\"className\":\"membership-widget\",\"description\":\"Display a membership widget.\",\"keywords\":[\"membership\",\"form\",\"join\"],\"attributes\":{},\"supports\":{\"align\":true,\"anchor\":true,\"color\":{\"background\":false,\"text\":false,\"gradients\":false,\"link\":false},\"customClassName\":true,\"defaultStylePicker\":false,\"__experimentalLayout\":false},\"variations\":[],\"styles\":[],\"example\":{},\"style\":\"file:../../build/style-index.css\",\"editorScript\":\"file:../../build/index.js\",\"editorStyle\":\"file:../../build/index.css\"}");
+
+/***/ }),
+
+/***/ "./src/membershipWidget/edit.js":
+/*!**************************************!*\
+  !*** ./src/membershipWidget/edit.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./src/membershipWidget/editor.scss");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+
+const Edit = props => {
+  const {
+    className
+  } = props;
+  const blockProps = Object(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["useBlockProps"])({
+    className: classnames__WEBPACK_IMPORTED_MODULE_4___default()(className, 'membership-widget'),
+    id: 'membership-widget'
+  });
+  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", blockProps, "Component Placeholder - Membership Widget");
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Edit);
+
+/***/ }),
+
+/***/ "./src/membershipWidget/editor.scss":
+/*!******************************************!*\
+  !*** ./src/membershipWidget/editor.scss ***!
+  \******************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/membershipWidget/index.js":
+/*!***************************************!*\
+  !*** ./src/membershipWidget/index.js ***!
+  \***************************************/
+/*! exports provided: name, category, settings */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "name", function() { return name; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "category", function() { return category; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "settings", function() { return settings; });
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./block.json */ "./src/membershipWidget/block.json");
+var _block_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./block.json */ "./src/membershipWidget/block.json", 1);
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/membershipWidget/edit.js");
+/**
+ * WordPress dependencies
+ */
+
+/**
+ * Internal dependencies
+ */
+
+
+
+const {
+  name,
+  category
+} = _block_json__WEBPACK_IMPORTED_MODULE_1__;
+const settings = {
+  edit: _edit__WEBPACK_IMPORTED_MODULE_2__["default"]
+};
+
 
 /***/ }),
 
@@ -2084,14 +2162,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @wordpress/compose */ "@wordpress/compose");
 /* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_wordpress_compose__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _wordpress_core_data__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @wordpress/core-data */ "@wordpress/core-data");
-/* harmony import */ var _wordpress_core_data__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_wordpress_core_data__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _wordpress_date__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @wordpress/date */ "@wordpress/date");
-/* harmony import */ var _wordpress_date__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_wordpress_date__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./editor.scss */ "./src/purchaseAgreements/editor.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./style.scss */ "./src/purchaseAgreements/style.scss");
+/* harmony import */ var _wordpress_date__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @wordpress/date */ "@wordpress/date");
+/* harmony import */ var _wordpress_date__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_wordpress_date__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./editor.scss */ "./src/purchaseAgreements/editor.scss");
 
 
 
@@ -2110,10 +2185,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
  //  Import CSS.
 
-
+ // import './style.scss';
 
 const MAX_ITEMS = 50;
 
@@ -2150,7 +2224,7 @@ const Edit = props => {
   } = display;
   const instanceId = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_7__["useInstanceId"])(Edit);
 
-  const settings = Object(_wordpress_date__WEBPACK_IMPORTED_MODULE_9__["__experimentalGetSettings"])();
+  const settings = Object(_wordpress_date__WEBPACK_IMPORTED_MODULE_8__["__experimentalGetSettings"])();
 
   const dateFormat = settings.formats.date;
   const {
@@ -2195,10 +2269,10 @@ const Edit = props => {
       label: name
     }));
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__["__"])('Type', 'site-functionality'),
+      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_9__["__"])('Type', 'site-functionality'),
       options: [{
         value: '',
-        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__["__"])('Select a Type', 'site-functionality')
+        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_9__["__"])('Select a Type', 'site-functionality')
       }, ...options],
       onChange: setTypes,
       value: purchaseTypes
@@ -2208,7 +2282,7 @@ const Edit = props => {
   const PerPageSelector = () => {
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["RangeControl"], {
       key: "query-controls-range-control",
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__["__"])('Number of Posts', 'site-functionality'),
+      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_9__["__"])('Number of Posts', 'site-functionality'),
       value: perPage,
       onChange: setPerPage,
       min: 1,
@@ -2219,16 +2293,16 @@ const Edit = props => {
   const OrderSelector = () => {
     const options = [{
       value: 'date/desc',
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__["__"])('Soonest to Latest', 'site-functionality')
+      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_9__["__"])('Soonest to Latest', 'site-functionality')
     }, {
       value: 'date/asc',
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__["__"])('Latest to Soonest', 'site-functionality')
+      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_9__["__"])('Latest to Soonest', 'site-functionality')
     }, {
       value: 'title/asc',
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__["__"])('A → Z', 'site-functionality')
+      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_9__["__"])('A → Z', 'site-functionality')
     }, {
       value: 'title/desc',
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__["__"])('Z → A', 'site-functionality')
+      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_9__["__"])('Z → A', 'site-functionality')
     }];
 
     if (!options || !options.length) {
@@ -2236,7 +2310,7 @@ const Edit = props => {
     }
 
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__["__"])('Order By', 'site-functionality'),
+      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_9__["__"])('Order By', 'site-functionality'),
       options: options,
       onChange: setOrderBy,
       value: orderby
@@ -2257,7 +2331,7 @@ const Edit = props => {
         key: index
       }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["ToggleControl"], {
         label: label,
-        help: checked ? Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__["__"])('Show', 'site-functionality') : Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__["__"])('Hide', 'site-functionality'),
+        help: checked ? Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_9__["__"])('Show', 'site-functionality') : Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_9__["__"])('Hide', 'site-functionality'),
         checked: checked,
         onChange: isChecked => {
           setAttributes({
@@ -2272,7 +2346,7 @@ const Edit = props => {
 
   const SettingsPanel = () => {
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__["InspectorControls"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelBody"], {
-      title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__["__"])('Query Options', 'site-functionality'),
+      title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_9__["__"])('Query Options', 'site-functionality'),
       initialOpen: true
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelRow"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(TermSelector, null)), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelRow"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(OrderSelector, null)), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelRow"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(PerPageSelector, null))));
   };
@@ -2281,12 +2355,12 @@ const Edit = props => {
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__["InspectorControls"], {
       __experimentalGroup: "advanced"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelBody"], {
-      title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__["__"])('HTML Tag Options', 'site-functionality'),
+      title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_9__["__"])('HTML Tag Options', 'site-functionality'),
       initialOpen: true
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelRow"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__["__"])('Wrapper HTML Element', 'site-functionality'),
+      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_9__["__"])('Wrapper HTML Element', 'site-functionality'),
       options: [{
-        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__["__"])('Default (<div>)', 'site-functionality'),
+        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_9__["__"])('Default (<div>)', 'site-functionality'),
         value: 'div'
       }, {
         label: '<main>',
@@ -2303,9 +2377,9 @@ const Edit = props => {
         wrapperTagName: value
       })
     })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelRow"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__["__"])('Item HTML Element', 'site-functionality'),
+      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_9__["__"])('Item HTML Element', 'site-functionality'),
       options: [{
-        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__["__"])('Default (<article>)', 'site-functionality'),
+        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_9__["__"])('Default (<article>)', 'site-functionality'),
         value: 'article'
       }, {
         label: '<div>',
@@ -2377,7 +2451,7 @@ const Edit = props => {
       className: "purchase-agreement__date entry-meta"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("time", {
       dateTime: post.date
-    }, Object(_wordpress_date__WEBPACK_IMPORTED_MODULE_9__["dateI18n"])(dateFormat, post.date))), showTitle && ((_post$meta2 = post.meta) === null || _post$meta2 === void 0 ? void 0 : _post$meta2['show_title']) && post.title && Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("h3", {
+    }, Object(_wordpress_date__WEBPACK_IMPORTED_MODULE_8__["dateI18n"])(dateFormat, post.date))), showTitle && ((_post$meta2 = post.meta) === null || _post$meta2 === void 0 ? void 0 : _post$meta2['show_title']) && post.title && Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("h3", {
       className: "purchase-agreement__title entry-title",
       dangerouslySetInnerHTML: {
         __html: post === null || post === void 0 ? void 0 : (_post$title = post.title) === null || _post$title === void 0 ? void 0 : _post$title.rendered
@@ -2395,11 +2469,13 @@ const Edit = props => {
       className: "value"
     }, new Intl.NumberFormat('us-EN', format).format(parseFloat((_post$meta4 = post.meta) === null || _post$meta4 === void 0 ? void 0 : _post$meta4['amount'].replace(/,/g, ''))))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("dt", {
       className: "purchase-agreement__amount entry-label"
-    }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__["__"])('Abolished', 'site-functionality'))), showTypes && purchaseTypes && types && Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("dt", {
+    }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_9__["__"])('Abolished', 'site-functionality'))), showTypes && purchaseTypes && types && Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("dt", {
       className: "purchase-agreement__type entry-label"
-    }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__["__"])('Type', 'site-functionality')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("dd", {
+    }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_9__["__"])('Type', 'site-functionality')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("dd", {
       className: "purchase-agreement__type entry-value"
-    }, types.map((type, index) => Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("a", {
+    }, types.map((type, index) => Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
+      key: type === null || type === void 0 ? void 0 : type.id
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("a", {
       href: type === null || type === void 0 ? void 0 : type.link,
       id: type === null || type === void 0 ? void 0 : type.id,
       rel: "tag",
@@ -2410,33 +2486,33 @@ const Edit = props => {
       className: "separator"
     }, "/"))))), showNumber && ((_post$meta5 = post.meta) === null || _post$meta5 === void 0 ? void 0 : _post$meta5['number']) && Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("dt", {
       className: "purchase-agreement__number entry-label"
-    }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__["__"])('Number of Debtors', 'site-functionality')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("dd", {
+    }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_9__["__"])('Number of Debtors', 'site-functionality')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("dd", {
       className: "purchase-agreement__number entry-value"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("span", {
       className: "value"
     }, new Intl.NumberFormat().format(parseInt((_post$meta6 = post.meta) === null || _post$meta6 === void 0 ? void 0 : _post$meta6['number'].replace(/,/g, '')))))), showAverage && ((_post$meta7 = post.meta) === null || _post$meta7 === void 0 ? void 0 : _post$meta7['average']) && Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("dt", {
       className: "purchase-agreement__average entry-label"
-    }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__["__"])('Average Debt/Debtor', 'site-functionality')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("dd", {
+    }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_9__["__"])('Average Debt/Debtor', 'site-functionality')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("dd", {
       className: "purchase-agreement__average entry-value"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("span", {
       className: "value"
     }, new Intl.NumberFormat('us-EN', format).format(parseFloat((_post$meta8 = post.meta) === null || _post$meta8 === void 0 ? void 0 : _post$meta8['average'].replace(/,/g, '')))))), showPurchasePrice && ((_post$meta9 = post.meta) === null || _post$meta9 === void 0 ? void 0 : _post$meta9['price']) && Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("dt", {
       className: "purchase-agreement__purchase-price entry-label"
-    }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__["__"])('Purchase Price', 'site-functionality')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("dd", {
+    }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_9__["__"])('Purchase Price', 'site-functionality')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("dd", {
       className: "purchase-agreement__purchase-price entry-value"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("span", {
       className: "value"
     }, new Intl.NumberFormat('us-EN', format).format(parseFloat((_post$meta10 = post.meta) === null || _post$meta10 === void 0 ? void 0 : _post$meta10['price'].replace(/,/g, '')))))))), media && Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("a", {
       href: media.source_url,
-      "aria-label": Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__["__"])('Download Purchase Agreement as PDF', 'site-functionality'),
+      "aria-label": Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_9__["__"])('Download Purchase Agreement as PDF', 'site-functionality'),
       target: "_blank"
-    }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__["__"])('Download Purchase Agreement as PDF', 'site-functionality')));
+    }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_9__["__"])('Download Purchase Agreement as PDF', 'site-functionality')));
   };
 
   const NoPosts = () => {
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
       className: "no-posts"
-    }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__["__"])('No posts', 'site-functionality'));
+    }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_9__["__"])('No posts', 'site-functionality'));
   };
 
   const updateQuery = () => {
@@ -2586,13 +2662,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./editor.scss */ "./src/tout/editor.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.scss */ "./src/tout/style.scss");
 
 
 
  //  Import CSS.
 
-
+ // import './style.scss';
 
 const TEMPLATE = [['core/heading', {
   placeholder: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Add Heading...', 'site-functionality'),
@@ -2782,7 +2857,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./editor.scss */ "./src/userQuery/editor.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./style.scss */ "./src/userQuery/style.scss");
 
 
 
@@ -2802,10 +2876,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // import '../data/user-roles';
-//  Import CSS.
+ //  Import CSS.
 
-
+ // import './style.scss';
 
 const MAX_ITEMS = 24;
 

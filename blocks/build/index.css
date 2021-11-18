@@ -3,6 +3,26 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
+.wp-block-site-functionality-donation-widget {
+  background-color: #ebe7dc;
+  padding: 2rem;
+  margin: 2px;
+}
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-site-functionality-membership-widget {
+  background-color: #ebe7dc;
+  padding: 2rem;
+  margin: 2px;
+}
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
 .wp-block-site-functionality-faqs .answer {
   max-height: initial !important;
   height: auto !important;
