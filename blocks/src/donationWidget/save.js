@@ -1,7 +1,6 @@
-import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps } from '@wordpress/block-editor';
 
-const Save = ( props ) => {
-	// return <InnerBlocks.Content />;
+const Save = ( { className } ) => {
 	return null;
 };
 
