@@ -29,7 +29,7 @@ function render( $attributes, $content, $block ) {
         if( 'core/image' === $inner_block->name ) {
             $attributes = $inner_block->parsed_block['attrs'];
 
-            if( $attributes['id'] ) {
+            if( isset( $attributes['id'] ) ) {
                 $output .= sprintf( '<picture class="%s">%s</picture>', 
                     $attributes['className'] ?? 'tout__image',
                     \wp_get_attachment_image( $attributes['id'], $attributes['sizeSlug'] ?? 'full' )

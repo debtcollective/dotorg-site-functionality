@@ -8,6 +8,8 @@ registerBlockCollection( 'site-functionality', {
 import './patterns';
 import './styles';
 
+import * as donationWidget from './donationWidget';
+import * as membershipWidget from './membershipWidget';
 import * as faqs from './faqs';
 import * as faq from './faq';
 import * as impactfulCallout from './impactfulCallout';
@@ -17,6 +19,8 @@ import * as tout from './tout';
 import * as userQuery from './userQuery';
 
 const blocks = [
+	donationWidget,
+	membershipWidget,
 	faqs,
 	faq,
 	impactfulCallout,

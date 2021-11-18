@@ -4,4 +4,10 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-site-functionality-donation-widget {}
+$color__grey-light: #ebe7dc;
+
+.wp-block-site-functionality-donation-widget {
+    background-color: $color__grey-light;
+    padding: 2rem;
+    margin: 2px;
+}

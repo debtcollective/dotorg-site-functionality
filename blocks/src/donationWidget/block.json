@@ -13,6 +13,7 @@
         "donation",
         "form"
     ],
+    "attributes": {},
     "supports": {
         "align": true,
         "anchor": true,
@@ -26,11 +27,9 @@
         "defaultStylePicker": false,
         "__experimentalLayout": false
     },
-    "attributes": {},
     "variations": [],
     "styles": [],
     "example": {},
-    "script": "site-functionality",
     "style": "file:../../build/style-index.css",
     "editorScript": "file:../../build/index.js",
 	"editorStyle": "file:../../build/index.css"
