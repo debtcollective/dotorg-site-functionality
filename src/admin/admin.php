@@ -8,33 +8,27 @@
 
 namespace Site_Functionality\Admin;
 
+use Site_Functionality\Abstracts\Base;
+use Site_Functionality\Admin\Options as Options;
+
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class Admin {
+class Admin extends Base {
 
 	/**
-	 * Instance of the class.
-	 * @var object
+	 * Constructor.
+	 *
+	 * @since 1.0.0
 	 */
-	private static $instance;
+	public function __construct( $version, $plugin_name ) {
+		parent::__construct( $version, $plugin_name );
 
-	/**
-	 * Class Instance.
-	 * @return Admin
-	 */
-	public static function instance() {
-		if ( ! isset( self::$instance ) && ! ( self::$instance instanceof Admin ) ) {
-            self::$instance = new Admin();
-            
-            self::$instance->dependencies();
-                        
-		}
-		return self::$instance;
-    }
-    
+		$this->dependencies();
+	}
+
 	/**
 	 * Dependencies
 	 *
@@ -42,6 +36,8 @@ class Admin {
 	 */
 	function dependencies() {
 		include_once( SITE_CORE_DIR . '/src/admin/options.php' );
+
+		$options = new Options( $this->version, $this->plugin_name );
     }
 
     /**
@@ -57,16 +53,3 @@ class Admin {
     }
 
 }
-
-/**
- * The function provides access to the class methods.
- *
- * Use this function like you would a global variable, except without needing
- * to declare the global.
- *
- * @return object
- */
-function admin() {
-	return Admin::instance();
-}
-admin();

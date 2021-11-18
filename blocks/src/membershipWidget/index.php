@@ -12,7 +12,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-
 /**
  * Render Block
  *
@@ -32,6 +31,8 @@ function render( $attributes, $content, $block ) {
         'class' => 'membership-widget',
         'id'    => 'membership-widget'
     ] );
+
+    $options = \get_option( 'web_components' );
     
     ob_start();
     ?>
@@ -40,21 +41,17 @@ function render( $attributes, $content, $block ) {
         Requires Javascript to Work...
     </div>
 
-    <?php
-    if( isset( $_ENV ) ) : ?>
-
-        <script src="<?php echo \esc_url( 'https://www.google.com/recaptcha/api.js?render=' . \esc_url( $_ENV['DC_RECAPTCHA_V3_SITE_KEY'] ) ); ?>"></script>
+    <script src="<?php echo \esc_url( 'https://www.google.com/recaptcha/api.js?render=' . \esc_url( $options['recaptcha_v3_site_key'] ) ); ?>"></script>
 
         <script>
-            window.DC_DONATE_API_URL = "<?php echo \esc_attr( $_ENV['DC_DONATE_API_URL'] ); ?>"
-            window.DC_MEMBERSHIP_API_URL = "<?php echo \esc_attr( $_ENV['DC_MEMBERSHIP_API_URL'] ); ?>"
-            window.DC_FUNDS_API_URL = "<?php echo \esc_attr( $_ENV['DC_FUNDS_API_URL'] ); ?>"
-            window.DC_RECAPTCHA_V3_SITE_KEY = "<?php echo \esc_attr( $_ENV['DC_RECAPTCHA_V3_SITE_KEY'] ); ?>"
-            window.DC_STRIPE_PUBLIC_TOKEN = "<?php echo \esc_attr( $_ENV['DC_STRIPE_PUBLIC_TOKEN'] ); ?>"
+            window.DC_DONATE_API_URL = "<?php echo \esc_attr( $options['donate_api_url'] ); ?>"
+            window.DC_MEMBERSHIP_API_URL = "<?php echo \esc_attr( $options['membership_api_url'] ); ?>"
+            window.DC_FUNDS_API_URL = "<?php echo \esc_attr( $options['funds_api_url'] ); ?>"
+            window.DC_RECAPTCHA_V3_SITE_KEY = "<?php echo \esc_attr( $options['recaptcha_v3_site_key'] ); ?>"
+            window.DC_STRIPE_PUBLIC_TOKEN = "<?php echo \esc_attr( $options['stripe_public_token'] ); ?>"
         </script>
 
-    <?php endif;
-
+    <?php
     $content = ob_get_clean();
 
     return $content;

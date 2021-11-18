@@ -48,6 +48,8 @@ function site_functionality_init() {
 	include_once( SITE_CORE_DIR . '/blocks/blocks.php' 									);
 
 	include_once( SITE_CORE_DIR . '/src/admin/admin.php' 								);
+	$admin = new Admin\Admin( VERSION, PLUGIN );
+
 	include_once( SITE_CORE_DIR . '/src/class-template-loader.php' 						);
 	include_once( SITE_CORE_DIR . '/src/abstracts/class-post-type.php' 					);
 	include_once( SITE_CORE_DIR . '/src/abstracts/class-taxonomy.php' 					);
