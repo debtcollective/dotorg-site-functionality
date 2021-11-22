@@ -23,6 +23,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 function render( $attributes, $content, $block ) {
     $wrapper_attributes = \get_block_wrapper_attributes( array( 'class' => 'faq-list' ) );
 
+    var_dump( $wrapper_attributes, $attributes, $content, $block );
+
     $return = '<div ' . $wrapper_attributes . '>';
 
     if( $block->inner_blocks ) {
