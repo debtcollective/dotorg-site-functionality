@@ -31,8 +31,12 @@
         },
         "answer": {
             "type": "string"
+        },
+        "anchor": {
+            "type": "string"
         }
     },
+    "usesContext": [ "faqs/recordId", "faqs/anchor" ],
     "variations": [],
     "styles": [],
     "example": {},
