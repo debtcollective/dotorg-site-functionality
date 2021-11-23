@@ -26,7 +26,20 @@
         "defaultStylePicker": false,
         "__experimentalLayout": false
     },
-    "attributes": {},
+    "attributes": {
+        "recordId": {
+            "type": "string",
+            "context": true
+        },
+        "anchor": {
+            "type": "string",
+            "context": true
+        }
+    },
+    "providesContext": {
+        "faqs/recordId": "recordId",
+        "faqs/anchor": "anchor"
+    },
     "variations": [],
     "styles": [],
     "example": {},

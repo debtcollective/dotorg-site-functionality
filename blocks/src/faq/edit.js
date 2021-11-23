@@ -8,15 +8,15 @@ const ALLOWED_FORMATS = [ 'core/bold', 'core/link' ];
 
 const Edit = ( props ) => {
 	const {
-		attributes: { question, answer },
+		attributes: { question, answer, anchor },
 		className,
 		setAttributes,
-		onSelect,
 		isActive,
+		context
 	} = props;
 
 	const blockProps = useBlockProps( {
-		className: 'faq',
+		className: classNames( className, 'faq' ),
 	} );
 
 	return (
