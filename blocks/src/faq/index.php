@@ -21,15 +21,24 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return string
  */
 function render( $attributes, $content, $block ) {
-	$wrapper_attributes = \get_block_wrapper_attributes();
+	$wrapper_attributes = \get_block_wrapper_attributes(
+		[
+			'id'    => sprintf( 'faq-%s', ! empty( $attributes['anchor'] ) ? \esc_attr( $attributes['anchor'] ) : \esc_attr( spl_object_id( $block ) ) )
+		]
+	);
+
+	// if( ! \is_admin() ) {
+    //  echo '<pre>';
+	// 	var_dump( $attributes, $block );
+	// 	echo '</pre>';
+    // }
 	
 	ob_start();
 
 	if( isset( $attributes['question'] ) || isset( $attributes['answer'] ) ) : 
-		$uuid = uniqid( 'faq-' );
 	?>
 
-	<article id="<?php echo esc_attr( $uuid ); ?>" <?php echo $wrapper_attributes; ?>>
+	<article <?php echo $wrapper_attributes; ?>>
 
 		<div class="faq__question question">
 			<?php
