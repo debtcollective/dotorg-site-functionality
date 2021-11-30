@@ -12,6 +12,18 @@
         "callout",
         "tout"
     ],
+    "attributes": {
+        "url": {
+            "type": "string",
+            "default": ""
+        },
+        "linkTarget": {
+			"type": "string"
+		},
+		"rel": {
+			"type": "string"
+		}
+    },
     "supports": {
         "align": true,
         "anchor": true,
