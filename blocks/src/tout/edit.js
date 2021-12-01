@@ -16,7 +16,7 @@ import {
 	Popover,
 } from '@wordpress/components';
 
-import { useCallback, useEffect, useState, useRef } from '@wordpress/element';
+import { useEffect, useState, useRef } from '@wordpress/element';
 
 import { displayShortcut, isKeyboardEvent } from '@wordpress/keycodes';
 import { link, linkOff } from '@wordpress/icons';
