@@ -1,0 +1,50 @@
+{
+    "apiVersion": 2,
+    "version": "1.0.0",
+    "textdomain": "site-functionality",
+    "name": "site-functionality/field",
+    "title": "Field",
+    "category": "fields",
+    "collection": "site-functionality",
+    "className": "text",
+    "description": "Display a text field",
+    "keywords": [
+        "text",
+        "field"
+    ],
+    "attributes": {
+        "type": {
+            "type": "string",
+            "default": "text"
+        },
+        "label": {
+            "type": "string",
+            "default": "Text"
+        },
+        "placeholder": {
+            "type": "string",
+            "default": "Add text..."
+        },
+        "content": {
+			"type": "string"
+		}
+    },
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "color": { 
+            "background": true,
+            "text": true,
+            "gradients": false,
+            "link": false
+        },
+        "customClassName": true,
+        "defaultStylePicker": false,
+        "__experimentalLayout": false
+    },
+    "example" : {},
+    "script": "site-functionality",
+    "style": "file:../../build/style-index.css",
+    "editorScript": "file:../../build/index.js",
+	"editorStyle": "file:../../build/index.css"
+}
