@@ -7,15 +7,20 @@
  */
 namespace Site_Functionality\Blocks;
 
+include_once( \plugin_dir_path( __FILE__ ) . 'src/eventTout/index.php' );
+
 include_once( \plugin_dir_path( __FILE__ ) . 'src/membershipWidget/index.php' );
 include_once( \plugin_dir_path( __FILE__ ) . 'src/donationWidget/index.php' );
 include_once( \plugin_dir_path( __FILE__ ) . 'src/faqs/index.php' );
 include_once( \plugin_dir_path( __FILE__ ) . 'src/faq/index.php' );
+
+include_once( \plugin_dir_path( __FILE__ ) . 'src/field/index.php' );
 include_once( \plugin_dir_path( __FILE__ ) . 'src/impactfulCallout/index.php' );
 include_once( \plugin_dir_path( __FILE__ ) . 'src/postmeta/index.php' );
 include_once( \plugin_dir_path( __FILE__ ) . 'src/purchaseAgreements/index.php' );
 include_once( \plugin_dir_path( __FILE__ ) . 'src/tout/index.php' );
 include_once( \plugin_dir_path( __FILE__ ) . 'src/userQuery/index.php' );
+include_once( \plugin_dir_path( __FILE__ ) . 'src/taxonomySelector/index.php' );
 
 const TEMPLATE_PARAMS = [
 	'filter_prefix'             => 'site_functionality',
@@ -72,11 +77,16 @@ function register_block_category( $block_categories, $editor_context ) {
 	if ( ! empty( $editor_context->post ) ) {
 		array_push(
 			$block_categories,
-			array(
+			[
 				'slug'  => 'components',
 				'title' => __( 'Components', 'site-functionality' ),
 				'icon'  => 'block-default',
-			)
+			],
+			[
+				'slug'  => 'fields',
+				'title' => __( 'Fields', 'site-functionality' ),
+				'icon'  => 'edit',
+			]
 		);
 	}
 	return $block_categories;

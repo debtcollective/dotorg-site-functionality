@@ -8,7 +8,9 @@ registerBlockCollection( 'site-functionality', {
 import './patterns';
 import './styles';
 
+import * as eventTout from './eventTout';
 import * as donationWidget from './donationWidget';
+import * as field from './field';
 import * as membershipWidget from './membershipWidget';
 import * as faqs from './faqs';
 import * as faq from './faq';
@@ -17,9 +19,12 @@ import * as postmeta from './postmeta';
 import * as purchaseAgreements from './purchaseAgreements';
 import * as tout from './tout';
 import * as userQuery from './userQuery';
+import * as taxonomySelector from './taxonomySelector';
 
 const blocks = [
+	eventTout,
 	donationWidget,
+	field,
 	membershipWidget,
 	faqs,
 	faq,
@@ -28,6 +33,7 @@ const blocks = [
 	purchaseAgreements,
 	tout,
 	userQuery,
+	taxonomySelector
 ];
 
 /**
