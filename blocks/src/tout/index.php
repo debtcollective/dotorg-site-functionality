@@ -24,22 +24,22 @@ function render( $attributes, $content, $block ) {
 
     $output = '<div ' . $wrapper_attributes . '>';
 
+    if( isset( $attributes['url'] ) && $attributes['url'] ) {
+        $output .= sprintf( '<a href="%1$s"%2$s%3$s class="tout__link">', 
+            \esc_url( $attributes['url'] ), 
+            ( isset( $attributes['linkTarget'] ) && $attributes['linkTarget'] ) ? ' target="' . $attributes['linkTarget'] . '"' : '',
+            ( isset( $attributes['linkTarget'] ) && $attributes['linkTarget'] ) ? ' rel="noreferrer noopener"' : ''
+        );
+    }
+
     foreach ( $block->inner_blocks as $inner_block ) { 
 
-        if( 'core/image' === $inner_block->name ) {
-            $attributes = $inner_block->parsed_block['attrs'];
-
-            if( $attributes['id'] ) {
-                $output .= sprintf( '<picture class="%s">%s</picture>', 
-                    $attributes['className'] ?? 'tout__image',
-                    \wp_get_attachment_image( $attributes['id'], $attributes['sizeSlug'] ?? 'full' )
-                ); 
-            }
-
-        } else {
-            $output .= $inner_block->render(); 
-        }
+        $output .= $inner_block->render(); 
         
+    }
+
+    if( isset( $attributes['url'] ) && $attributes['url'] ) {
+        $output .= '</a>';
     }
 
     $output .= '</div>';

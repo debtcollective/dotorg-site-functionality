@@ -21,7 +21,12 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return string
  */
 function render( $attributes, $content, $block ) {
-    $wrapper_attributes = \get_block_wrapper_attributes( array( 'class' => 'faq-list' ) );
+    $wrapper_attributes = \get_block_wrapper_attributes( 
+        [
+            'class' => 'faq-list',
+            'id'    => sprintf( 'tab-%s', ! empty( $attributes['anchor'] ) ? \esc_attr( $attributes['anchor'] ) : \esc_attr( $attributes['recordId'] ) ),
+        ]
+    );
 
     $return = '<div ' . $wrapper_attributes . '>';
 

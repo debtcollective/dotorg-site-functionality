@@ -25,6 +25,11 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 define( 'SITE_CORE_DIR', dirname( __FILE__ ) );
 define( 'SITE_CORE_DIR_URI', plugin_dir_url( __FILE__ ) );
 
+if( class_exists( '\Dotenv\Dotenv' ) ) {
+	$dotenv = \Dotenv\Dotenv::createImmutable( __DIR__ );
+	$dotenv->safeLoad();
+}
+
 const PLUGIN = 'site-functionality';
 const VERSION = '1.0.0';
 
@@ -43,6 +48,8 @@ function site_functionality_init() {
 	include_once( SITE_CORE_DIR . '/blocks/blocks.php' 									);
 
 	include_once( SITE_CORE_DIR . '/src/admin/admin.php' 								);
+	$admin = new Admin\Admin( VERSION, PLUGIN );
+
 	include_once( SITE_CORE_DIR . '/src/class-template-loader.php' 						);
 	include_once( SITE_CORE_DIR . '/src/abstracts/class-post-type.php' 					);
 	include_once( SITE_CORE_DIR . '/src/abstracts/class-taxonomy.php' 					);

@@ -1,0 +1,13 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+$color__grey-light: #ebe7dc;
+
+.wp-block-site-functionality-donation-widget {
+    background-color: $color__grey-light;
+    padding: 2rem;
+    margin: 2px;
+}

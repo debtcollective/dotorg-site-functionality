@@ -5,7 +5,7 @@ import classNames from 'classnames';
 
 //  Import CSS.
 import './editor.scss';
-import './style.scss';
+// import './style.scss';
 
 const TEMPLATE = [
 	[
@@ -21,7 +21,16 @@ const TEMPLATE = [
 const ALLOWED_BLOCKS = [ 'site-functionality/faq' ];
 
 const Edit = ( props ) => {
-	const { className, setAttributes } = props;
+	const { 
+		attributes: { recordId, anchor },
+		className,
+		setAttributes,
+		clientId
+	} = props;
+
+	setAttributes( {
+		recordId: clientId
+	} )
 
 	const blockProps = useBlockProps( {
 		className: classNames( className, 'faq-list' ),
