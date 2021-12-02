@@ -57,7 +57,12 @@ const TEMPLATE = [
 	],
 ];
 
-const ALLOWED_BLOCKS = ['core/heading', 'core/paragraph', 'core/image', 'core/button'];
+const ALLOWED_BLOCKS = [
+	'core/heading',
+	'core/paragraph',
+	'core/image',
+	'core/button',
+];
 
 const NEW_TAB_REL = 'noreferrer noopener';
 
@@ -67,23 +72,19 @@ const Edit = ( props ) => {
 		isSelected,
 		onReplace,
 		setAttributes,
-		className
+		className,
 	} = props;
 
-	const {
-		linkTarget,
-		rel,
-		url,
-	} = attributes;
+	const { linkTarget, rel, url } = attributes;
 
 	const blockProps = useBlockProps( {
 		className: classNames( className, 'tout' ),
-	});
+	} );
 	const ref = useRef();
 	const [ isEditingURL, setIsEditingURL ] = useState( false );
 	const isURLSet = !! url;
 	const opensInNewTab = linkTarget === '_blank';
-	
+
 	function onToggleOpenInNewTab( value ) {
 		const newLinkTarget = value ? '_blank' : undefined;
 
@@ -121,7 +122,7 @@ const Edit = ( props ) => {
 	}, [ isSelected ] );
 
 	return (
-		<div {...blockProps}>
+		<div { ...blockProps }>
 			<BlockControls group="block">
 				{ ! isURLSet && (
 					<ToolbarButton
@@ -172,7 +173,7 @@ const Edit = ( props ) => {
 					/>
 				</Popover>
 			) }
-			{/* <InspectorControls>
+			{ /* <InspectorControls>
 				<PanelBody
 					title={ __( 'Link', 'site-functionality' ) }
 					initialOpen={ true }
@@ -195,8 +196,8 @@ const Edit = ( props ) => {
 						forceIsEditingLink={ isEditingURL }
 					/>
 				</PanelBody>
-			</InspectorControls> */}
-			
+			</InspectorControls> */ }
+
 			<InnerBlocks
 				allowedBlocks={ ALLOWED_BLOCKS }
 				template={ TEMPLATE }

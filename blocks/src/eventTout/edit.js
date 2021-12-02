@@ -6,10 +6,7 @@ import {
 	__experimentalLinkControlSearchInput as LinkControlSearchInput,
 } from '@wordpress/block-editor';
 
-import {
-	ToolbarButton,
-	Popover,
-} from '@wordpress/components';
+import { ToolbarButton, Popover } from '@wordpress/components';
 
 import { useCallback, useEffect, useState, useRef } from '@wordpress/element';
 
@@ -29,7 +26,7 @@ const TEMPLATE = [
 		'site-functionality/taxonomy-term',
 		{
 			className: 'event-tout__tag',
-			taxonomy: 'event_tag'
+			taxonomy: 'event_tag',
 		},
 		[],
 	],
@@ -45,22 +42,20 @@ const TEMPLATE = [
 	[
 		'site-functionality/field',
 		{
-		
 			className: 'date event-tout__date',
-			type: "date",
-			label: "Date",
-			placeholder: "Add date..."
+			type: 'date',
+			label: 'Date',
+			placeholder: 'Add date...',
 		},
 		[],
 	],
 	[
 		'site-functionality/field',
 		{
-		
-			className: "time event-tout__time",
-			type: "time",
-			label: "Time",
-			placeholder: "Add time..."
+			className: 'time event-tout__time',
+			type: 'time',
+			label: 'Time',
+			placeholder: 'Add time...',
 		},
 		[],
 	],

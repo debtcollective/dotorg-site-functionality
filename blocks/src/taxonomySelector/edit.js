@@ -3,13 +3,9 @@
  */
 import {
 	useBlockProps,
-	store as blockEditorStore
+	store as blockEditorStore,
 } from '@wordpress/block-editor';
-import {
-	SelectControl,
-	Spinner,
-	ToggleControl
-} from '@wordpress/components';
+import { SelectControl, Spinner, ToggleControl } from '@wordpress/components';
 import { useSelect } from '@wordpress/data';
 import { __ } from '@wordpress/i18n';
 
@@ -30,7 +26,7 @@ const Edit = ( props ) => {
 
 	const setTerm = ( value ) => {
 		setAttributes( {
-			term: value
+			term: value,
 		} );
 
 		// console.log( value );
@@ -38,13 +34,13 @@ const Edit = ( props ) => {
 
 	const setIsLinked = ( value ) => {
 		setAttributes( {
-			isLinked: value
+			isLinked: value,
 		} );
 
 		// console.log( isLinked );
 	};
 
-	const TermSelector = () => {		
+	const TermSelector = () => {
 		const terms = useSelect( ( select ) => {
 			return select( 'core' ).getEntityRecords( 'taxonomy', taxonomy );
 		}, [] );
@@ -65,7 +61,10 @@ const Edit = ( props ) => {
 					options={ [
 						{
 							value: '',
-							label: __( 'Select a ' + label, 'site-functionality' ),
+							label: __(
+								'Select a ' + label,
+								'site-functionality'
+							),
 						},
 						...options,
 					] }
@@ -77,7 +76,6 @@ const Edit = ( props ) => {
 	};
 
 	const ToggleSelector = () => {
-	
 		return (
 			<ToggleControl
 				label={ __( 'Link to Term', 'site-functionality' ) }
@@ -93,10 +91,13 @@ const Edit = ( props ) => {
 	};
 
 	return (
-		<div {...blockProps}>
-			{ console.log( term, isLinked ) }
-			<div><TermSelector /></div>
-			<div><ToggleSelector /></div>
+		<div { ...blockProps }>
+			<div>
+				<TermSelector />
+			</div>
+			<div>
+				<ToggleSelector />
+			</div>
 		</div>
 	);
 };

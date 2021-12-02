@@ -9,6 +9,7 @@ import './patterns';
 import './styles';
 
 import * as eventTout from './eventTout';
+import * as dateTimeField from './dateTimeField';
 import * as donationWidget from './donationWidget';
 import * as field from './field';
 import * as membershipWidget from './membershipWidget';
@@ -23,6 +24,7 @@ import * as taxonomySelector from './taxonomySelector';
 
 const blocks = [
 	eventTout,
+	dateTimeField,
 	donationWidget,
 	field,
 	membershipWidget,
@@ -33,7 +35,7 @@ const blocks = [
 	purchaseAgreements,
 	tout,
 	userQuery,
-	taxonomySelector
+	taxonomySelector,
 ];
 
 /**

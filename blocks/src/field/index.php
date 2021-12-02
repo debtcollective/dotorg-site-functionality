@@ -30,11 +30,36 @@ function render( $attributes, $content, $block ) {
         'class'         => $type,
     ] );
 
-    $output = '<p ' . $wrapper_attributes . '>';
+    switch ( $type ) {
+        case 'date' :
+            $format = \get_option( 'date_format' );
+            $content = date( $format, strtotime( $attributes['content'] ) );
+            break;
+        case 'time' :
+            $format = \get_option( 'time_format' );
+            $timezone = \get_option( 'timezone_string' );
+            $content = date( $format, strtotime( $attributes['content'] ) );
+            break;
+        // case 'tel' :
+        //     $phoneUtil = PhoneNumberUtil::getInstance();
+        //     $numberPrototype = $phoneUtil->parse( $attributes['content'], "US" );
+        //     $content = $phoneUtil->format( $numberPrototype, PhoneNumberFormat::NATIONAL );
+        //     break;
+        case 'email' :
+            $content = filter_var( $attributes['content'], FILTER_SANITIZE_EMAIL );
+            break;
+        case 'url' :
+            $content = filter_var( $attributes['content'], FILTER_SANITIZE_URL );
+            break;
+        case 'number' :
+            $content = filter_var( $attributes['content'], FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_THOUSAND );
+            break;
+        default :
+            $content = \sanitize_text_field( $attributes['content'] );
+            break;
+    }
 
-    $output .= \esc_attr( $attributes['content'] );
-
-    $output .= '</p>';
+    $output = sprintf( '<p %s>%s</p>', $wrapper_attributes, $content );
 
     return $output;
 }
