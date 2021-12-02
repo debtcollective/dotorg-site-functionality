@@ -8,6 +8,7 @@
 namespace Site_Functionality\Blocks;
 
 include_once( \plugin_dir_path( __FILE__ ) . 'src/eventTout/index.php' );
+include_once( \plugin_dir_path( __FILE__ ) . 'src/dateTimeField/index.php' );
 
 include_once( \plugin_dir_path( __FILE__ ) . 'src/membershipWidget/index.php' );
 include_once( \plugin_dir_path( __FILE__ ) . 'src/donationWidget/index.php' );

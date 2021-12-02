@@ -1,0 +1,63 @@
+{
+    "apiVersion": 2,
+    "version": "1.0.0",
+    "textdomain": "site-functionality",
+    "name": "site-functionality/date-time",
+    "title": "Date",
+    "category": "fields",
+    "collection": "site-functionality",
+    "className": "datetime",
+    "icon": "calendar-alt",
+    "description": "Display a date field",
+    "keywords": [
+        "date",
+        "field"
+    ],
+    "attributes": {
+        "type": {
+            "type": "string",
+            "default": "date"
+        },
+        "label": {
+            "type": "string",
+            "default": "Date"
+        },
+        "placeholder": {
+            "type": "string",
+            "default": "Add date..."
+        },
+        "date": {
+			"type": "string"
+        },
+        "format": {
+			"type": "string",
+			"default": "l, F j, Y",
+			"enum": [ 
+                "D, M j",
+				"l, F j, Y",
+				"D, M j, Y",
+				"F j, Y",
+				"M j, Y",
+				"m/j/Y"
+			]
+		}
+    },
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "color": { 
+            "background": true,
+            "text": true,
+            "gradients": false,
+            "link": false
+        },
+        "customClassName": true,
+        "defaultStylePicker": false,
+        "__experimentalLayout": false
+    },
+    "example" : {},
+    "script": "site-functionality",
+    "style": "file:../../build/style-index.css",
+    "editorScript": "file:../../build/index.js",
+	"editorStyle": "file:../../build/index.css"
+}
