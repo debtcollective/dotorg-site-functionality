@@ -92,23 +92,13 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-.components-panel .block-editor-link-control {
-  min-width: initial;
-}
-.components-panel .block-editor-link-control__search-input input {
-  margin: 0 !important;
-  width: 100%;
-}
-.components-panel .block-editor-link-control__search-item.is-current {
-  padding: 0;
-}
-.components-panel .block-editor-link-control__search-actions {
-  top: 0;
-  right: 5px;
-}
-.components-panel .block-editor-link-control__settings {
-  max-width: 100%;
-  padding-left: 0;
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-site-functionality-button-tout .tout__image {
+  position: initial !important;
 }
 /**
  * The following styles get applied inside the editor only.
