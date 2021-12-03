@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return string
  */
 function render( $attributes, $content, $block ) {
-    $wrapper_attributes = \get_block_wrapper_attributes( array( 'class' => 'tout' ) );
+    $wrapper_attributes = \get_block_wrapper_attributes();
 
     $output = '<div ' . $wrapper_attributes . '>';
 
