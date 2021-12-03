@@ -61,7 +61,6 @@ const ALLOWED_BLOCKS = [
 	'core/heading',
 	'core/paragraph',
 	'core/image',
-	'core/button',
 ];
 
 const NEW_TAB_REL = 'noreferrer noopener';
