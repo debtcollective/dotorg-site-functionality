@@ -19,6 +19,7 @@ import * as impactfulCallout from './impactfulCallout';
 import * as postmeta from './postmeta';
 import * as purchaseAgreements from './purchaseAgreements';
 import * as tout from './tout';
+import * as buttonTout from './buttonTout';
 import * as userQuery from './userQuery';
 import * as taxonomySelector from './taxonomySelector';
 
@@ -34,6 +35,7 @@ const blocks = [
 	postmeta,
 	purchaseAgreements,
 	tout,
+	buttonTout,
 	userQuery,
 	taxonomySelector,
 ];
