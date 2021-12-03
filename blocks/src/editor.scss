@@ -17,3 +17,9 @@ $color__grey-darker: #343434;
 $color__grey: #777;
 $color__white: #fff;
 $color__black: #000;
+
+.tout {
+    .tout__image {
+        position: static !important;
+    }
+}

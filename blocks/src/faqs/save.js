@@ -3,15 +3,15 @@ import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 import classNames from 'classnames';
 
 const Save = ( props ) => {
-	const { 
+	const {
 		attributes: { recordId, anchor },
 		className,
 		setAttributes,
-		clientId
+		clientId,
 	} = props;
 	const blockProps = useBlockProps.save( {
 		className: classNames( className, 'faq-list' ),
-		id: anchor ? anchor : recordId
+		id: anchor ? anchor : recordId,
 	} );
 	return (
 		<div { ...blockProps }>

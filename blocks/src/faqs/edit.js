@@ -21,16 +21,16 @@ const TEMPLATE = [
 const ALLOWED_BLOCKS = [ 'site-functionality/faq' ];
 
 const Edit = ( props ) => {
-	const { 
+	const {
 		attributes: { recordId, anchor },
 		className,
 		setAttributes,
-		clientId
+		clientId,
 	} = props;
 
 	setAttributes( {
-		recordId: clientId
-	} )
+		recordId: clientId,
+	} );
 
 	const blockProps = useBlockProps( {
 		className: classNames( className, 'faq-list' ),

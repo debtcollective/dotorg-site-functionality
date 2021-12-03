@@ -21423,11 +21423,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 if (document.getElementById('donation-widget')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_debtcollective_union_component__WEBPACK_IMPORTED_MODULE_2__["DonationWidget"]), document.querySelector("#donation-widget"));
+  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_debtcollective_union_component__WEBPACK_IMPORTED_MODULE_2__["DonationWidget"]), document.querySelector('#donation-widget'));
 }
 
 if (document.getElementById('membership-widget')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_debtcollective_union_component__WEBPACK_IMPORTED_MODULE_2__["MembershipWidget"]), document.querySelector("#membership-widget"));
+  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_debtcollective_union_component__WEBPACK_IMPORTED_MODULE_2__["MembershipWidget"]), document.querySelector('#membership-widget'));
 }
 
 /***/ }),
