@@ -2,28 +2,18 @@
     "apiVersion": 2,
     "version": "1.0.0",
     "textdomain": "site-functionality",
-    "name": "site-functionality/tout",
-    "title": "Tout",
+    "name": "site-functionality/button-tout",
+    "title": "Tout with Button",
     "category": "components",
     "collection": "site-functionality",
     "className": "tout",
-    "description": "Display a tout on page",
+    "description": "Display a tout with button on page",
     "keywords": [
         "callout",
-        "tout"
+        "tout",
+        "button"
     ],
-    "attributes": {
-        "url": {
-            "type": "string",
-            "default": ""
-        },
-        "linkTarget": {
-			"type": "string"
-		},
-		"rel": {
-			"type": "string"
-		}
-    },
+    "attributes": {},
     "supports": {
         "align": true,
         "anchor": true,
@@ -39,7 +29,7 @@
     },
     "example" : {
         "attributes": {
-            "className": "tout salmon"
+            "className": "tout button-tout salmon"
         },
         "innerBlocks": [
             {
@@ -65,10 +55,17 @@
                     "sizeSlug": "full",
                     "linkDestination": "none"
                 }
+            },
+            {
+                "name": "core/button",
+                "attributes": {
+                    "className": "tout__button btn",
+                    "placeholder": "Add Button Text..."
+                }
             }
         ]
     },
+    "script": "site-functionality",
     "style": "file:../../build/style-index.css",
-    "editorScript": "site-functionality",
 	"editorStyle": "file:../../build/index.css"
 }
