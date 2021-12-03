@@ -13,7 +13,7 @@ const TEMPLATE = [
 			className: 'impactful-callout__content',
 		},
 		[],
-	]
+	],
 ];
 
 const ALLOWED_BLOCKS = [ 'core/heading' ];

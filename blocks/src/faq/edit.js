@@ -12,7 +12,7 @@ const Edit = ( props ) => {
 		className,
 		setAttributes,
 		isActive,
-		context
+		context,
 	} = props;
 
 	const blockProps = useBlockProps( {
