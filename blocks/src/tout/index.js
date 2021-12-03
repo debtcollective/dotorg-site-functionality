@@ -182,6 +182,7 @@ const settings = {
 	icon,
 	edit: Edit,
 	save: Save,
+	variations
 };
 
 export { name, category, settings };
