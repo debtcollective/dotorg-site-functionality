@@ -107,7 +107,9 @@ const Edit = ( props ) => {
 
 	const { linkTarget, rel, url, tag } = attributes;
 
-	const blockProps = useBlockProps();
+	const blockProps = useBlockProps( {
+		className: classNames( className, 'tout', 'event-tout' ),
+	} );
 	const ref = useRef();
 	const [ isEditingURL, setIsEditingURL ] = useState( false );
 	const isURLSet = !! url;
