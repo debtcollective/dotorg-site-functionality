@@ -14,7 +14,10 @@
     ],
     "attributes": {
         "taxonomy": "event_tag",
-        "className": "tout event-tout"
+        "className": {
+            "type": "string",
+            "default": "tout event-tout"
+        }
     },
     "supports": {
         "align": true,
