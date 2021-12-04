@@ -15,6 +15,59 @@ const { name, category } = metadata;
 
 const variations = [
 	{
+		name: 'tout',
+		title: __( 'Tout', 'site-functionality' ),
+		category: 'components',
+		description: __( 'Display a tout on page.', 'site-functionality' ),
+		isDefault: true,
+		keywords: [
+			__( 'tout', 'site-functionality' ),
+			__( 'call to action', 'site-functionality' ),
+			__( 'callout', 'site-functionality' ),
+		],
+		attributes: {
+			className: 'tout link-tout',
+		},
+		example: {
+			attributes: {
+				className: 'tout link-tout',
+			},
+			innerBlocks: [
+				{
+					name: 'core/heading',
+					attributes: {
+						level: 2,
+						className: 'tout__heading',
+						content: __(
+							'Alone our debts are a burden.<br /> Together they make us <em>powerful</em>.',
+							'site-functionality'
+						),
+					},
+				},
+				{
+					name: 'core/paragraph',
+					attributes: {
+						className: 'tout__content',
+						content: __(
+							"We are a debtors' union fighting to cancel debts and defend millions of households. Join us to build a world where college is publicly funded, healthcare is universal and housing is guaranteed for all.",
+							'site-functionality'
+						),
+					},
+				},
+				{
+					name: 'core/image',
+					attributes: {
+						className: 'tout__image btn',
+						id: 134,
+						sizeSlug: 'full',
+						linkDestination: 'none',
+					},
+				},
+			],
+		},
+		scope: [ 'block', 'inserter', 'transform' ],
+	},
+	{
 		name: 'tout-jade',
 		title: __( 'Jade Tout', 'site-functionality' ),
 		category: 'components',
@@ -25,11 +78,11 @@ const variations = [
 			__( 'callout', 'site-functionality' ),
 		],
 		attributes: {
-			className: 'tout jade',
+			className: 'tout link-tout jade',
 		},
 		example: {
 			attributes: {
-				className: 'tout jade',
+				className: 'tout link-tout jade',
 			},
 			innerBlocks: [
 				{
@@ -80,11 +133,11 @@ const variations = [
 			__( 'callout', 'site-functionality' ),
 		],
 		attributes: {
-			className: 'tout canary',
+			className: 'tout link-tout canary',
 		},
 		example: {
 			attributes: {
-				className: 'tout canary',
+				className: 'tout link-tout canary',
 			},
 			innerBlocks: [
 				{
@@ -135,11 +188,11 @@ const variations = [
 			__( 'callout', 'site-functionality' ),
 		],
 		attributes: {
-			className: 'tout salmon',
+			className: 'tout link-tout salmon',
 		},
 		example: {
 			attributes: {
-				className: 'tout salmon',
+				className: 'tout link-tout salmon',
 			},
 			innerBlocks: [
 				{
