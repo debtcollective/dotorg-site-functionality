@@ -23,7 +23,7 @@
 			"type": "string"
         },
          "attributes": {
-            "className": "tout"
+            "className": "tout link-tout jade"
         }
     },
     "supports": {
