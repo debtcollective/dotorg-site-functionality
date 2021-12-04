@@ -64,7 +64,7 @@ const Edit = ( props ) => {
 	} = props;
 
 	const blockProps = useBlockProps( {
-		className: classNames( className, 'tout button-tout' ),
+		className: classNames( className, 'tout', 'button-tout' ),
 	} );
 
 	return (
