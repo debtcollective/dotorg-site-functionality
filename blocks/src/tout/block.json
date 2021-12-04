@@ -22,8 +22,9 @@
 		"rel": {
 			"type": "string"
         },
-         "attributes": {
-            "className": "tout link-tout jade"
+        "className": {
+            "type": "string",
+            "default": "tout link-tout"
         }
     },
     "supports": {
