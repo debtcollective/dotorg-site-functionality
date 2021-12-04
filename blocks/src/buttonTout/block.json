@@ -13,7 +13,10 @@
         "button"
     ],
     "attributes": {
-        "className": "tout button-tout"
+        "className": {
+            "type": "string",
+            "default": "tout button-tout"
+        }
     },
     "supports": {
         "align": true,
