@@ -8885,10 +8885,10 @@ module.exports = g;
 /*!***********************************!*\
   !*** ./src/buttonTout/block.json ***!
   \***********************************/
-/*! exports provided: apiVersion, version, textdomain, name, title, category, collection, className, description, keywords, attributes, supports, example, script, style, editorStyle, default */
+/*! exports provided: apiVersion, version, textdomain, name, title, category, collection, description, keywords, attributes, supports, example, script, style, editorStyle, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"apiVersion\":2,\"version\":\"1.0.0\",\"textdomain\":\"site-functionality\",\"name\":\"site-functionality/button-tout\",\"title\":\"Tout with Button\",\"category\":\"components\",\"collection\":\"site-functionality\",\"className\":\"tout\",\"description\":\"Display a tout with button on page\",\"keywords\":[\"callout\",\"tout\",\"button\"],\"attributes\":{},\"supports\":{\"align\":true,\"anchor\":true,\"color\":{\"background\":true,\"text\":true,\"gradients\":false,\"link\":false},\"customClassName\":true,\"defaultStylePicker\":false,\"__experimentalLayout\":false},\"example\":{\"attributes\":{\"className\":\"tout button-tout salmon\"},\"innerBlocks\":[{\"name\":\"core/heading\",\"attributes\":{\"level\":2,\"className\":\"tout__heading\",\"content\":\"Alone our debts are a burden.<br /> Together they make us <em>powerful</em>.\"}},{\"name\":\"core/paragraph\",\"attributes\":{\"className\":\"tout__content\",\"content\":\"We are a debtors' union fighting to cancel debts and defend millions of households. Join us to build a world where college is publicly funded, healthcare is universal and housing is guaranteed for all.\"}},{\"name\":\"core/image\",\"attributes\":{\"className\":\"tout__image\",\"id\":134,\"sizeSlug\":\"full\",\"linkDestination\":\"none\"}},{\"name\":\"core/button\",\"attributes\":{\"className\":\"tout__button btn\",\"placeholder\":\"Add Button Text...\"}}]},\"script\":\"site-functionality\",\"style\":\"file:../../build/style-index.css\",\"editorStyle\":\"file:../../build/index.css\"}");
+module.exports = JSON.parse("{\"apiVersion\":2,\"version\":\"1.0.0\",\"textdomain\":\"site-functionality\",\"name\":\"site-functionality/button-tout\",\"title\":\"Button Tout\",\"category\":\"components\",\"collection\":\"site-functionality\",\"description\":\"Display a tout with button on page\",\"keywords\":[\"callout\",\"tout\",\"button\"],\"attributes\":{\"className\":\"tout button-tout\"},\"supports\":{\"align\":true,\"anchor\":true,\"color\":{\"background\":true,\"text\":true,\"gradients\":false,\"link\":false},\"customClassName\":true,\"defaultStylePicker\":false,\"__experimentalLayout\":false},\"example\":{\"attributes\":{\"className\":\"tout button-tout salmon\"},\"innerBlocks\":[{\"name\":\"core/heading\",\"attributes\":{\"level\":2,\"className\":\"tout__heading\",\"content\":\"Alone our debts are a burden.<br /> Together they make us <em>powerful</em>.\"}},{\"name\":\"core/paragraph\",\"attributes\":{\"className\":\"tout__content\",\"content\":\"We are a debtors' union fighting to cancel debts and defend millions of households. Join us to build a world where college is publicly funded, healthcare is universal and housing is guaranteed for all.\"}},{\"name\":\"core/image\",\"attributes\":{\"className\":\"tout__image\",\"id\":134,\"sizeSlug\":\"full\",\"linkDestination\":\"none\"}},{\"name\":\"core/button\",\"attributes\":{\"className\":\"tout__button btn\",\"placeholder\":\"Add Button Text...\"}}]},\"script\":\"site-functionality\",\"style\":\"file:../../build/style-index.css\",\"editorStyle\":\"file:../../build/index.css\"}");
 
 /***/ }),
 
@@ -8942,7 +8942,7 @@ const Edit = props => {
     className
   } = props;
   const blockProps = Object(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["useBlockProps"])({
-    className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, 'tout button-tout')
+    className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, 'tout', 'button-tout')
   });
   return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", blockProps, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["InnerBlocks"], {
     allowedBlocks: ALLOWED_BLOCKS,
@@ -9036,12 +9036,58 @@ const {
   category
 } = _block_json__WEBPACK_IMPORTED_MODULE_1__;
 const variations = [{
+  name: 'button-tout',
+  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Button Tout', 'site-functionality'),
+  category: 'components',
+  description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Display a jade tout with button on page.', 'site-functionality'),
+  isDefault: true,
+  attributes: {
+    className: 'tout button-tout'
+  },
+  example: {
+    attributes: {
+      className: 'tout button-tout'
+    },
+    innerBlocks: [{
+      name: 'core/heading',
+      attributes: {
+        level: 2,
+        className: 'tout__heading',
+        content: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Alone our debts are a burden.<br /> Together they make us <em>powerful</em>.', 'site-functionality')
+      }
+    }, {
+      name: 'core/paragraph',
+      attributes: {
+        className: 'tout__content',
+        content: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])("We are a debtors' union fighting to cancel debts and defend millions of households. Join us to build a world where college is publicly funded, healthcare is universal and housing is guaranteed for all.", 'site-functionality')
+      }
+    }, {
+      name: 'core/image',
+      attributes: {
+        className: 'tout__image',
+        id: 134,
+        sizeSlug: 'full',
+        linkDestination: 'none'
+      }
+    }, {
+      name: 'core/button',
+      attributes: {
+        className: 'tout__button btn',
+        content: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])("Button", 'site-functionality')
+      }
+    }]
+  },
+  scope: ['block', 'inserter', 'transform']
+}, {
   name: 'button-tout-jade',
-  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Jade Tout with Button', 'site-functionality'),
+  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Jade Button Tout', 'site-functionality'),
   category: 'components',
   description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Display a jade tout with button on page.', 'site-functionality'),
   attributes: {
-    className: 'button-tout jade'
+    className: 'tout button-tout jade'
+  },
+  attributes: {
+    className: 'tout button-tout jade'
   },
   example: {
     innerBlocks: [{
@@ -9076,13 +9122,16 @@ const variations = [{
   scope: ['block', 'inserter', 'transform']
 }, {
   name: 'button-tout-salmon',
-  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Salmon Tout with Button', 'site-functionality'),
+  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Salmon Button Tout', 'site-functionality'),
   category: 'components',
   description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Display a salmon tout with button on page.', 'site-functionality'),
   attributes: {
-    className: 'button-tout salmon'
+    className: 'tout button-tout salmon'
   },
   example: {
+    attributes: {
+      className: 'tout button-tout salmon'
+    },
     innerBlocks: [{
       name: 'core/heading',
       attributes: {
@@ -9115,13 +9164,16 @@ const variations = [{
   scope: ['block', 'inserter', 'transform']
 }, {
   name: 'button-tout-canary',
-  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Canary Tout with Button', 'site-functionality'),
+  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Canary Button Tout', 'site-functionality'),
   category: 'components',
   description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Display a canary tout with button on page.', 'site-functionality'),
   attributes: {
-    className: 'button-tout canary'
+    className: 'tout button-tout canary'
   },
   example: {
+    attributes: {
+      className: 'tout button-tout canary'
+    },
     innerBlocks: [{
       name: 'core/heading',
       attributes: {
@@ -9578,14 +9630,28 @@ const settings = {
 
 /***/ }),
 
+/***/ "./src/editor.scss":
+/*!*************************!*\
+  !*** ./src/editor.scss ***!
+  \*************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/eventTout/block.json":
 /*!**********************************!*\
   !*** ./src/eventTout/block.json ***!
   \**********************************/
-/*! exports provided: apiVersion, version, textdomain, name, title, category, collection, className, description, keywords, attributes, supports, style, editorScript, editorStyle, default */
+/*! exports provided: apiVersion, version, textdomain, name, title, category, collection, description, keywords, attributes, supports, style, editorScript, editorStyle, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"apiVersion\":2,\"version\":\"1.0.0\",\"textdomain\":\"site-functionality\",\"name\":\"site-functionality/event-tout\",\"title\":\"Event Tout\",\"category\":\"components\",\"collection\":\"site-functionality\",\"className\":\"event-tout\",\"description\":\"Display a single event as a tout.\",\"keywords\":[\"callout\",\"tout\",\"event\"],\"attributes\":{\"taxonomy\":\"event_tag\"},\"supports\":{\"align\":true,\"anchor\":true,\"color\":{\"background\":true,\"text\":true,\"gradients\":false,\"link\":false},\"customClassName\":true,\"defaultStylePicker\":false,\"__experimentalLayout\":false},\"style\":\"file:../../build/style-index.css\",\"editorScript\":\"site-functionality\",\"editorStyle\":\"file:../../build/index.css\"}");
+module.exports = JSON.parse("{\"apiVersion\":2,\"version\":\"1.0.0\",\"textdomain\":\"site-functionality\",\"name\":\"site-functionality/event-tout\",\"title\":\"Event Tout\",\"category\":\"components\",\"collection\":\"site-functionality\",\"description\":\"Display a single event as a tout.\",\"keywords\":[\"callout\",\"tout\",\"event\"],\"attributes\":{\"taxonomy\":\"event_tag\",\"className\":\"tout event-tout\"},\"supports\":{\"align\":true,\"anchor\":true,\"color\":{\"background\":true,\"text\":true,\"gradients\":false,\"link\":false},\"customClassName\":true,\"defaultStylePicker\":false,\"__experimentalLayout\":false},\"style\":\"file:../../build/style-index.css\",\"editorScript\":\"site-functionality\",\"editorStyle\":\"file:../../build/index.css\"}");
 
 /***/ }),
 
@@ -9667,7 +9733,9 @@ const Edit = props => {
     url,
     tag
   } = attributes;
-  const blockProps = Object(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["useBlockProps"])();
+  const blockProps = Object(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["useBlockProps"])({
+    className: classnames__WEBPACK_IMPORTED_MODULE_6___default()(className, 'tout', 'event-tout')
+  });
   const ref = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
   const [isEditingURL, setIsEditingURL] = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
   const isURLSet = !!url;
@@ -10605,23 +10673,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _patterns__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./patterns */ "./src/patterns/index.js");
-/* harmony import */ var _patterns__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_patterns__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles */ "./src/styles/index.js");
-/* harmony import */ var _eventTout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./eventTout */ "./src/eventTout/index.js");
-/* harmony import */ var _dateTimeField__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./dateTimeField */ "./src/dateTimeField/index.js");
-/* harmony import */ var _donationWidget__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./donationWidget */ "./src/donationWidget/index.js");
-/* harmony import */ var _field__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./field */ "./src/field/index.js");
-/* harmony import */ var _membershipWidget__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./membershipWidget */ "./src/membershipWidget/index.js");
-/* harmony import */ var _faqs__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./faqs */ "./src/faqs/index.js");
-/* harmony import */ var _faq__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./faq */ "./src/faq/index.js");
-/* harmony import */ var _impactfulCallout__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./impactfulCallout */ "./src/impactfulCallout/index.js");
-/* harmony import */ var _postmeta__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./postmeta */ "./src/postmeta/index.js");
-/* harmony import */ var _purchaseAgreements__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./purchaseAgreements */ "./src/purchaseAgreements/index.js");
-/* harmony import */ var _tout__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./tout */ "./src/tout/index.js");
-/* harmony import */ var _buttonTout__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./buttonTout */ "./src/buttonTout/index.js");
-/* harmony import */ var _userQuery__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./userQuery */ "./src/userQuery/index.js");
-/* harmony import */ var _taxonomySelector__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./taxonomySelector */ "./src/taxonomySelector/index.js");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./editor.scss */ "./src/editor.scss");
+/* harmony import */ var _patterns__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./patterns */ "./src/patterns/index.js");
+/* harmony import */ var _patterns__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_patterns__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles */ "./src/styles/index.js");
+/* harmony import */ var _eventTout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./eventTout */ "./src/eventTout/index.js");
+/* harmony import */ var _dateTimeField__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./dateTimeField */ "./src/dateTimeField/index.js");
+/* harmony import */ var _donationWidget__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./donationWidget */ "./src/donationWidget/index.js");
+/* harmony import */ var _field__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./field */ "./src/field/index.js");
+/* harmony import */ var _membershipWidget__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./membershipWidget */ "./src/membershipWidget/index.js");
+/* harmony import */ var _faqs__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./faqs */ "./src/faqs/index.js");
+/* harmony import */ var _faq__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./faq */ "./src/faq/index.js");
+/* harmony import */ var _impactfulCallout__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./impactfulCallout */ "./src/impactfulCallout/index.js");
+/* harmony import */ var _postmeta__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./postmeta */ "./src/postmeta/index.js");
+/* harmony import */ var _purchaseAgreements__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./purchaseAgreements */ "./src/purchaseAgreements/index.js");
+/* harmony import */ var _tout__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./tout */ "./src/tout/index.js");
+/* harmony import */ var _buttonTout__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./buttonTout */ "./src/buttonTout/index.js");
+/* harmony import */ var _userQuery__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./userQuery */ "./src/userQuery/index.js");
+/* harmony import */ var _taxonomySelector__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./taxonomySelector */ "./src/taxonomySelector/index.js");
 
 
 Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockCollection"])('site-functionality', {
@@ -10643,7 +10712,8 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockCollection"]
 
 
 
-const blocks = [_eventTout__WEBPACK_IMPORTED_MODULE_4__, _dateTimeField__WEBPACK_IMPORTED_MODULE_5__, _donationWidget__WEBPACK_IMPORTED_MODULE_6__, _field__WEBPACK_IMPORTED_MODULE_7__, _membershipWidget__WEBPACK_IMPORTED_MODULE_8__, _faqs__WEBPACK_IMPORTED_MODULE_9__, _faq__WEBPACK_IMPORTED_MODULE_10__, _impactfulCallout__WEBPACK_IMPORTED_MODULE_11__, _postmeta__WEBPACK_IMPORTED_MODULE_12__, _purchaseAgreements__WEBPACK_IMPORTED_MODULE_13__, _tout__WEBPACK_IMPORTED_MODULE_14__, _buttonTout__WEBPACK_IMPORTED_MODULE_15__, _userQuery__WEBPACK_IMPORTED_MODULE_16__, _taxonomySelector__WEBPACK_IMPORTED_MODULE_17__];
+
+const blocks = [_eventTout__WEBPACK_IMPORTED_MODULE_5__, _dateTimeField__WEBPACK_IMPORTED_MODULE_6__, _donationWidget__WEBPACK_IMPORTED_MODULE_7__, _field__WEBPACK_IMPORTED_MODULE_8__, _membershipWidget__WEBPACK_IMPORTED_MODULE_9__, _faqs__WEBPACK_IMPORTED_MODULE_10__, _faq__WEBPACK_IMPORTED_MODULE_11__, _impactfulCallout__WEBPACK_IMPORTED_MODULE_12__, _postmeta__WEBPACK_IMPORTED_MODULE_13__, _purchaseAgreements__WEBPACK_IMPORTED_MODULE_14__, _tout__WEBPACK_IMPORTED_MODULE_15__, _buttonTout__WEBPACK_IMPORTED_MODULE_16__, _userQuery__WEBPACK_IMPORTED_MODULE_17__, _taxonomySelector__WEBPACK_IMPORTED_MODULE_18__];
 /**
  * Function to register an individual block.
  *
@@ -11843,10 +11913,10 @@ const Save = props => {
 /*!*****************************!*\
   !*** ./src/tout/block.json ***!
   \*****************************/
-/*! exports provided: apiVersion, version, textdomain, name, title, category, collection, className, description, keywords, attributes, supports, example, style, editorScript, editorStyle, default */
+/*! exports provided: apiVersion, version, textdomain, name, title, category, collection, description, keywords, attributes, supports, example, style, editorScript, editorStyle, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"apiVersion\":2,\"version\":\"1.0.0\",\"textdomain\":\"site-functionality\",\"name\":\"site-functionality/tout\",\"title\":\"Tout\",\"category\":\"components\",\"collection\":\"site-functionality\",\"className\":\"tout\",\"description\":\"Display a tout on page\",\"keywords\":[\"callout\",\"tout\"],\"attributes\":{\"url\":{\"type\":\"string\",\"default\":\"\"},\"linkTarget\":{\"type\":\"string\"},\"rel\":{\"type\":\"string\"}},\"supports\":{\"align\":true,\"anchor\":true,\"color\":{\"background\":true,\"text\":true,\"gradients\":false,\"link\":false},\"customClassName\":true,\"defaultStylePicker\":false,\"__experimentalLayout\":false},\"example\":{\"attributes\":{\"className\":\"tout salmon\"},\"innerBlocks\":[{\"name\":\"core/heading\",\"attributes\":{\"level\":2,\"className\":\"tout__heading\",\"content\":\"Alone our debts are a burden.<br /> Together they make us <em>powerful</em>.\"}},{\"name\":\"core/paragraph\",\"attributes\":{\"className\":\"tout__content\",\"content\":\"We are a debtors' union fighting to cancel debts and defend millions of households. Join us to build a world where college is publicly funded, healthcare is universal and housing is guaranteed for all.\"}},{\"name\":\"core/image\",\"attributes\":{\"className\":\"tout__image\",\"id\":134,\"sizeSlug\":\"full\",\"linkDestination\":\"none\"}}]},\"style\":\"file:../../build/style-index.css\",\"editorScript\":\"site-functionality\",\"editorStyle\":\"file:../../build/index.css\"}");
+module.exports = JSON.parse("{\"apiVersion\":2,\"version\":\"1.0.0\",\"textdomain\":\"site-functionality\",\"name\":\"site-functionality/tout\",\"title\":\"Tout\",\"category\":\"components\",\"collection\":\"site-functionality\",\"description\":\"Display a tout on page\",\"keywords\":[\"callout\",\"tout\"],\"attributes\":{\"url\":{\"type\":\"string\",\"default\":\"\"},\"linkTarget\":{\"type\":\"string\"},\"rel\":{\"type\":\"string\"},\"attributes\":{\"className\":\"tout link-tout jade\"}},\"supports\":{\"align\":true,\"anchor\":true,\"color\":{\"background\":true,\"text\":true,\"gradients\":false,\"link\":false},\"customClassName\":true,\"defaultStylePicker\":false,\"__experimentalLayout\":false},\"example\":{\"attributes\":{\"className\":\"tout salmon\"},\"innerBlocks\":[{\"name\":\"core/heading\",\"attributes\":{\"level\":2,\"className\":\"tout__heading\",\"content\":\"Alone our debts are a burden.<br /> Together they make us <em>powerful</em>.\"}},{\"name\":\"core/paragraph\",\"attributes\":{\"className\":\"tout__content\",\"content\":\"We are a debtors' union fighting to cancel debts and defend millions of households. Join us to build a world where college is publicly funded, healthcare is universal and housing is guaranteed for all.\"}},{\"name\":\"core/image\",\"attributes\":{\"className\":\"tout__image\",\"id\":134,\"sizeSlug\":\"full\",\"linkDestination\":\"none\"}}]},\"style\":\"file:../../build/style-index.css\",\"editorScript\":\"site-functionality\",\"editorStyle\":\"file:../../build/index.css\"}");
 
 /***/ }),
 
@@ -11912,7 +11982,7 @@ const Edit = props => {
     url
   } = attributes;
   const blockProps = Object(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["useBlockProps"])({
-    className: classnames__WEBPACK_IMPORTED_MODULE_6___default()(className, 'tout')
+    className: classnames__WEBPACK_IMPORTED_MODULE_6___default()(className, 'tout', 'link-tout')
   });
   const ref = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
   const [isEditingURL, setIsEditingURL] = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
@@ -12090,17 +12160,18 @@ const {
   category
 } = _block_json__WEBPACK_IMPORTED_MODULE_1__;
 const variations = [{
-  name: 'tout-jade',
-  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Jade Tout', 'site-functionality'),
+  name: 'tout',
+  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Tout', 'site-functionality'),
   category: 'components',
-  description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Display a jade tout on page.', 'site-functionality'),
+  description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Display a tout on page.', 'site-functionality'),
+  isDefault: true,
   keywords: [Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('tout', 'site-functionality'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('call to action', 'site-functionality'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('callout', 'site-functionality')],
   attributes: {
-    className: 'jade'
+    className: 'tout link-tout'
   },
   example: {
     attributes: {
-      className: 'jade'
+      className: 'tout link-tout'
     },
     innerBlocks: [{
       name: 'core/heading',
@@ -12118,7 +12189,44 @@ const variations = [{
     }, {
       name: 'core/image',
       attributes: {
-        className: 'tout__image',
+        className: 'tout__image btn',
+        id: 134,
+        sizeSlug: 'full',
+        linkDestination: 'none'
+      }
+    }]
+  },
+  scope: ['block', 'inserter', 'transform']
+}, {
+  name: 'tout-jade',
+  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Jade Tout', 'site-functionality'),
+  category: 'components',
+  description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Display a jade tout on page.', 'site-functionality'),
+  keywords: [Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('tout', 'site-functionality'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('call to action', 'site-functionality'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('callout', 'site-functionality')],
+  attributes: {
+    className: 'tout link-tout jade'
+  },
+  example: {
+    attributes: {
+      className: 'tout link-tout jade'
+    },
+    innerBlocks: [{
+      name: 'core/heading',
+      attributes: {
+        level: 2,
+        className: 'tout__heading',
+        content: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Alone our debts are a burden.<br /> Together they make us <em>powerful</em>.', 'site-functionality')
+      }
+    }, {
+      name: 'core/paragraph',
+      attributes: {
+        className: 'tout__content',
+        content: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])("We are a debtors' union fighting to cancel debts and defend millions of households. Join us to build a world where college is publicly funded, healthcare is universal and housing is guaranteed for all.", 'site-functionality')
+      }
+    }, {
+      name: 'core/image',
+      attributes: {
+        className: 'tout__image btn',
         id: 134,
         sizeSlug: 'full',
         linkDestination: 'none'
@@ -12133,11 +12241,11 @@ const variations = [{
   description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Display a canary tout on page.', 'site-functionality'),
   keywords: [Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('tout', 'site-functionality'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('call to action', 'site-functionality'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('callout', 'site-functionality')],
   attributes: {
-    className: 'canary'
+    className: 'tout link-tout canary'
   },
   example: {
     attributes: {
-      className: 'canary'
+      className: 'tout link-tout canary'
     },
     innerBlocks: [{
       name: 'core/heading',
@@ -12155,7 +12263,7 @@ const variations = [{
     }, {
       name: 'core/image',
       attributes: {
-        className: 'tout__image',
+        className: 'tout__image btn',
         id: 134,
         sizeSlug: 'full',
         linkDestination: 'none'
@@ -12170,11 +12278,11 @@ const variations = [{
   description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Display a salmon tout on page.', 'site-functionality'),
   keywords: [Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('tout', 'site-functionality'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('call to action', 'site-functionality'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('callout', 'site-functionality')],
   attributes: {
-    className: 'salmon'
+    className: 'tout link-tout salmon'
   },
   example: {
     attributes: {
-      className: 'salmon'
+      className: 'tout link-tout salmon'
     },
     innerBlocks: [{
       name: 'core/heading',
@@ -12192,7 +12300,7 @@ const variations = [{
     }, {
       name: 'core/image',
       attributes: {
-        className: 'tout__image',
+        className: 'tout__image btn',
         id: 134,
         sizeSlug: 'full',
         linkDestination: 'none'
