@@ -25,11 +25,11 @@ const variations = [
 			__( 'callout', 'site-functionality' ),
 		],
 		attributes: {
-			className: 'jade',
+			className: 'tout jade',
 		},
 		example: {
 			attributes: {
-				className: 'jade',
+				className: 'tout jade',
 			},
 			innerBlocks: [
 				{
@@ -56,7 +56,7 @@ const variations = [
 				{
 					name: 'core/image',
 					attributes: {
-						className: 'tout__image',
+						className: 'tout__image btn',
 						id: 134,
 						sizeSlug: 'full',
 						linkDestination: 'none',
@@ -80,11 +80,11 @@ const variations = [
 			__( 'callout', 'site-functionality' ),
 		],
 		attributes: {
-			className: 'canary',
+			className: 'tout canary',
 		},
 		example: {
 			attributes: {
-				className: 'canary',
+				className: 'tout canary',
 			},
 			innerBlocks: [
 				{
@@ -111,7 +111,7 @@ const variations = [
 				{
 					name: 'core/image',
 					attributes: {
-						className: 'tout__image',
+						className: 'tout__image btn',
 						id: 134,
 						sizeSlug: 'full',
 						linkDestination: 'none',
@@ -135,11 +135,11 @@ const variations = [
 			__( 'callout', 'site-functionality' ),
 		],
 		attributes: {
-			className: 'salmon',
+			className: 'tout salmon',
 		},
 		example: {
 			attributes: {
-				className: 'salmon',
+				className: 'tout salmon',
 			},
 			innerBlocks: [
 				{
@@ -166,7 +166,7 @@ const variations = [
 				{
 					name: 'core/image',
 					attributes: {
-						className: 'tout__image',
+						className: 'tout__image btn',
 						id: 134,
 						sizeSlug: 'full',
 						linkDestination: 'none',

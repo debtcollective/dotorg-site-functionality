@@ -20,7 +20,7 @@ const variations = [
 		category: 'components',
 		description: __( 'Display a jade tout with button on page.', 'site-functionality' ),
 		attributes: {
-			className: 'button-tout jade',
+			className: 'tout button-tout jade',
 		},
 		example: {
 			innerBlocks: [
@@ -74,7 +74,7 @@ const variations = [
 		category: 'components',
 		description: __( 'Display a salmon tout with button on page.', 'site-functionality' ),
 		attributes: {
-			className: 'button-tout salmon',
+			className: 'tout button-tout salmon',
 		},
 		example: {
 			innerBlocks: [
@@ -128,7 +128,7 @@ const variations = [
 		category: 'components',
 		description: __( 'Display a canary tout with button on page.', 'site-functionality' ),
 		attributes: {
-			className: 'button-tout canary',
+			className: 'tout button-tout canary',
 		},
 		example: {
 			innerBlocks: [

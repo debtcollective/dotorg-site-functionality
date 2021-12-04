@@ -6,14 +6,15 @@
     "title": "Tout with Button",
     "category": "components",
     "collection": "site-functionality",
-    "className": "tout",
     "description": "Display a tout with button on page",
     "keywords": [
         "callout",
         "tout",
         "button"
     ],
-    "attributes": {},
+    "attributes": {
+        "className": "tout button-tout"
+    },
     "supports": {
         "align": true,
         "anchor": true,
