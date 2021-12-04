@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return string
  */
 function render( $attributes, $content, $block ) {
-    if( ! $attributes['content'] ) {
+    if( ! isset( $attributes['content'] ) || ! $attributes['content'] ) {
         return '';
     }
 
