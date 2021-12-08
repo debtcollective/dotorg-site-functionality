@@ -22,6 +22,8 @@ import * as tout from './tout';
 import * as buttonTout from './buttonTout';
 import * as userQuery from './userQuery';
 import * as taxonomySelector from './taxonomySelector';
+import * as videoBanner from './videoBanner';
+
 
 const blocks = [
 	eventTout,
@@ -38,6 +40,7 @@ const blocks = [
 	buttonTout,
 	userQuery,
 	taxonomySelector,
+	videoBanner,
 ];
 
 /**

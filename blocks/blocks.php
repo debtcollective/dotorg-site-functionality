@@ -23,6 +23,8 @@ include_once( \plugin_dir_path( __FILE__ ) . 'src/tout/index.php' );
 include_once( \plugin_dir_path( __FILE__ ) . 'src/buttonTout/index.php' );
 include_once( \plugin_dir_path( __FILE__ ) . 'src/userQuery/index.php' );
 include_once( \plugin_dir_path( __FILE__ ) . 'src/taxonomySelector/index.php' );
+include_once( \plugin_dir_path( __FILE__ ) . 'src/videoBanner/index.php' );
+
 
 const TEMPLATE_PARAMS = [
 	'filter_prefix'             => 'site_functionality',

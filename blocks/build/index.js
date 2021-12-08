@@ -10691,6 +10691,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _buttonTout__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./buttonTout */ "./src/buttonTout/index.js");
 /* harmony import */ var _userQuery__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./userQuery */ "./src/userQuery/index.js");
 /* harmony import */ var _taxonomySelector__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./taxonomySelector */ "./src/taxonomySelector/index.js");
+/* harmony import */ var _videoBanner__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./videoBanner */ "./src/videoBanner/index.js");
 
 
 Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockCollection"])('site-functionality', {
@@ -10713,7 +10714,8 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockCollection"]
 
 
 
-const blocks = [_eventTout__WEBPACK_IMPORTED_MODULE_5__, _dateTimeField__WEBPACK_IMPORTED_MODULE_6__, _donationWidget__WEBPACK_IMPORTED_MODULE_7__, _field__WEBPACK_IMPORTED_MODULE_8__, _membershipWidget__WEBPACK_IMPORTED_MODULE_9__, _faqs__WEBPACK_IMPORTED_MODULE_10__, _faq__WEBPACK_IMPORTED_MODULE_11__, _impactfulCallout__WEBPACK_IMPORTED_MODULE_12__, _postmeta__WEBPACK_IMPORTED_MODULE_13__, _purchaseAgreements__WEBPACK_IMPORTED_MODULE_14__, _tout__WEBPACK_IMPORTED_MODULE_15__, _buttonTout__WEBPACK_IMPORTED_MODULE_16__, _userQuery__WEBPACK_IMPORTED_MODULE_17__, _taxonomySelector__WEBPACK_IMPORTED_MODULE_18__];
+
+const blocks = [_eventTout__WEBPACK_IMPORTED_MODULE_5__, _dateTimeField__WEBPACK_IMPORTED_MODULE_6__, _donationWidget__WEBPACK_IMPORTED_MODULE_7__, _field__WEBPACK_IMPORTED_MODULE_8__, _membershipWidget__WEBPACK_IMPORTED_MODULE_9__, _faqs__WEBPACK_IMPORTED_MODULE_10__, _faq__WEBPACK_IMPORTED_MODULE_11__, _impactfulCallout__WEBPACK_IMPORTED_MODULE_12__, _postmeta__WEBPACK_IMPORTED_MODULE_13__, _purchaseAgreements__WEBPACK_IMPORTED_MODULE_14__, _tout__WEBPACK_IMPORTED_MODULE_15__, _buttonTout__WEBPACK_IMPORTED_MODULE_16__, _userQuery__WEBPACK_IMPORTED_MODULE_17__, _taxonomySelector__WEBPACK_IMPORTED_MODULE_18__, _videoBanner__WEBPACK_IMPORTED_MODULE_19__];
 /**
  * Function to register an individual block.
  *
@@ -12704,6 +12706,162 @@ const settings = {
   edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"]
 };
 
+
+/***/ }),
+
+/***/ "./src/videoBanner/block.json":
+/*!************************************!*\
+  !*** ./src/videoBanner/block.json ***!
+  \************************************/
+/*! exports provided: apiVersion, version, textdomain, name, title, category, collection, className, description, keywords, supports, variations, example, style, editorScript, editorStyle, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"apiVersion\":2,\"version\":\"1.0.0\",\"textdomain\":\"site-functionality\",\"name\":\"site-functionality/video-banner\",\"title\":\"Video Banner\",\"category\":\"components\",\"collection\":\"site-functionality\",\"className\":\"video-banner\",\"description\":\"Display a banner with video and text\",\"keywords\":[\"callout\",\"banner\",\"tout\"],\"supports\":{\"align\":true,\"anchor\":true,\"color\":{\"background\":true,\"text\":false,\"gradients\":false,\"link\":false},\"customClassName\":true,\"defaultStylePicker\":false,\"__experimentalLayout\":false},\"variations\":[],\"example\":{},\"style\":\"file:../../build/style-index.css\",\"editorScript\":\"site-functionality\",\"editorStyle\":\"file:../../build/index.css\"}");
+
+/***/ }),
+
+/***/ "./src/videoBanner/edit.js":
+/*!*********************************!*\
+  !*** ./src/videoBanner/edit.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./src/videoBanner/editor.scss");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+const TEMPLATE = [['core/column', {
+  verticalAlignment: 'top',
+  className: 'video-banner__left'
+}, [['core/embed', {
+  type: "video",
+  providerNameSlug: "youtube",
+  responsive: true,
+  className: "video-banner__media"
+}]]], ['core/column', {
+  verticalAlignment: 'top',
+  className: 'video-banner__right'
+}, [['core/heading', {
+  level: 3,
+  className: 'video-banner__heading',
+  placeholder: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Add Heading...', 'site-functionality')
+}], ['core/paragraph', {
+  className: 'video-banner__content',
+  placeholder: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Add content...', 'site-functionality')
+}]]]];
+const ALLOWED_BLOCKS = ['core/columns', 'core/column', 'core/heading', 'core/paragraph'];
+
+const Edit = props => {
+  const {
+    attributes,
+    className
+  } = props;
+  const blockProps = Object(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["useBlockProps"])({
+    className: classnames__WEBPACK_IMPORTED_MODULE_4___default()(className, 'video-banner')
+  });
+  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", blockProps, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["InnerBlocks"], {
+    allowedBlocks: ALLOWED_BLOCKS,
+    template: TEMPLATE,
+    templateLock: "insert"
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Edit);
+
+/***/ }),
+
+/***/ "./src/videoBanner/editor.scss":
+/*!*************************************!*\
+  !*** ./src/videoBanner/editor.scss ***!
+  \*************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/videoBanner/index.js":
+/*!**********************************!*\
+  !*** ./src/videoBanner/index.js ***!
+  \**********************************/
+/*! exports provided: name, category, settings */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "name", function() { return name; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "category", function() { return category; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "settings", function() { return settings; });
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_icons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/icons */ "./node_modules/@wordpress/icons/build-module/index.js");
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./block.json */ "./src/videoBanner/block.json");
+var _block_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./block.json */ "./src/videoBanner/block.json", 1);
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit */ "./src/videoBanner/edit.js");
+/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./save */ "./src/videoBanner/save.js");
+/**
+ * WordPress dependencies
+ */
+
+
+/**
+ * Internal dependencies
+ */
+
+
+
+
+const {
+  name,
+  category
+} = _block_json__WEBPACK_IMPORTED_MODULE_2__;
+const settings = {
+  icon: _wordpress_icons__WEBPACK_IMPORTED_MODULE_1__["video"],
+  edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"],
+  save: _save__WEBPACK_IMPORTED_MODULE_4__["default"]
+};
+
+
+/***/ }),
+
+/***/ "./src/videoBanner/save.js":
+/*!*********************************!*\
+  !*** ./src/videoBanner/save.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+const Save = props => {
+  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["InnerBlocks"].Content, null); // return null;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Save);
 
 /***/ }),
 
