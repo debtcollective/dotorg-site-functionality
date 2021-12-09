@@ -101,11 +101,6 @@ function register_block_category( $block_categories, $editor_context ) {
 				'slug'  => 'components',
 				'title' => __( 'Components', 'site-functionality' ),
 				'icon'  => 'block-default',
-			],
-			[
-				'slug'  => 'fields',
-				'title' => __( 'Fields', 'site-functionality' ),
-				'icon'  => 'edit',
 			]
 		);
 	}

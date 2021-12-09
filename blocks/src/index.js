@@ -1,9 +1,9 @@
 import { registerBlockType, registerBlockCollection } from '@wordpress/blocks';
 import { __ } from '@wordpress/i18n';
 
-registerBlockCollection( 'site-functionality', {
-	title: __( 'Debt Collective', 'site-functionality' ),
-} );
+// registerBlockCollection( 'site-functionality', {
+// 	title: __( 'Debt Collective', 'site-functionality' ),
+// } );
 import './editor.scss';
 import './patterns';
 import './styles';
