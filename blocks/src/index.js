@@ -9,7 +9,7 @@ import './patterns';
 import './styles';
 
 import * as eventTout from './eventTout';
-import * as dateTimeField from './dateTimeField';
+// import * as dateTimeField from './dateTimeField';
 import * as donationWidget from './donationWidget';
 import * as field from './field';
 import * as membershipWidget from './membershipWidget';
@@ -27,7 +27,6 @@ import * as videoBanner from './videoBanner';
 
 const blocks = [
 	eventTout,
-	dateTimeField,
 	donationWidget,
 	field,
 	membershipWidget,

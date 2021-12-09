@@ -34,7 +34,7 @@ function render( $attributes, $content, $block ) {
 		'<div %1$s>%2$s%3$s%4$s</div>',
 		$wrapper_attributes,
 		( $is_linked ) ? '<a href="' . \esc_url( \get_term_link( $term, $taxonomy ) ) . '" rel="tag">' : '',
-		\esc_html( $term->name ),
+		( ! empty( $term ) && ! is_wp_error( $term ) ) ? \esc_html( $term->name ) : '',
 		( $is_linked ) ? '</a>' : ''
 	);
 }
