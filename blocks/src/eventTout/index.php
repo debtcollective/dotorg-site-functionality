@@ -24,22 +24,10 @@ function render( $attributes, $content, $block ) {
 
     $output = '<div ' . $wrapper_attributes . '>';
 
-    if( isset( $attributes['url'] ) && $attributes['url'] ) {
-        $output .= sprintf( '<a href="%1$s"%2$s%3$s class="tout__link">', 
-            \esc_url( $attributes['url'] ), 
-            ( isset( $attributes['linkTarget'] ) && $attributes['linkTarget'] ) ? ' target="' . $attributes['linkTarget'] . '"' : '',
-            ( isset( $attributes['linkTarget'] ) && $attributes['linkTarget'] ) ? ' rel="noreferrer noopener"' : ''
-        );
-    }
-
     foreach ( $block->inner_blocks as $inner_block ) { 
 
         $output .= $inner_block->render(); 
         
-    }
-
-    if( isset( $attributes['url'] ) && $attributes['url'] ) {
-        $output .= '</a>';
     }
 
     $output .= '</div>';
