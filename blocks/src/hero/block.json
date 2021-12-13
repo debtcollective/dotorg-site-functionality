@@ -4,7 +4,7 @@
     "textdomain": "site-functionality",
     "name": "site-functionality/hero",
     "title": "Hero",
-    "category": "components",
+    "category": "touts",
     "collection": "site-functionality",
     "icon": "slides",
     "className": "hero",
@@ -16,7 +16,7 @@
     "supports": {
         "align": true,
         "anchor": true,
-        "color": { 
+        "color": {
             "background": true,
             "text": true,
             "gradients": false,

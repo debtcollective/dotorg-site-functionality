@@ -5,7 +5,7 @@
     "name": "site-functionality/postmeta",
     "title": "Post Meta Field",
     "icon": "database",
-    "category": "components",
+    "category": "dc-misc",
     "className": "entry-meta",
     "parent": "core/query",
     "description": "Display a custom field for post.",
@@ -47,7 +47,7 @@
     "supports": {
         "align": true,
         "anchor": false,
-        "color": { 
+        "color": {
             "background": false,
             "text": false,
             "gradients": false,

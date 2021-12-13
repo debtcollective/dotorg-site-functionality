@@ -4,7 +4,7 @@
     "textdomain": "site-functionality",
     "name": "site-functionality/faqs",
     "title": "FAQs",
-    "category": "components",
+    "category": "dc-content",
     "collection": "site-functionality",
     "icon": "format-chat",
     "className": "faq-list",
@@ -16,7 +16,7 @@
     "supports": {
         "align": false,
         "anchor": true,
-        "color": { 
+        "color": {
             "background": true,
             "text": true,
             "gradients": false,
