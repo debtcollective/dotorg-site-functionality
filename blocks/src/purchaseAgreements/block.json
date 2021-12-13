@@ -3,7 +3,7 @@
 	"name": "site-functionality/purchase-agreements",
 	"title": "Purchase Agreements",
 	"icon": "bank",
-	"category": "components",
+	"category": "dc-misc",
 	"description": "Display a List of Purchase Agreements",
 	"textdomain": "site-functionality",
 	"attributes": {

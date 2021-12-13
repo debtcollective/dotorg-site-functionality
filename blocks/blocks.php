@@ -80,17 +80,27 @@ function register_block_category( $block_categories, $editor_context ) {
 			array(
 				'slug'  => 'touts',
 				'title' => __( 'Touts', 'site-functionality' ),
-				'icon'  => 'block-default',
+				'icon'  => 'announcement',
 			),
 			array(
-				'slug'  => 'content',
+				'slug'  => 'dc-content',
 				'title' => __( 'Content', 'site-functionality' ),
-				'icon'  => 'block-default',
+				'icon'  => 'paragraph-left',
 			),
 			array(
 				'slug'  => 'events',
 				'title' => __( 'Events', 'site-functionality' ),
-				'icon'  => 'block-default',
+				'icon'  => 'calendar',
+			),
+			array(
+				'slug'  => 'layout',
+				'title' => __( 'Layout', 'site-functionality' ),
+				'icon'  => 'rulers',
+			),
+			array(
+				'slug'  => 'misc',
+				'title' => __( 'Misc', 'site-functionality' ),
+				'icon'  => 'triangle-alert',
 			)
 		);
 	}

@@ -4,7 +4,7 @@
     "textdomain": "site-functionality",
     "name": "site-functionality/donation-widget",
     "title": "Donations",
-    "category": "components",
+    "category": "misc",
     "collection": "site-functionality",
     "icon": "money-alt",
     "className": "donation-widget",
@@ -17,7 +17,7 @@
     "supports": {
         "align": true,
         "anchor": true,
-        "color": { 
+        "color": {
             "background": false,
             "text": false,
             "gradients": false,
