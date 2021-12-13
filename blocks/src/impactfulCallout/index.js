@@ -13,10 +13,13 @@ import icon from './icon';
 
 const { name, category } = metadata;
 
+const variations = [];
+
 const settings = {
 	icon,
 	edit: Edit,
 	save: Save,
+	variations
 };
 
 export { name, category, settings };

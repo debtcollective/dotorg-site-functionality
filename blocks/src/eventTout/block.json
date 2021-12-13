@@ -4,7 +4,7 @@
     "textdomain": "site-functionality",
     "name": "site-functionality/event-tout",
     "title": "Event Tout",
-    "category": "components",
+    "category": "events",
     "collection": "site-functionality",
     "description": "Display a single event as a tout.",
     "keywords": [
@@ -22,7 +22,7 @@
     "supports": {
         "align": true,
         "anchor": true,
-        "color": { 
+        "color": {
             "background": true,
             "text": true,
             "gradients": false,
