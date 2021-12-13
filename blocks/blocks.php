@@ -38,15 +38,15 @@ function init() {
 
 	/**
 	 * Register custom pattern category
-	 * 
+	 *
 	 * @see https://developer.wordpress.org/reference/functions/register_block_pattern_category/
 	 */
 	if ( class_exists( '\WP_Block_Patterns_Registry' ) ) {
 
 		\register_block_pattern_category(
 			'touts',
-			[ 
-				'label' => \_x( 'Heroes and touts.', 'Block pattern category', 'site-functionality' ) 
+			[
+				'label' => \_x( 'Heroes and touts.', 'Block pattern category', 'site-functionality' )
 			]
 		);
 
@@ -65,7 +65,7 @@ add_action( 'init', __NAMESPACE__ . '\init' );
 
 /**
  * Register custom block category
- * 
+ *
  * @see https://developer.wordpress.org/block-editor/reference-guides/filters/block-filters/#managing-block-categories
  */
 function register_block_category( $block_categories, $editor_context ) {
@@ -75,6 +75,21 @@ function register_block_category( $block_categories, $editor_context ) {
 			array(
 				'slug'  => 'components',
 				'title' => __( 'Components', 'site-functionality' ),
+				'icon'  => 'block-default',
+			),
+			array(
+				'slug'  => 'touts',
+				'title' => __( 'Touts', 'site-functionality' ),
+				'icon'  => 'block-default',
+			),
+			array(
+				'slug'  => 'content',
+				'title' => __( 'Content', 'site-functionality' ),
+				'icon'  => 'block-default',
+			),
+			array(
+				'slug'  => 'events',
+				'title' => __( 'Events', 'site-functionality' ),
 				'icon'  => 'block-default',
 			)
 		);
