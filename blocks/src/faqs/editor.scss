@@ -20,31 +20,27 @@
 
  .wp-block-site-functionality-faqs {
     .answer {
-        max-height: initial !important;
-        height: auto !important;
-        overflow: initial !important;
+      max-height: initial !important;
+      height: auto !important;
+      overflow: initial !important;
 
-        .answer-wrapper {
-            opacity: initial !important;
-            top: 1rem  !important;
-        }
+      .answer-wrapper {
+        opacity: initial !important;
+        top: 1rem  !important;
+      }
     }
  }
 
 .faq {
-    &.is-selected {
-        background-color: $color__jade-dark !important;
-
-        .question,
-        .answer {
-            background-color: $color__jade;
-            padding-right: .25rem;
-            padding-left: .25rem;
-        }
-
-        .question {
-            padding-top: .25rem;
-            padding-bottom: .25rem;
-        }
+  h3,
+  p {
+    color: white !important;
+  }
+  &.is-selected {
+    background-color: $color__grey-light !important;
+    h3,
+    p {
+      color: $color__grey-dark !important;
     }
+  }
 }

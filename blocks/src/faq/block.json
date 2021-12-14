@@ -15,7 +15,7 @@
     "supports": {
         "align": false,
         "anchor": true,
-        "color": { 
+        "color": {
             "background": false,
             "text": false,
             "gradients": false,

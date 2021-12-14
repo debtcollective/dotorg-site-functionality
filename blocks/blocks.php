@@ -104,19 +104,15 @@ function register_block_category( $block_categories, $editor_context ) {
 					'icon'  => 'announcement',
 				),
 				array(
-					'slug'  => 'dc-content',
+					'slug'  => 'text',
 					'title' => __( 'Content', 'site-functionality' ),
 					'icon'  => 'paragraph-left',
 				),
 				array(
+					// make this the same 'slug' as action-network events
 					'slug'  => 'events',
 					'title' => __( 'Events', 'site-functionality' ),
 					'icon'  => 'calendar',
-				),
-				array(
-					'slug'  => 'layout',
-					'title' => __( 'Layout', 'site-functionality' ),
-					'icon'  => 'rulers',
 				),
 				array(
 					'slug'  => 'misc',

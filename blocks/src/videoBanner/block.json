@@ -4,7 +4,7 @@
     "textdomain": "site-functionality",
     "name": "site-functionality/video-banner",
     "title": "Video Banner",
-    "category": "components",
+    "category": "Content",
     "collection": "site-functionality",
     "className": "video-banner",
     "description": "Display a banner with video and text",
@@ -16,7 +16,7 @@
     "supports": {
         "align": true,
         "anchor": true,
-        "color": { 
+        "color": {
             "background": true,
             "text": false,
             "gradients": false,

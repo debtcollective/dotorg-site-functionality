@@ -4,7 +4,7 @@
     "textdomain": "site-functionality",
     "name": "site-functionality/tout",
     "title": "Tout",
-    "category": "components",
+    "category": "touts",
     "collection": "site-functionality",
     "description": "Display a tout on page",
     "keywords": [
@@ -30,7 +30,7 @@
     "supports": {
         "align": true,
         "anchor": true,
-        "color": { 
+        "color": {
             "background": true,
             "text": true,
             "gradients": false,
@@ -64,7 +64,7 @@
                 "name": "core/image",
                 "attributes": {
                     "className": "tout__image",
-                    "id": 134, 
+                    "id": 134,
                     "sizeSlug": "full",
                     "linkDestination": "none"
                 }
