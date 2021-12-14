@@ -4,7 +4,7 @@
     "textdomain": "site-functionality",
     "name": "site-functionality/membership-widget",
     "title": "Join Us",
-    "category": "components",
+    "category": "misc",
     "collection": "site-functionality",
     "icon": "buddicons-groups",
     "className": "membership-widget",
@@ -18,7 +18,7 @@
     "supports": {
         "align": true,
         "anchor": true,
-        "color": { 
+        "color": {
             "background": false,
             "text": false,
             "gradients": false,

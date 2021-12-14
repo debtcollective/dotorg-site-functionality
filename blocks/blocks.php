@@ -47,15 +47,15 @@ function init() {
 
 	/**
 	 * Register custom pattern category
-	 * 
+	 *
 	 * @see https://developer.wordpress.org/reference/functions/register_block_pattern_category/
 	 */
 	if ( class_exists( '\WP_Block_Patterns_Registry' ) ) {
 
 		\register_block_pattern_category(
 			'touts',
-			[ 
-				'label' => \_x( 'Heroes and touts.', 'Block pattern category', 'site-functionality' ) 
+			[
+				'label' => \_x( 'Heroes and touts.', 'Block pattern category', 'site-functionality' )
 			]
 		);
 
@@ -74,10 +74,10 @@ function init() {
 
 /**
  * Enqueue Build Script
- * 
+ *
  * When using @wordpress/create-block set-up with multiple blocks, we get "Block ... is already registered." error because each block's block.json file calls the build script again.
  * Remove build script reference in block.json files
- * 
+ *
  * @link https://wordpress.slack.com/archives/C02QB2JS7/p1629116113108600
  *
  * @return void
@@ -90,7 +90,7 @@ function enqueue_blocks_scripts() {
 
 /**
  * Register custom block category
- * 
+ *
  * @see https://developer.wordpress.org/block-editor/reference-guides/filters/block-filters/#managing-block-categories
  */
 function register_block_category( $block_categories, $editor_context ) {
@@ -98,14 +98,27 @@ function register_block_category( $block_categories, $editor_context ) {
 		array_push(
 			$block_categories,
 			[
-				'slug'  => 'components',
-				'title' => __( 'Components', 'site-functionality' ),
-				'icon'  => 'block-default',
-			],
-			[
-				'slug'  => 'fields',
-				'title' => __( 'Fields', 'site-functionality' ),
-				'icon'  => 'edit',
+				array(
+					'slug'  => 'touts',
+					'title' => __( 'Touts', 'site-functionality' ),
+					'icon'  => 'announcement',
+				),
+				array(
+					'slug'  => 'text',
+					'title' => __( 'Content', 'site-functionality' ),
+					'icon'  => 'paragraph-left',
+				),
+				array(
+					// make this the same 'slug' as action-network events
+					'slug'  => 'events',
+					'title' => __( 'Events', 'site-functionality' ),
+					'icon'  => 'calendar',
+				),
+				array(
+					'slug'  => 'misc',
+					'title' => __( 'Misc', 'site-functionality' ),
+					'icon'  => 'triangle-alert',
+				)
 			]
 		);
 	}

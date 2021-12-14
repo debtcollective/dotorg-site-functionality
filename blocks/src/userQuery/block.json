@@ -2,7 +2,7 @@
 	"apiVersion": 2,
 	"name": "site-functionality/user-query",
 	"title": "People Query",
-	"category": "components",
+	"category": "misc",
 	"description": "Display a List of People",
 	"textdomain": "site-functionality",
 	"attributes": {

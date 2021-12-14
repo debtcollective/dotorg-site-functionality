@@ -17,7 +17,7 @@ const variations = [
 	{
 		name: 'tout',
 		title: __( 'Tout', 'site-functionality' ),
-		category: 'components',
+		category: 'touts',
 		description: __( 'Display a tout on page.', 'site-functionality' ),
 		isDefault: true,
 		keywords: [
@@ -70,7 +70,7 @@ const variations = [
 	{
 		name: 'tout-jade',
 		title: __( 'Jade Tout', 'site-functionality' ),
-		category: 'components',
+		category: 'touts',
 		description: __( 'Display a jade tout on page.', 'site-functionality' ),
 		keywords: [
 			__( 'tout', 'site-functionality' ),
@@ -122,7 +122,7 @@ const variations = [
 	{
 		name: 'tout-canary',
 		title: __( 'Canary Tout', 'site-functionality' ),
-		category: 'components',
+		category: 'touts',
 		description: __(
 			'Display a canary tout on page.',
 			'site-functionality'
@@ -177,7 +177,7 @@ const variations = [
 	{
 		name: 'tout-salmon',
 		title: __( 'Salmon Tout', 'site-functionality' ),
-		category: 'components',
+		category: 'touts',
 		description: __(
 			'Display a salmon tout on page.',
 			'site-functionality'
