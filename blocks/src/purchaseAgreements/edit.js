@@ -20,10 +20,7 @@ import {
 	Spinner,
 	ToggleControl,
 } from '@wordpress/components';
-import { 
-	Fragment,
-	useEffect
-} from '@wordpress/element';
+import { Fragment, useEffect } from '@wordpress/element';
 import { useDispatch, useSelect } from '@wordpress/data';
 import { useInstanceId } from '@wordpress/compose';
 import { __experimentalGetSettings, dateI18n } from '@wordpress/date';
@@ -351,8 +348,8 @@ const Edit = ( props ) => {
 
 		const format = {
 			style: 'currency',
-			currency: 'USD'
-		}
+			currency: 'USD',
+		};
 
 		return (
 			<article className="purchase-agreement">
@@ -389,7 +386,12 @@ const Edit = ( props ) => {
 											'us-EN',
 											format
 										).format(
-											parseFloat( post.meta?.[ 'amount' ].replace( /,/g, '' ) )
+											parseFloat(
+												post.meta?.[ 'amount' ].replace(
+													/,/g,
+													''
+												)
+											)
 										) }
 									</span>
 								</dd>
@@ -404,11 +406,8 @@ const Edit = ( props ) => {
 									{ __( 'Type', 'site-functionality' ) }
 								</dt>
 								<dd className="purchase-agreement__type entry-value">
-
-									{ types.map( ( type, index ) =>
-										<Fragment
-											key={ type?.id }
-										>
+									{ types.map( ( type, index ) => (
+										<Fragment key={ type?.id }>
 											<a
 												href={ type?.link }
 												id={ type?.id }
@@ -417,11 +416,13 @@ const Edit = ( props ) => {
 													__html: type?.name,
 												} }
 											></a>
-											{ ( types.length - 1 !== index ) && (
-												<span className="separator">/</span>
+											{ types.length - 1 !== index && (
+												<span className="separator">
+													/
+												</span>
 											) }
 										</Fragment>
-									) }
+									) ) }
 								</dd>
 							</>
 						) }
@@ -436,7 +437,12 @@ const Edit = ( props ) => {
 								<dd className="purchase-agreement__number entry-value">
 									<span className="value">
 										{ new Intl.NumberFormat().format(
-											parseInt( post.meta?.[ 'number' ].replace( /,/g, '' ) )
+											parseInt(
+												post.meta?.[ 'number' ].replace(
+													/,/g,
+													''
+												)
+											)
 										) }
 									</span>
 								</dd>
@@ -445,7 +451,10 @@ const Edit = ( props ) => {
 						{ showAverage && post.meta?.[ 'average' ] && (
 							<>
 								<dt className="purchase-agreement__average entry-label">
-									{ __( 'Average Debt/Debtor', 'site-functionality' ) }
+									{ __(
+										'Average Debt/Debtor',
+										'site-functionality'
+									) }
 								</dt>
 								<dd className="purchase-agreement__average entry-value">
 									<span className="value">
@@ -453,7 +462,11 @@ const Edit = ( props ) => {
 											'us-EN',
 											format
 										).format(
-											parseFloat( post.meta?.[ 'average' ].replace( /,/g, '' ) )
+											parseFloat(
+												post.meta?.[
+													'average'
+												].replace( /,/g, '' )
+											)
 										) }
 									</span>
 								</dd>
@@ -462,7 +475,10 @@ const Edit = ( props ) => {
 						{ showPurchasePrice && post.meta?.[ 'price' ] && (
 							<>
 								<dt className="purchase-agreement__purchase-price entry-label">
-									{ __( 'Purchase Price', 'site-functionality' ) }
+									{ __(
+										'Purchase Price',
+										'site-functionality'
+									) }
 								</dt>
 								<dd className="purchase-agreement__purchase-price entry-value">
 									<span className="value">
@@ -470,7 +486,12 @@ const Edit = ( props ) => {
 											'us-EN',
 											format
 										).format(
-											parseFloat( post.meta?.[ 'price' ].replace( /,/g, '' ) )
+											parseFloat(
+												post.meta?.[ 'price' ].replace(
+													/,/g,
+													''
+												)
+											)
 										) }
 									</span>
 								</dd>

@@ -5,35 +5,3 @@
  */
 
  .wp-block-site-functionality-tout {}
-
- .components-panel {
-    .block-editor-link-control {
-        min-width: initial;
-
-        form {}
-
-        &__search-input {
-
-            input {
-                margin: 0 !important;
-                width: 100%;
-            }
-        }
-
-        &__search-item {
-            &.is-current {
-                padding: 0;
-            }
-        }
-
-        &__search-actions {
-            top: 0;
-            right: 5px;
-        }
-
-        &__settings {
-            max-width: 100%;
-            padding-left: 0;
-        }
-    }
- }

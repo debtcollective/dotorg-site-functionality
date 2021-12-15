@@ -4,7 +4,7 @@
     "textdomain": "site-functionality",
     "name": "site-functionality/faqs",
     "title": "FAQs",
-    "category": "dc-content",
+    "category": "Content",
     "collection": "site-functionality",
     "icon": "format-chat",
     "className": "faq-list",
@@ -43,8 +43,7 @@
     "variations": [],
     "styles": [],
     "example": {},
-    "script": "site-functionality",
     "style": "file:../../build/style-index.css",
-    "editorScript": "file:../../build/index.js",
+    "editorScript": "site-functionality",
 	"editorStyle": "file:../../build/index.css"
 }

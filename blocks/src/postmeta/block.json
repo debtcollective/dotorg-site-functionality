@@ -5,7 +5,7 @@
     "name": "site-functionality/postmeta",
     "title": "Post Meta Field",
     "icon": "database",
-    "category": "dc-misc",
+    "category": "design",
     "className": "entry-meta",
     "parent": "core/query",
     "description": "Display a custom field for post.",
@@ -60,8 +60,7 @@
     "variations": [],
     "styles": [],
     "example": {},
-    "script": "site-functionality",
     "style": "file:../../build/style-index.css",
-    "editorScript": "file:../../build/index.js",
+    "editorScript": "site-functionality",
 	"editorStyle": "file:../../build/index.css"
 }

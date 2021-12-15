@@ -4,7 +4,7 @@
     "textdomain": "site-functionality",
     "name": "site-functionality/hero",
     "title": "Hero",
-    "category": "touts",
+    "category": "Content",
     "collection": "site-functionality",
     "icon": "slides",
     "className": "hero",
@@ -54,8 +54,7 @@
             "url": "https://example.com/image.jpg"
         }
     },
-    "script": "site-functionality",
     "style": "file:../../build/style-index.css",
-    "editorScript": "file:../../build/index.js",
+    "editorScript": "site-functionality",
 	"editorStyle": "file:../../build/index.css"
 }

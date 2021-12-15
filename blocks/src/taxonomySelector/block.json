@@ -1,0 +1,51 @@
+{
+    "apiVersion": 2,
+    "version": "1.0.0",
+    "textdomain": "site-functionality",
+    "name": "site-functionality/taxonomy-term",
+    "title": "Term",
+    "category": "fields",
+    "collection": "site-functionality",
+    "className": "term",
+    "description": "Display a term",
+    "keywords": [
+        "taxonomy",
+        "term",
+        "field"
+    ],
+    "attributes": {
+        "taxonomy": {
+            "type": "string",
+            "default": "post_tag"
+        },
+        "label": {
+            "type": "string",
+            "default": "Tag"
+        },
+        "term": {
+            "type": "string",
+            "default": ""
+        },
+        "isLinked": {
+            "type": "boolean",
+            "default": false
+        }
+    },
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "color": { 
+            "background": true,
+            "text": true,
+            "gradients": false,
+            "link": false
+        },
+        "customClassName": true,
+        "defaultStylePicker": false,
+        "__experimentalLayout": false
+    },
+    "example" : {},
+    "style": "file:../../build/style-index.css",
+    "editorScript": "site-functionality",
+	"editorStyle": "file:../../build/index.css"
+}

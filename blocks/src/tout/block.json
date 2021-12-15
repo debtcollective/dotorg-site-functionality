@@ -6,7 +6,6 @@
     "title": "Tout",
     "category": "touts",
     "collection": "site-functionality",
-    "className": "tout",
     "description": "Display a tout on page",
     "keywords": [
         "callout",
@@ -22,7 +21,11 @@
 		},
 		"rel": {
 			"type": "string"
-		}
+        },
+        "className": {
+            "type": "string",
+            "default": "tout link-tout"
+        }
     },
     "supports": {
         "align": true,
@@ -68,8 +71,7 @@
             }
         ]
     },
-    "script": "site-functionality",
     "style": "file:../../build/style-index.css",
-    "editorScript": "file:../../build/index.js",
+    "editorScript": "site-functionality",
 	"editorStyle": "file:../../build/index.css"
 }

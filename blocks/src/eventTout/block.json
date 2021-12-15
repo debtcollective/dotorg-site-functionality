@@ -1,0 +1,38 @@
+{
+    "apiVersion": 2,
+    "version": "1.0.0",
+    "textdomain": "site-functionality",
+    "name": "site-functionality/event-tout",
+    "title": "Event Tout",
+    "category": "events",
+    "collection": "site-functionality",
+    "description": "Display a single event as a tout.",
+    "keywords": [
+        "callout",
+        "tout",
+        "event"
+    ],
+    "attributes": {
+        "taxonomy": "event_tag",
+        "className": {
+            "type": "string",
+            "default": "tout event-tout"
+        }
+    },
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "color": {
+            "background": true,
+            "text": true,
+            "gradients": false,
+            "link": false
+        },
+        "customClassName": true,
+        "defaultStylePicker": false,
+        "__experimentalLayout": false
+    },
+    "style": "file:../../build/style-index.css",
+    "editorScript": "site-functionality",
+	"editorStyle": "file:../../build/index.css"
+}

@@ -15,7 +15,7 @@
     "supports": {
         "align": false,
         "anchor": true,
-        "color": { 
+        "color": {
             "background": false,
             "text": false,
             "gradients": false,
@@ -40,8 +40,7 @@
     "variations": [],
     "styles": [],
     "example": {},
-    "script": "site-functionality",
     "style": "file:../../build/style-index.css",
-    "editorScript": "file:../../build/index.js",
+    "editorScript": "site-functionality",
 	"editorStyle": "file:../../build/index.css"
 }

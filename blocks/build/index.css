@@ -1,6 +1,12 @@
+.tout .tout__image{position:static !important}
+
 .wp-block-site-functionality-donation-widget{background-color:#ebe7dc;padding:2rem;margin:2px}
+
 .wp-block-site-functionality-membership-widget{background-color:#ebe7dc;padding:2rem;margin:2px}
-.wp-block-site-functionality-faqs .answer{max-height:initial !important;height:auto !important;overflow:initial !important}.wp-block-site-functionality-faqs .answer .answer-wrapper{opacity:initial !important;top:1rem !important}.faq.is-selected{background-color:#1e9981 !important}.faq.is-selected .question,.faq.is-selected .answer{background-color:#20a78c;padding-right:.25rem;padding-left:.25rem}.faq.is-selected .question{padding-top:.25rem;padding-bottom:.25rem}
+.wp-block-site-functionality-faqs .answer{max-height:initial !important;height:auto !important;overflow:initial !important}.wp-block-site-functionality-faqs .answer .answer-wrapper{opacity:initial !important;top:1rem !important}.faq h3,.faq p{color:#fff !important}.faq.is-selected{background-color:#ebe7dc !important}.faq.is-selected h3,.faq.is-selected p{color:#434343 !important}
 .wp-block-site-functionality-purchase-agreements{display:-ms-grid;display:grid;-ms-grid-columns:1fr 1fr 1fr;grid-template-columns:1fr 1fr 1fr;gap:1rem}.wp-block-site-functionality-purchase-agreements .purchase-agreement{width:auto !important}.wp-block-site-functionality-purchase-agreements dl{display:flex;flex-wrap:wrap}.wp-block-site-functionality-purchase-agreements dl dt{width:calc( 100% / 3 );margin-right:.125rem}.wp-block-site-functionality-purchase-agreements dl dd{width:calc( ( 100% / 1.5 ) - .125rem )}
-.components-panel .block-editor-link-control{min-width:initial}.components-panel .block-editor-link-control__search-input input{margin:0 !important;width:100%}.components-panel .block-editor-link-control__search-item.is-current{padding:0}.components-panel .block-editor-link-control__search-actions{top:0;right:5px}.components-panel .block-editor-link-control__settings{max-width:100%;padding-left:0}
+
+.wp-block-site-functionality-button-tout .tout__image{position:initial !important}
 @media screen and (min-width: 720px){.wp-block-site-functionality-user-query{display:-ms-grid;display:grid;-ms-grid-columns:1fr 1fr 1fr;grid-template-columns:1fr 1fr 1fr;gap:1rem}}
+
+.wp-block-site-functionality-video-banner>.block-editor-inner-blocks>.block-editor-block-list__layout{display:-ms-grid;display:grid;-ms-grid-columns:1fr 1fr;grid-template-columns:1fr 1fr}

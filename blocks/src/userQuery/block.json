@@ -1,7 +1,7 @@
 {
 	"apiVersion": 2,
 	"name": "site-functionality/user-query",
-	"title": "List of People",
+	"title": "People Query",
 	"category": "misc",
 	"description": "Display a List of People",
 	"textdomain": "site-functionality",
@@ -67,8 +67,7 @@
 			"__experimentalFontWeight": false
 		}
 	},
-	"script": "site-functionality",
 	"style": "file:../../build/style-index.css",
-	"editorScript": "file:../../build/index.js",
+	"editorScript": "site-functionality",
 	"editorStyle": "file:../../build/index.css"
 }

@@ -4,7 +4,7 @@
     "textdomain": "site-functionality",
     "name": "site-functionality/membership-widget",
     "title": "Join Us",
-    "category": "dc-misc",
+    "category": "misc",
     "collection": "site-functionality",
     "icon": "buddicons-groups",
     "className": "membership-widget",
@@ -32,6 +32,6 @@
     "styles": [],
     "example": {},
     "style": "file:../../build/style-index.css",
-    "editorScript": "file:../../build/index.js",
+    "editorScript": "site-functionality",
 	"editorStyle": "file:../../build/index.css"
 }
