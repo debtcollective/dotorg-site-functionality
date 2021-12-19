@@ -353,167 +353,169 @@ const Edit = ( props ) => {
 
 		return (
 			<article className="purchase-agreement">
-				{ showDate && (
-					<div className="purchase-agreement__date entry-meta">
-						<time dateTime={ post.date }>
-							{ dateI18n( dateFormat, post.date ) }
-						</time>
-					</div>
-				) }
-				{ showTitle && post.meta?.[ 'show_title' ] && post.title && (
-					<h3
-						className="purchase-agreement__title entry-title"
-						dangerouslySetInnerHTML={ {
-							__html: post?.title?.rendered,
-						} }
-					></h3>
-				) }
-				{ showSummary && post?.content?.rendered && (
-					<div
-						className="purchase-agreement__summary entry-content"
-						dangerouslySetInnerHTML={ {
-							__html: post?.content?.rendered,
-						} }
-					/>
-				) }
-				<div className="purchase-agreement__details">
-					<dl>
-						{ showAmount && post.meta?.[ 'amount' ] && (
-							<>
-								<dd className="purchase-agreement__amount entry-value">
-									<span className="value">
-										{ new Intl.NumberFormat(
-											'us-EN',
-											format
-										).format(
-											parseFloat(
-												post.meta?.[ 'amount' ].replace(
-													/,/g,
-													''
+				<div class="wrapper">
+					{ showDate && (
+						<div className="purchase-agreement__date entry-meta">
+							<time dateTime={ post.date }>
+								{ dateI18n( dateFormat, post.date ) }
+							</time>
+						</div>
+					) }
+					{ showTitle && post.meta?.[ 'show_title' ] && post.title && (
+						<h3
+							className="purchase-agreement__title entry-title"
+							dangerouslySetInnerHTML={ {
+								__html: post?.title?.rendered,
+							} }
+						></h3>
+					) }
+					{ showSummary && post?.content?.rendered && (
+						<div
+							className="purchase-agreement__summary entry-content"
+							dangerouslySetInnerHTML={ {
+								__html: post?.content?.rendered,
+							} }
+						/>
+					) }
+					<div className="purchase-agreement__details">
+						<dl>
+							{ showAmount && post.meta?.[ 'amount' ] && (
+								<>
+									<dd className="purchase-agreement__amount entry-value">
+										<span className="value">
+											{ new Intl.NumberFormat(
+												'us-EN',
+												format
+											).format(
+												parseFloat(
+													post.meta?.[ 'amount' ].replace(
+														/,/g,
+														''
+													)
 												)
-											)
-										) }
-									</span>
-								</dd>
-								<dt className="purchase-agreement__amount entry-label">
-									{ __( 'Abolished', 'site-functionality' ) }
-								</dt>
-							</>
-						) }
-						{ showTypes && purchaseTypes && types && (
-							<>
-								<dt className="purchase-agreement__type entry-label">
-									{ __( 'Type', 'site-functionality' ) }
-								</dt>
-								<dd className="purchase-agreement__type entry-value">
-									{ types.map( ( type, index ) => (
-										<Fragment key={ type?.id }>
-											<a
-												href={ type?.link }
-												id={ type?.id }
-												rel="tag"
-												dangerouslySetInnerHTML={ {
-													__html: type?.name,
-												} }
-											></a>
-											{ types.length - 1 !== index && (
-												<span className="separator">
-													/
-												</span>
 											) }
-										</Fragment>
-									) ) }
-								</dd>
-							</>
-						) }
-						{ showNumber && post.meta?.[ 'number' ] && (
-							<>
-								<dt className="purchase-agreement__number entry-label">
-									{ __(
-										'Number of Debtors',
-										'site-functionality'
-									) }
-								</dt>
-								<dd className="purchase-agreement__number entry-value">
-									<span className="value">
-										{ new Intl.NumberFormat().format(
-											parseInt(
-												post.meta?.[ 'number' ].replace(
-													/,/g,
-													''
+										</span>
+									</dd>
+									<dt className="purchase-agreement__amount entry-label">
+										{ __( 'Abolished', 'site-functionality' ) }
+									</dt>
+								</>
+							) }
+							{ showTypes && purchaseTypes && types && (
+								<>
+									<dt className="purchase-agreement__type entry-label">
+										{ __( 'Type', 'site-functionality' ) }
+									</dt>
+									<dd className="purchase-agreement__type entry-value">
+										{ types.map( ( type, index ) => (
+											<Fragment key={ type?.id }>
+												<a
+													href={ type?.link }
+													id={ type?.id }
+													rel="tag"
+													dangerouslySetInnerHTML={ {
+														__html: type?.name,
+													} }
+												></a>
+												{ types.length - 1 !== index && (
+													<span className="separator">
+														/
+													</span>
+												) }
+											</Fragment>
+										) ) }
+									</dd>
+								</>
+							) }
+							{ showNumber && post.meta?.[ 'number' ] && (
+								<>
+									<dt className="purchase-agreement__number entry-label">
+										{ __(
+											'Number of Debtors',
+											'site-functionality'
+										) }
+									</dt>
+									<dd className="purchase-agreement__number entry-value">
+										<span className="value">
+											{ new Intl.NumberFormat().format(
+												parseInt(
+													post.meta?.[ 'number' ].replace(
+														/,/g,
+														''
+													)
 												)
-											)
+											) }
+										</span>
+									</dd>
+								</>
+							) }
+							{ showAverage && post.meta?.[ 'average' ] && (
+								<>
+									<dt className="purchase-agreement__average entry-label">
+										{ __(
+											'Average Debt/Debtor',
+											'site-functionality'
 										) }
-									</span>
-								</dd>
-							</>
-						) }
-						{ showAverage && post.meta?.[ 'average' ] && (
-							<>
-								<dt className="purchase-agreement__average entry-label">
-									{ __(
-										'Average Debt/Debtor',
-										'site-functionality'
-									) }
-								</dt>
-								<dd className="purchase-agreement__average entry-value">
-									<span className="value">
-										{ new Intl.NumberFormat(
-											'us-EN',
-											format
-										).format(
-											parseFloat(
-												post.meta?.[
-													'average'
-												].replace( /,/g, '' )
-											)
-										) }
-									</span>
-								</dd>
-							</>
-						) }
-						{ showPurchasePrice && post.meta?.[ 'price' ] && (
-							<>
-								<dt className="purchase-agreement__purchase-price entry-label">
-									{ __(
-										'Purchase Price',
-										'site-functionality'
-									) }
-								</dt>
-								<dd className="purchase-agreement__purchase-price entry-value">
-									<span className="value">
-										{ new Intl.NumberFormat(
-											'us-EN',
-											format
-										).format(
-											parseFloat(
-												post.meta?.[ 'price' ].replace(
-													/,/g,
-													''
+									</dt>
+									<dd className="purchase-agreement__average entry-value">
+										<span className="value">
+											{ new Intl.NumberFormat(
+												'us-EN',
+												format
+											).format(
+												parseFloat(
+													post.meta?.[
+														'average'
+													].replace( /,/g, '' )
 												)
-											)
+											) }
+										</span>
+									</dd>
+								</>
+							) }
+							{ showPurchasePrice && post.meta?.[ 'price' ] && (
+								<>
+									<dt className="purchase-agreement__purchase-price entry-label">
+										{ __(
+											'Purchase Price',
+											'site-functionality'
 										) }
-									</span>
-								</dd>
-							</>
-						) }
-					</dl>
+									</dt>
+									<dd className="purchase-agreement__purchase-price entry-value">
+										<span className="value">
+											{ new Intl.NumberFormat(
+												'us-EN',
+												format
+											).format(
+												parseFloat(
+													post.meta?.[ 'price' ].replace(
+														/,/g,
+														''
+													)
+												)
+											) }
+										</span>
+									</dd>
+								</>
+							) }
+						</dl>
+					</div>
+					{ media && (
+						<a
+							href={ media.source_url }
+							aria-label={ __(
+								'Download Purchase Agreement as PDF',
+								'site-functionality'
+							) }
+							target="_blank"
+						>
+							{ __(
+								'Download Purchase Agreement as PDF',
+								'site-functionality'
+							) }
+						</a>
+					) }
 				</div>
-				{ media && (
-					<a
-						href={ media.source_url }
-						aria-label={ __(
-							'Download Purchase Agreement as PDF',
-							'site-functionality'
-						) }
-						target="_blank"
-					>
-						{ __(
-							'Download Purchase Agreement as PDF',
-							'site-functionality'
-						) }
-					</a>
-				) }
 			</article>
 		);
 	};
