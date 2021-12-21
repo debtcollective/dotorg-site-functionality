@@ -16,7 +16,7 @@ const TEMPLATE = [
 	],
 ];
 
-const ALLOWED_BLOCKS = [ 'core/heading' ];
+const ALLOWED_BLOCKS = [ 'core/heading', 'core/paragraph', 'core/link', 'core/buttons' ];
 
 const Edit = ( props ) => {
 	const { attributes, className } = props;
@@ -30,7 +30,6 @@ const Edit = ( props ) => {
 			<InnerBlocks
 				allowedBlocks={ ALLOWED_BLOCKS }
 				template={ TEMPLATE }
-				templateLock="insert"
 			/>
 		</div>
 	);
