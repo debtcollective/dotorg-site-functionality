@@ -43,13 +43,8 @@
       color: $color__grey-dark !important;
     }
   }
-}
 
-.components-toolbar-group {
-  .components-toolbar-button[aria-label="Heading 1"] {
-    display: none !important;
-    position: fixed;
-    left: 100vw;
-    top: 100vh;
+  a {
+    color: $color__jade-dark !important;
   }
 }
