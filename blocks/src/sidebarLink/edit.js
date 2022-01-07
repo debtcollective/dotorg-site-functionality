@@ -107,7 +107,7 @@ const Edit = ( props ) => {
 	}, [ isSelected ] );
 
 	return (
-		<div { ...blockProps }>
+		<>
 			<BlockControls group="block">
 				{ ! isURLSet && (
 					<ToolbarButton
@@ -158,12 +158,14 @@ const Edit = ( props ) => {
 					/>
 				</Popover>
 			) }
-			<InnerBlocks
-				allowedBlocks={ ALLOWED_BLOCKS }
-				template={ TEMPLATE }
-				templateLock="all"
-			/>
-		</div>
+			<div { ...blockProps }>
+				<InnerBlocks
+					allowedBlocks={ ALLOWED_BLOCKS }
+					template={ TEMPLATE }
+					templateLock="all"
+				/>
+			</div>
+		</>
 	);
 };
 
