@@ -1,0 +1,72 @@
+{
+    "apiVersion": 2,
+    "version": "1.0.0",
+    "textdomain": "site-functionality",
+    "name": "site-functionality/sidebar-link",
+    "title": "Link",
+    "icon": "admin-links",
+    "category": "widgets",
+    "description": "Add a link to sidebar links widget.",
+    "parent": [
+        "site-functionality/sidebar-links"
+    ],
+    "keywords": [
+        "link",
+        "widget",
+        "sidebar"
+    ],
+    "attributes": {
+        "url": {
+            "type": "string",
+            "default": ""
+        },
+        "linkTarget": {
+			"type": "string"
+		},
+		"rel": {
+			"type": "string"
+        },
+        "className": {
+            "type": "string",
+            "default": "sidebar-link"
+        }
+    },
+    "supports": {
+        "align": true,
+        "anchor": false,
+        "color": {
+            "background": false,
+            "text": true,
+            "gradients": false,
+            "link": false
+        },
+        "customClassName": true,
+        "defaultStylePicker": false,
+        "__experimentalLayout": false
+    },
+    "example" : {
+        "attributes": {
+            "className": "sidebar-link"
+        },
+        "innerBlocks": [
+            {
+                "name": "core/heading",
+                "attributes": {
+                    "level": 4,
+                    "className": "sidebar-link__title",
+                    "content": "Overview"
+                }
+            },
+            {
+                "name": "core/paragraph",
+                "attributes": {
+                    "className": "sidebar-link__content",
+                    "content": "Some inviting text to intice users"
+                }
+            }
+        ]
+    },
+    "style": "file:../../build/style-index.css",
+    "editorScript": "site-functionality",
+	"editorStyle": "file:../../build/index.css"
+}
