@@ -14,7 +14,8 @@ require_once \plugin_dir_path( __FILE__ ) . 'src/membershipWidget/index.php';
 require_once \plugin_dir_path( __FILE__ ) . 'src/donationWidget/index.php';
 require_once \plugin_dir_path( __FILE__ ) . 'src/faqs/index.php';
 require_once \plugin_dir_path( __FILE__ ) . 'src/faq/index.php';
-
+require_once \plugin_dir_path( __FILE__ ) . 'src/sidebarLinks/index.php';
+require_once \plugin_dir_path( __FILE__ ) . 'src/sidebarLink/index.php';
 require_once \plugin_dir_path( __FILE__ ) . 'src/field/index.php';
 require_once \plugin_dir_path( __FILE__ ) . 'src/impactfulCallout/index.php';
 require_once \plugin_dir_path( __FILE__ ) . 'src/postmeta/index.php';

@@ -1,0 +1,49 @@
+{
+    "apiVersion": 2,
+    "version": "1.0.0",
+    "textdomain": "site-functionality",
+    "name": "site-functionality/sidebar-links",
+    "title": "Sidebar Links",
+    "category": "widgets",
+    "icon": "admin-links",
+    "className": "sidebar-links",
+    "description": "Display links in the sidebar",
+    "keywords": [
+        "links",
+        "widget",
+        "sidebar"
+    ],
+    "supports": {
+        "align": false,
+        "anchor": true,
+        "color": {
+            "background": true,
+            "text": true,
+            "gradients": false,
+            "link": false
+        },
+        "customClassName": true,
+        "defaultStylePicker": false,
+        "__experimentalLayout": false
+    },
+    "attributes": {
+        "recordId": {
+            "type": "string",
+            "context": true
+        },
+        "anchor": {
+            "type": "string",
+            "context": true
+        }
+    },
+    "providesContext": {
+        "faqs/recordId": "recordId",
+        "faqs/anchor": "anchor"
+    },
+    "variations": [],
+    "styles": [],
+    "example": {},
+    "style": "file:../../build/style-index.css",
+    "editorScript": "site-functionality",
+	"editorStyle": "file:../../build/index.css"
+}
