@@ -21,11 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return string
  */
 function render( $attributes, $content, $block ) {
-	$wrapper_attributes = \get_block_wrapper_attributes(
-		array(
-			'class' => 'sidebar-links',
-		)
-	);
+	$wrapper_attributes = \get_block_wrapper_attributes();
 
 	$return = '<ul ' . $wrapper_attributes . '>';
 
