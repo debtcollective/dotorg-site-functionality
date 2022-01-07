@@ -4,7 +4,7 @@
     "textdomain": "site-functionality",
     "name": "site-functionality/field",
     "title": "Field",
-    "category": "fields",
+    "category": "misc",
     "collection": "site-functionality",
     "className": "text",
     "description": "Display a text field",

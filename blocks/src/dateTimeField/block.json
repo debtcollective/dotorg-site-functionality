@@ -4,7 +4,7 @@
     "textdomain": "site-functionality",
     "name": "site-functionality/date-time",
     "title": "Date",
-    "category": "fields",
+    "category": "misc",
     "collection": "site-functionality",
     "className": "datetime",
     "icon": "calendar-alt",
