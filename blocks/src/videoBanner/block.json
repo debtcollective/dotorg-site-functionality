@@ -4,7 +4,7 @@
     "textdomain": "site-functionality",
     "name": "site-functionality/video-banner",
     "title": "Video Banner",
-    "category": "Content",
+    "category": "text",
     "collection": "site-functionality",
     "className": "video-banner",
     "description": "Display a banner with video and text",

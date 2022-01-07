@@ -1,5 +1,26 @@
 {
-    "require": {
-        "vlucas/phpdotenv": "^5.4"
-    }
+	"name": "debtcollective/dotorg-site-functionality",
+	"description": "Custom plugin for Debt Collective",
+	"type": "wordpress-plugin",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "Debt Collective"
+		}
+	],
+	"config": {
+		"platform": {
+			"php": "7.4"
+		},
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	},
+	"require": {},
+	"require-dev": {
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+		"phpcompatibility/phpcompatibility-wp": "^2.1.1",
+		"wp-cli/wp-cli-bundle": "^2.5.0",
+		"wp-coding-standards/wpcs": "^2.3.0"
+	}
 }
