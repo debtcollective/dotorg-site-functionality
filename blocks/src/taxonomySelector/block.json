@@ -4,7 +4,7 @@
     "textdomain": "site-functionality",
     "name": "site-functionality/taxonomy-term",
     "title": "Term",
-    "category": "fields",
+    "category": "misc",
     "collection": "site-functionality",
     "className": "term",
     "description": "Display a term",
