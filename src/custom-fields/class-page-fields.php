@@ -22,7 +22,7 @@ class PageFields extends Base {
 	public const FIELDS = array(
 		'display_section_navigation' => 'string',
 		'featured_image_is_hero'     => 'boolean',
-		'field_display_name' => 'string'
+		'field_display_name'         => 'string',
 	);
 
 	/**
