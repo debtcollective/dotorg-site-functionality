@@ -144,6 +144,13 @@ class PageFields extends Base {
 						'ui_on_text'        => '',
 						'ui_off_text'       => '',
 					),
+					array(
+						'key'          => 'field_display_name',
+						'label'        => __( 'Display Name', 'site-functionality' ),
+						'name'         => 'display_name',
+						'type'         => 'text',
+						'instructions' => __( 'Alternate page title to display in section navigation.', 'site-functionality' ),
+					),
 				),
 				'location'              => array(
 					array(
@@ -170,6 +177,45 @@ class PageFields extends Base {
 				'active'                => true,
 				'description'           => '',
 				'show_in_rest'          => 1,
+			)
+		);
+
+		\acf_add_local_field_group(
+			array(
+				'key'                   => 'group_display_options_special',
+				'title'                 => __( 'Display Options', 'site-functionality' ),
+				'fields'                => array(
+					array(
+						'key'               => 'field_display_name',
+						'label'             => __( 'Display Name', 'site-functionality' ),
+						'name'              => 'display_name',
+						'type'              => 'text',
+						'instructions'      => __( 'Alternate page title to display in section navigation.', 'site-functionality' ),
+					),
+				),
+				'location'              => array(
+					array(
+						array(
+							'param'    => 'post_template',
+							'operator' => '==',
+							'value'    => 'page-templates/events-archive.php',
+						),
+					),
+					array(
+						array(
+							'param'    => 'post_template',
+							'operator' => '==',
+							'value'    => 'page-templates/people-archive.php',
+						),
+					),
+				),
+				'menu_order'            => 0,
+				'position'              => 'side',
+				'style'                 => 'default',
+				'label_placement'       => 'top',
+				'instruction_placement' => 'label',
+				'active'                => true,
+				'show_in_rest'          => 0,
 			)
 		);
 
