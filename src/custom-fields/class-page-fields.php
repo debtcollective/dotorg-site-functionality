@@ -16,14 +16,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class PageFields extends Base {
 
-
 	/**
 	 * Custom fields
 	 */
 	public const FIELDS = array(
 		'display_section_navigation' => 'string',
 		'featured_image_is_hero'     => 'boolean',
-
+		'field_display_name' => 'string'
 	);
 
 	/**
@@ -92,6 +91,13 @@ class PageFields extends Base {
 						'layout'            => 'vertical',
 						'return_format'     => 'value',
 						'save_other_choice' => 0,
+					),
+					array(
+						'key'          => 'field_display_name',
+						'label'        => __( 'Display Name', 'site-functionality' ),
+						'name'         => 'display_name',
+						'type'         => 'text',
+						'instructions' => __( 'Alternate page title to display in section navigation.', 'site-functionality' ),
 					),
 				),
 				'location'              => array(
