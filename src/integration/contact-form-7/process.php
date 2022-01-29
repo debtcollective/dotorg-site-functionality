@@ -96,11 +96,13 @@ class Process extends Base {
 			try {
 				$response = $this->send_data( $data );
 				$submission->set_response( \wp_remote_retrieve_response_message( $response ) );
+				error_log( 'Request: ' . json_encode( $response ) );
 
 				if ( \is_wp_error( $response ) ) {
 					throw new \Exception( \wp_remote_retrieve_response_message( $response ) );
 				} elseif ( 200 === \wp_remote_retrieve_response_code( $response ) ) {
 					$result = json_decode( \wp_remote_retrieve_body( $response ) );
+					error_log( 'Result: ' . json_encode( $result ) );
 					$submission->set_status( 'api-success' );
 				} else {
 					throw new \Exception( \wp_remote_retrieve_response_message( $response ) );
@@ -110,7 +112,7 @@ class Process extends Base {
 				$submission->set_response( $exception );
 				$submission->set_status( 'api-failure' );
 			}
-
+			error_log( 'Form Response: ' . $submission->get_response() );
 		}
 	}
 
@@ -121,25 +123,35 @@ class Process extends Base {
 	 * @return object
 	 */
 	public function send_data( $data ) {
+		if( ! isset( $data['email'] ) && ! isset( $data['telephone'] ) ) {
+			throw new \Exception( \esc_attr__( 'Submissions require either email or telephone, but either the fields don\'t exist or they were not filled in.', 'site-functionality' ) );
+		}
+
 		$args = array(
-			'website'  => \esc_url( \get_home_url() ),
+			'action_network:referrer_data' => array(
+				'website'  => \esc_url( \get_home_url() ),
+			),
 			'person'   => array(
-				'given_name'      => \sanitize_text_field( $data['first-name'] ),
-				'family_name'     => \sanitize_text_field( $data['last-name'] ),
 				'email_addresses' => array(
 					array(
 						'address' => \sanitize_email( $data['email'] ),
 					),
 				),
 			),
-			'add_tags' => array(
-				'newsletter_yes',
-			),
 			'source'   => 'dotorg',
 		);
 
+		if ( isset( $data['first-name'] ) ) {
+			$args['person']['given_name'] = \sanitize_text_field( $data['first-name'] );
+		}
+		if ( isset( $data['last-name'] ) ) {
+			$args['person']['family_name'] = \sanitize_text_field( $data['last-name'] );
+		}
 		if ( isset( $data['telephone'] ) ) {
 			$args['person']['phone_numbers'][]['number'] = \sanitize_text_field( $data['telephone'] );
+		}
+		if ( isset( $data['an-tag'] ) ) {
+			$args['add_tags'][] = \sanitize_text_field( $data['an-tag'] );
 		}
 
 		$endpoint = str_replace( '%id%', $data[ $this->form_id_key ], $this->endpoint );
