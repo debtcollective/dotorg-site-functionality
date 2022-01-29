@@ -124,22 +124,26 @@ class Process extends Base {
 		$args = array(
 			'website'  => \esc_url( \get_home_url() ),
 			'person'   => array(
-				'given_name'      => \sanitize_text_field( $data['first-name'] ),
-				'family_name'     => \sanitize_text_field( $data['last-name'] ),
 				'email_addresses' => array(
 					array(
 						'address' => \sanitize_email( $data['email'] ),
 					),
 				),
 			),
-			'add_tags' => array(
-				'newsletter_yes',
-			),
 			'source'   => 'dotorg',
 		);
 
 		if ( isset( $data['telephone'] ) ) {
 			$args['person']['phone_numbers'][]['number'] = \sanitize_text_field( $data['telephone'] );
+		}
+		if ( isset( $data['first-name'] ) ) {
+			$args['person']['given_name'] = \sanitize_text_field( $data['first-name'] );
+		}
+		if ( isset( $data['last-name'] ) ) {
+			$args['person']['family_name'] = \sanitize_text_field( $data['last-name'] );
+		}
+		if ( isset( $data['tag'] ) ) {
+			$args['add_tags'][] = \sanitize_text_field( $data['tag'] );
 		}
 
 		$endpoint = str_replace( '%id%', $data[ $this->form_id_key ], $this->endpoint );
