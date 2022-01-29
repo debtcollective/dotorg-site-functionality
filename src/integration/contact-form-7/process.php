@@ -99,6 +99,7 @@ class Process extends Base {
 				error_log( 'Request: ' . json_encode( $response ) );
 
 				if ( \is_wp_error( $response ) ) {
+					error_log( 'WP_Error Response: ' . json_encode( $response ) );
 					throw new \Exception( \wp_remote_retrieve_response_message( $response ) );
 				} elseif ( 200 === \wp_remote_retrieve_response_code( $response ) ) {
 					$result = json_decode( \wp_remote_retrieve_body( $response ) );
