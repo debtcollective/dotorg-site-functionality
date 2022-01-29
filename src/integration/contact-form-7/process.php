@@ -106,8 +106,9 @@ class Process extends Base {
 					error_log( 'Result: ' . json_encode( $result ) );
 					$submission->set_status( 'api-success' );
 				} else {
-					throw new \Exception( \wp_remote_retrieve_response_message( $response ) );
 					$submission->set_status( 'unexpected-response' );
+					error_log( 'Exception Response: ' . json_encode( $response ) );
+					throw new \Exception( \wp_remote_retrieve_response_message( $response ) );
 				}
 			} catch ( \Exception $exception ) {
 				$submission->set_response( $exception );
@@ -168,6 +169,8 @@ class Process extends Base {
 			'redirection' => 5,
 			'body'        => json_encode( $args ),
 		);
+
+		error_log( 'Form Request Data: ' . $url . json_encode( $options ) );
 
 		return \wp_remote_post(
 			$url,
