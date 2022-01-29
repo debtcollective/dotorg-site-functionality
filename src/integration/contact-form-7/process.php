@@ -123,8 +123,14 @@ class Process extends Base {
 	 * @return object
 	 */
 	public function send_data( $data ) {
+		if( ! isset( $data['email'] ) && ! isset( $data['telephone'] ) ) {
+			throw new \Exception( \esc_attr__( 'Submissions require either email or telephone, but either the fields don\'t exist or they were not filled in.', 'site-functionality' ) );
+		}
+
 		$args = array(
-			'website'  => \esc_url( \get_home_url() ),
+			'action_network:referrer_data' => array(
+				'website'  => \esc_url( \get_home_url() ),
+			),
 			'person'   => array(
 				'email_addresses' => array(
 					array(
@@ -135,17 +141,17 @@ class Process extends Base {
 			'source'   => 'dotorg',
 		);
 
-		if ( isset( $data['telephone'] ) ) {
-			$args['person']['phone_numbers'][]['number'] = \sanitize_text_field( $data['telephone'] );
-		}
 		if ( isset( $data['first-name'] ) ) {
 			$args['person']['given_name'] = \sanitize_text_field( $data['first-name'] );
 		}
 		if ( isset( $data['last-name'] ) ) {
 			$args['person']['family_name'] = \sanitize_text_field( $data['last-name'] );
 		}
-		if ( isset( $data['tag'] ) ) {
-			$args['add_tags'][] = \sanitize_text_field( $data['tag'] );
+		if ( isset( $data['telephone'] ) ) {
+			$args['person']['phone_numbers'][]['number'] = \sanitize_text_field( $data['telephone'] );
+		}
+		if ( isset( $data['an-tag'] ) ) {
+			$args['add_tags'][] = \sanitize_text_field( $data['an-tag'] );
 		}
 
 		$endpoint = str_replace( '%id%', $data[ $this->form_id_key ], $this->endpoint );
