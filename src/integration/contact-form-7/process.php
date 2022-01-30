@@ -99,19 +99,19 @@ class Process extends Base {
 
 				if ( \is_wp_error( $response ) ) {
 					$submission->set_status( 'wp-error' );
-					error_log( 'WP_Error Response: ' . \wp_remote_retrieve_response_message( $response ) );
+					// error_log( 'WP_Error Response: ' . \wp_remote_retrieve_response_message( $response ) );
 					throw new \Exception( \wp_remote_retrieve_response_message( $response ) );
 				} elseif ( 200 === \wp_remote_retrieve_response_code( $response ) ) {
 					$submission->set_status( 'api-success' );
 					$result = json_decode( \wp_remote_retrieve_body( $response ) );
 				} else {
 					$submission->set_status( 'unexpected-response' );
-					error_log( 'Unexpected Response: ' . \wp_remote_retrieve_response_message( $response ) );
+					// error_log( 'Unexpected Response: ' . \wp_remote_retrieve_response_message( $response ) );
 					throw new \Exception( \wp_remote_retrieve_response_message( $response ) );
 				}
 			} catch ( \Exception $exception ) {
 				$submission->set_status( 'api-failure' );
-				error_log( 'Exception Response: ' . \wp_remote_retrieve_response_message( $response ) );
+				// error_log( 'Exception Response: ' . \wp_remote_retrieve_response_message( $response ) );
 				$submission->set_response( $exception );
 			}
 
