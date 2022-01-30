@@ -96,25 +96,25 @@ class Process extends Base {
 			try {
 				$response = $this->send_data( $data );
 				$submission->set_response( \wp_remote_retrieve_response_message( $response ) );
-				error_log( 'Request: ' . json_encode( $response ) );
 
 				if ( \is_wp_error( $response ) ) {
-					error_log( 'WP_Error Response: ' . json_encode( $response ) );
+					$submission->set_status( 'wp-error' );
+					error_log( 'WP_Error Response: ' . \wp_remote_retrieve_response_message( $response ) );
 					throw new \Exception( \wp_remote_retrieve_response_message( $response ) );
 				} elseif ( 200 === \wp_remote_retrieve_response_code( $response ) ) {
-					$result = json_decode( \wp_remote_retrieve_body( $response ) );
-					error_log( 'Result: ' . json_encode( $result ) );
 					$submission->set_status( 'api-success' );
+					$result = json_decode( \wp_remote_retrieve_body( $response ) );
 				} else {
 					$submission->set_status( 'unexpected-response' );
-					error_log( 'Exception Response: ' . json_encode( $response ) );
+					error_log( 'Unexpected Response: ' . \wp_remote_retrieve_response_message( $response ) );
 					throw new \Exception( \wp_remote_retrieve_response_message( $response ) );
 				}
 			} catch ( \Exception $exception ) {
-				$submission->set_response( $exception );
 				$submission->set_status( 'api-failure' );
+				error_log( 'Exception Response: ' . \wp_remote_retrieve_response_message( $response ) );
+				$submission->set_response( $exception );
 			}
-			error_log( 'Form Response: ' . $submission->get_response() );
+
 		}
 	}
 
@@ -125,22 +125,21 @@ class Process extends Base {
 	 * @return object
 	 */
 	public function send_data( $data ) {
-		if( ! isset( $data['email'] ) && ! isset( $data['telephone'] ) ) {
+		if ( ! isset( $data['email'] ) && ! isset( $data['telephone'] ) ) {
 			throw new \Exception( \esc_attr__( 'Submissions require either email or telephone, but either the fields don\'t exist or they were not filled in.', 'site-functionality' ) );
 		}
 
 		$args = array(
 			'action_network:referrer_data' => array(
-				'website'  => \esc_url( \get_home_url() ),
+				'website' => \esc_url( \get_home_url() ),
 			),
-			'person'   => array(
+			'person'                       => array(
 				'email_addresses' => array(
 					array(
 						'address' => \sanitize_email( $data['email'] ),
 					),
 				),
 			),
-			'source'   => 'dotorg',
 		);
 
 		if ( isset( $data['first-name'] ) ) {
@@ -169,8 +168,6 @@ class Process extends Base {
 			'redirection' => 5,
 			'body'        => json_encode( $args ),
 		);
-
-		error_log( 'Form Request Data: ' . $url . json_encode( $options ) );
 
 		return \wp_remote_post(
 			$url,
