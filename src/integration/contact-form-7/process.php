@@ -157,7 +157,7 @@ class Process extends Base {
 		}
 
 		$endpoint = str_replace( '%id%', $data[ $this->form_id_key ], $this->endpoint );
-		$url      = \esc_url( $this->base_url . $endpoint );
+		$url      = \esc_url( \trailingslashit( $this->base_url ) . $endpoint );
 
 		$options = array(
 			'method'      => 'POST',
