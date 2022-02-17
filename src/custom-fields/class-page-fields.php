@@ -23,6 +23,7 @@ class PageFields extends Base {
 		'display_section_navigation' => 'string',
 		'featured_image_is_hero'     => 'boolean',
 		'field_display_name'         => 'string',
+		'event_scope'                => 'string',
 	);
 
 	/**
@@ -182,15 +183,30 @@ class PageFields extends Base {
 
 		\acf_add_local_field_group(
 			array(
-				'key'                   => 'group_display_options_special',
+				'key'                   => 'group_display_options_events',
 				'title'                 => __( 'Display Options', 'site-functionality' ),
 				'fields'                => array(
 					array(
-						'key'               => 'field_display_name',
-						'label'             => __( 'Display Name', 'site-functionality' ),
-						'name'              => 'display_name',
-						'type'              => 'text',
-						'instructions'      => __( 'Alternate page title to display in section navigation.', 'site-functionality' ),
+						'key'          => 'field_display_name',
+						'label'        => __( 'Display Name', 'site-functionality' ),
+						'name'         => 'display_name',
+						'type'         => 'text',
+						'instructions' => __( 'Alternate page title to display in section navigation.', 'site-functionality' ),
+					),
+					array(
+						'key'           => 'field_event_scope',
+						'label'         => __( 'Scope', 'site-functionality' ),
+						'name'          => 'event_scope',
+						'type'          => 'select',
+						'instructions'  => __( 'Select whether to display events in future, past or all.', 'site-functionality' ),
+						'choices'       => array(
+							'future' => __( 'Future', 'site-functionality' ),
+							'past'   => __( 'Past', 'site-functionality' ),
+							'all'    => __( 'All', 'site-functionality' ),
+						),
+						'default_value' => 'all',
+						'ui'            => 1,
+						'return_format' => 'value',
 					),
 				),
 				'location'              => array(
@@ -201,6 +217,31 @@ class PageFields extends Base {
 							'value'    => 'page-templates/events-archive.php',
 						),
 					),
+				),
+				'menu_order'            => 0,
+				'position'              => 'side',
+				'style'                 => 'default',
+				'label_placement'       => 'top',
+				'instruction_placement' => 'label',
+				'active'                => true,
+				'show_in_rest'          => 0,
+			)
+		);
+
+		\acf_add_local_field_group(
+			array(
+				'key'                   => 'group_display_options_special',
+				'title'                 => __( 'Display Options', 'site-functionality' ),
+				'fields'                => array(
+					array(
+						'key'          => 'field_display_name',
+						'label'        => __( 'Display Name', 'site-functionality' ),
+						'name'         => 'display_name',
+						'type'         => 'text',
+						'instructions' => __( 'Alternate page title to display in section navigation.', 'site-functionality' ),
+					),
+				),
+				'location'              => array(
 					array(
 						array(
 							'param'    => 'post_template',
