@@ -4,7 +4,7 @@
     "textdomain": "site-functionality",
     "name": "site-functionality/hero",
     "title": "Hero",
-    "category": "Content",
+    "category": "text",
     "collection": "site-functionality",
     "icon": "slides",
     "className": "hero",

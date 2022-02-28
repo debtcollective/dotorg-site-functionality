@@ -2,16 +2,16 @@
     "apiVersion": 2,
     "version": "1.0.0",
     "textdomain": "site-functionality",
-    "name": "site-functionality/faqs",
-    "title": "FAQs",
-    "category": "text",
-    "collection": "site-functionality",
-    "icon": "format-chat",
-    "className": "faq-list",
-    "description": "Display FAQs on page",
+    "name": "site-functionality/sidebar-links",
+    "title": "Sidebar Links",
+    "category": "widgets",
+    "icon": "admin-links",
+    "className": "sidebar-links",
+    "description": "Display links in the sidebar",
     "keywords": [
-        "faqs",
-        "accorion"
+        "links",
+        "widget",
+        "sidebar"
     ],
     "supports": {
         "align": false,
