@@ -202,6 +202,23 @@ class PageFields extends Base {
 						'instructions' => __( 'Alternate page title to display in section navigation.', 'site-functionality' ),
 					),
 					array(
+						'key'               => 'field_display_section_navigation',
+						'label'             => \__( 'Display Section Navigation', 'site-functionality' ),
+						'name'              => 'display_section_navigation',
+						'type'              => 'radio',
+						'choices'           => array(
+							''         => \__( 'None', 'site-functionality' ),
+							'sibling'  => \__( 'Sibling-page Navigation', 'site-functionality' ),
+							'children' => \__( 'Sub-page Navigation', 'site-functionality' ),
+						),
+						'allow_null'        => 1,
+						'other_choice'      => 0,
+						'default_value'     => 'sibling',
+						'layout'            => 'vertical',
+						'return_format'     => 'value',
+						'save_other_choice' => 0,
+					),
+					array(
 						'key'           => 'field_event_scope',
 						'label'         => __( 'Scope', 'site-functionality' ),
 						'name'          => 'event_scope',
