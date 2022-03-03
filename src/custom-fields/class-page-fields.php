@@ -187,6 +187,14 @@ class PageFields extends Base {
 				'title'                 => __( 'Display Options', 'site-functionality' ),
 				'fields'                => array(
 					array(
+						'key'          => 'field_has_sidebar',
+						'label'        => __( 'Display Sidebar', 'site-functionality' ),
+						'name'         => 'has_sidebar',
+						'type'         => 'true_false',
+						'instructions' => __( 'Display sidebar on page.', 'site-functionality' ),
+						'ui'           => 1,
+					),
+					array(
 						'key'          => 'field_display_name',
 						'label'        => __( 'Display Name', 'site-functionality' ),
 						'name'         => 'display_name',
