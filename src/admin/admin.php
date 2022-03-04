@@ -27,6 +27,7 @@ class Admin extends Base {
 		parent::__construct( $version, $plugin_name );
 
 		$this->dependencies();
+		\add_filter( 'WpActionNetworkEvents\App\General\PostTypes\Event\Args', array( $this, 'modify_admin_menu' ) );
 	}
 
 	/**
@@ -34,9 +35,20 @@ class Admin extends Base {
 	 *
 	 * @return void
 	 */
-	function dependencies() {
+	public function dependencies() {
 		include_once SITE_CORE_DIR . '/src/admin/options.php';
 		$options = new Options( $this->version, $this->plugin_name );
+	}
+
+	/**
+	 * Modify Admin Menu Name
+	 *
+	 * @param array $args
+	 * @return array $args
+	 */
+	public function modify_admin_menu( $args ) {
+		$args['labels']['menu_name'] = esc_attr__( 'Events', 'wp-action-network-events' );
+		return $args;
 	}
 
 	/**
