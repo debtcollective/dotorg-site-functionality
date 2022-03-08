@@ -187,11 +187,36 @@ class PageFields extends Base {
 				'title'                 => __( 'Display Options', 'site-functionality' ),
 				'fields'                => array(
 					array(
+						'key'          => 'field_has_sidebar',
+						'label'        => __( 'Display Sidebar', 'site-functionality' ),
+						'name'         => 'has_sidebar',
+						'type'         => 'true_false',
+						'instructions' => __( 'Display sidebar on page.', 'site-functionality' ),
+						'ui'           => 1,
+					),
+					array(
 						'key'          => 'field_display_name',
 						'label'        => __( 'Display Name', 'site-functionality' ),
 						'name'         => 'display_name',
 						'type'         => 'text',
 						'instructions' => __( 'Alternate page title to display in section navigation.', 'site-functionality' ),
+					),
+					array(
+						'key'               => 'field_display_section_navigation',
+						'label'             => \__( 'Display Section Navigation', 'site-functionality' ),
+						'name'              => 'display_section_navigation',
+						'type'              => 'radio',
+						'choices'           => array(
+							''         => \__( 'None', 'site-functionality' ),
+							'sibling'  => \__( 'Sibling-page Navigation', 'site-functionality' ),
+							'children' => \__( 'Sub-page Navigation', 'site-functionality' ),
+						),
+						'allow_null'        => 1,
+						'other_choice'      => 0,
+						'default_value'     => 'sibling',
+						'layout'            => 'vertical',
+						'return_format'     => 'value',
+						'save_other_choice' => 0,
 					),
 					array(
 						'key'           => 'field_event_scope',
