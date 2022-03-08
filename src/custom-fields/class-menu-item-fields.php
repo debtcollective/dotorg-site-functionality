@@ -46,7 +46,7 @@ class MenuItemFields extends Base {
 			'title' => __( 'Menu Item Visibility', 'site-functionality' ),
 			'fields' => array(
 				array(
-					'key' => 'field_visibility',
+					'key' => 'field_is_visible',
 					'label' => __( 'Visibility', 'site-functionality' ),
 					'name' => 'visibility',
 					'type' => 'radio',
