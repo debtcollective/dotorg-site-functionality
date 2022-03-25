@@ -233,6 +233,20 @@ class PageFields extends Base {
 						'ui'            => 1,
 						'return_format' => 'value',
 					),
+					array(
+						'key'           => 'field_event_sort',
+						'label'         => __( 'Sort', 'site-functionality' ),
+						'name'          => 'event_sort',
+						'type'          => 'select',
+						'instructions'  => __( 'Select how to sort the events.', 'site-functionality' ),
+						'choices'       => array(
+							'desc' => __( 'Desc - Z to A (newest to oldest)', 'site-functionality' ),
+							'asc'  => __( 'Asc - A to Z (oldest to newest)', 'site-functionality' ),
+						),
+						'default_value' => 'desc',
+						'ui'            => 1,
+						'return_format' => 'value',
+					),
 				),
 				'location'              => array(
 					array(
