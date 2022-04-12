@@ -28,6 +28,7 @@ class Admin extends Base {
 
 		$this->dependencies();
 		\add_filter( 'WpActionNetworkEvents\App\General\PostTypes\Event\Args', array( $this, 'modify_admin_menu' ) );
+		\remove_action( 'admin_notices', 'lyte_admin_nag_apikey' );
 	}
 
 	/**
