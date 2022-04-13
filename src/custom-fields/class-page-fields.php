@@ -27,6 +27,20 @@ class PageFields extends Base {
 	);
 
 	/**
+	 * Scope options
+	 *
+	 * @var array
+	 */
+	public $scope;
+
+	/**
+	 * Sort options
+	 *
+	 * @var array
+	 */
+	public $sort;
+
+	/**
 	 * Constructor.
 	 *
 	 * @since 1.0.0
@@ -36,6 +50,17 @@ class PageFields extends Base {
 
 		\add_action( 'init', array( $this, 'register_meta' ) );
 		\add_action( 'acf/init', array( $this, 'register_fields' ) );
+
+		$this->scope = array(
+			'future' => __( 'Upcoming', 'site-functionality' ),
+			'past'   => __( 'Past', 'site-functionality' ),
+			'all'    => __( 'All', 'site-functionality' ),
+		);
+
+		$this->sort = array(
+			'DESC' => __( 'Desc - Z to A (newest to oldest)', 'site-functionality' ),
+			'ASC'  => __( 'Asc - A to Z (oldest to newest)', 'site-functionality' ),
+		);
 	}
 
 	/**
