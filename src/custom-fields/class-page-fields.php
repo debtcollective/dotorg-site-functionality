@@ -23,7 +23,12 @@ class PageFields extends Base {
 		'display_section_navigation' => 'string',
 		'featured_image_is_hero'     => 'boolean',
 		'field_display_name'         => 'string',
+		'event_heading_upcoming'     => 'string',
+		'event_scope_upcoming'       => 'string',
+		'event_sort_upcoming'        => 'string',
+		'event_heading'              => 'string',
 		'event_scope'                => 'string',
+		'event_sort'                 => 'string',
 	);
 
 	/**
@@ -206,9 +211,164 @@ class PageFields extends Base {
 			)
 		);
 
+		/**
+		 * Events Page Template
+		 */
 		\acf_add_local_field_group(
 			array(
-				'key'                   => 'group_display_options_events',
+				'key'                   => 'group_display_options_events_page',
+				'title'                 => __( 'Display Options', 'site-functionality' ),
+				'fields'                => array(
+					array(
+						'key'          => 'field_has_sidebar',
+						'label'        => __( 'Display Sidebar', 'site-functionality' ),
+						'name'         => 'has_sidebar',
+						'type'         => 'true_false',
+						'instructions' => __( 'Display sidebar on page.', 'site-functionality' ),
+						'ui'           => 1,
+					),
+					array(
+						'key'          => 'field_display_name',
+						'label'        => __( 'Display Name', 'site-functionality' ),
+						'name'         => 'display_name',
+						'type'         => 'text',
+						'instructions' => __( 'Alternate page title to display in section navigation.', 'site-functionality' ),
+					),
+					array(
+						'key'               => 'field_display_section_navigation',
+						'label'             => \__( 'Display Section Navigation', 'site-functionality' ),
+						'name'              => 'display_section_navigation',
+						'type'              => 'radio',
+						'choices'           => array(
+							''         => \__( 'None', 'site-functionality' ),
+							'sibling'  => \__( 'Sibling-page Navigation', 'site-functionality' ),
+							'children' => \__( 'Sub-page Navigation', 'site-functionality' ),
+						),
+						'allow_null'        => 1,
+						'other_choice'      => 0,
+						'default_value'     => 'sibling',
+						'layout'            => 'vertical',
+						'return_format'     => 'value',
+						'save_other_choice' => 0,
+					),
+					array(
+						'key'               => 'field_separator_upcoming',
+						'label'             => __( 'Upcoming Events', 'site-functionality' ),
+						'name'              => '',
+						'type'              => 'separator',
+						'instructions'      => '',
+						'required'          => 0,
+						'conditional_logic' => 0,
+						'wrapper'           => array(
+							'width' => '',
+							'class' => '',
+							'id'    => '',
+						),
+						'message'           => '',
+						'new_lines'         => 'wpautop',
+						'esc_html'          => 0,
+					),
+					array(
+						'key'          => 'field_heading_upcoming',
+						'label'        => __( 'Heading', 'site-functionality' ),
+						'name'         => 'event_heading_upcoming',
+						'type'         => 'text',
+						'instructions' => __( 'Heading for Upcoming Events.', 'site-functionality' ),
+					),
+					array(
+						'key'           => 'field_event_scope_upcoming',
+						'label'         => __( 'Scope', 'site-functionality' ),
+						'name'          => 'event_scope_upcoming',
+						'type'          => 'select',
+						'instructions'  => __( 'Select whether to display events upcoming, in past or all.', 'site-functionality' ),
+						'choices'       => $this->scope,
+						'default_value' => 'future',
+						'ui'            => 1,
+						'return_format' => 'value',
+					),
+					array(
+						'key'           => 'field_event_sort_upcoming',
+						'label'         => __( 'Sort', 'site-functionality' ),
+						'name'          => 'event_sort_upcoming',
+						'type'          => 'select',
+						'instructions'  => __( 'Select how to sort upcoming events.', 'site-functionality' ),
+						'choices'       => $this->sort,
+						'default_value' => 'ASC',
+						'ui'            => 1,
+						'return_format' => 'value',
+					),
+					array(
+						'key'               => 'field_separator',
+						'label'             => __( 'Past Events', 'site-functionality' ),
+						'name'              => '',
+						'type'              => 'separator',
+						'instructions'      => '',
+						'required'          => 0,
+						'conditional_logic' => 0,
+						'wrapper'           => array(
+							'width' => '',
+							'class' => '',
+							'id'    => '',
+						),
+						'message'           => '',
+						'new_lines'         => 'wpautop',
+						'esc_html'          => 0,
+					),
+					array(
+						'key'          => 'field_event_heading',
+						'label'        => __( 'Heading', 'site-functionality' ),
+						'name'         => 'event_heading',
+						'type'         => 'text',
+						'instructions' => __( 'Heading for Past Events.', 'site-functionality' ),
+					),
+					array(
+						'key'           => 'field_event_scope',
+						'label'         => __( 'Scope', 'site-functionality' ),
+						'name'          => 'event_scope',
+						'type'          => 'select',
+						'instructions'  => __( 'Select whether to display events upcoming, in past or all.', 'site-functionality' ),
+						'choices'       => $this->scope,
+						'default_value' => 'past',
+						'ui'            => 1,
+						'return_format' => 'value',
+					),
+					array(
+						'key'           => 'field_event_sort',
+						'label'         => __( 'Sort', 'site-functionality' ),
+						'name'          => 'event_sort',
+						'type'          => 'select',
+						'instructions'  => __( 'Select how to sort past events.', 'site-functionality' ),
+						'choices'       => $this->sort,
+						'default_value' => 'DESC',
+						'ui'            => 1,
+						'return_format' => 'value',
+					),
+				),
+				'location'              => array(
+					array(
+						array(
+							'param'    => 'post_template',
+							'operator' => '==',
+							'value'    => 'page-templates/events-page.php',
+						),
+					),
+				),
+				'menu_order'            => 0,
+				'position'              => 'side',
+				'style'                 => 'default',
+				'label_placement'       => 'top',
+				'instruction_placement' => 'label',
+				'active'                => true,
+				'show_in_rest'          => 0,
+			)
+		);
+
+		/**
+		 * Events Archive Template
+		 */
+		\acf_add_local_field_group(
+			array(
+				'key'                   => 'group_display_options_events_archive',
 				'title'                 => __( 'Display Options', 'site-functionality' ),
 				'fields'                => array(
 					array(
@@ -245,30 +405,23 @@ class PageFields extends Base {
 					),
 					array(
 						'key'           => 'field_event_scope',
-						'label'         => __( 'Scope', 'site-functionality' ),
+						'label'         => __( 'Events Scope', 'site-functionality' ),
 						'name'          => 'event_scope',
 						'type'          => 'select',
-						'instructions'  => __( 'Select whether to display events in future, past or all.', 'site-functionality' ),
-						'choices'       => array(
-							'future' => __( 'Future', 'site-functionality' ),
-							'past'   => __( 'Past', 'site-functionality' ),
-							'all'    => __( 'All', 'site-functionality' ),
-						),
-						'default_value' => 'all',
+						'instructions'  => __( 'Select whether to display events upcoming, in past or all.', 'site-functionality' ),
+						'choices'       => $this->scope,
+						'default_value' => 'past',
 						'ui'            => 1,
 						'return_format' => 'value',
 					),
 					array(
 						'key'           => 'field_event_sort',
-						'label'         => __( 'Sort', 'site-functionality' ),
+						'label'         => __( 'Events Sort', 'site-functionality' ),
 						'name'          => 'event_sort',
 						'type'          => 'select',
-						'instructions'  => __( 'Select how to sort the events.', 'site-functionality' ),
-						'choices'       => array(
-							'desc' => __( 'Desc - Z to A (newest to oldest)', 'site-functionality' ),
-							'asc'  => __( 'Asc - A to Z (oldest to newest)', 'site-functionality' ),
-						),
-						'default_value' => 'desc',
+						'instructions'  => __( 'Select how to sort events.', 'site-functionality' ),
+						'choices'       => $this->sort,
+						'default_value' => 'DESC',
 						'ui'            => 1,
 						'return_format' => 'value',
 					),
@@ -292,6 +445,9 @@ class PageFields extends Base {
 			)
 		);
 
+		/**
+		 * People Archive Template
+		 */
 		\acf_add_local_field_group(
 			array(
 				'key'                   => 'group_display_options_special',
