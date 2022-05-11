@@ -1,15 +1,11 @@
 import { registerBlockType, registerBlockCollection } from '@wordpress/blocks';
 import { __ } from '@wordpress/i18n';
 
-// registerBlockCollection( 'site-functionality', {
-// 	title: __( 'Debt Collective', 'site-functionality' ),
-// } );
 import './editor.scss';
 import './patterns';
 import './styles';
 
 import * as eventTout from './eventTout';
-// import * as dateTimeField from './dateTimeField';
 import * as donationWidget from './donationWidget';
 import * as field from './field';
 import * as membershipWidget from './membershipWidget';
@@ -25,6 +21,7 @@ import * as buttonTout from './buttonTout';
 import * as userQuery from './userQuery';
 import * as taxonomySelector from './taxonomySelector';
 import * as videoBanner from './videoBanner';
+import * as teamMember from './teamMember';
 
 
 const blocks = [
@@ -44,6 +41,7 @@ const blocks = [
 	userQuery,
 	taxonomySelector,
 	videoBanner,
+	teamMember
 ];
 
 /**

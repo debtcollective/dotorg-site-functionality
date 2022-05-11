@@ -1,0 +1,66 @@
+{
+  "apiVersion": 2,
+  "version": "1.0.0",
+  "textdomain": "site-functionality",
+  "name": "site-functionality/team-member",
+  "title": "Team Member",
+  "category": "misc",
+  "collection": "site-functionality",
+  "description": "A block for showing members of DC",
+  "keywords": [
+    "people",
+    "person",
+    "team member"
+  ],
+  "rel": {
+  	"type": "string"
+  },
+  "className": {
+    "type": "string",
+    "default": "person team-member"
+  },
+  "supports": {
+    "align": false,
+    "anchor": false,
+    "color": {
+      "background": false,
+      "text": false,
+      "gradients": false,
+      "link": false
+    },
+    "customClassName": true,
+    "defaultStylePicker": false,
+    "__experimentalLayout": false
+  },
+  "example" : {
+    "attributes": {
+      "className": "person team-member"
+    },
+    "innerBlocks": [
+      {
+        "name": "core/image",
+        "attributes": {
+          "className": "person__image"
+        }
+      },
+      {
+        "name": "core/heading",
+        "attributes": {
+          "level": 3,
+          "className": "person__name",
+          "content": "Person's Name"
+        }
+      },
+      {
+        "name": "core/paragraph",
+        "attributes": {
+          "className": "person__title",
+          "content": "A title"
+        }
+      }
+    ]
+  },
+  "editorScript": "site-functionality",
+  "style": "file:../../build/style-index.css",
+  "editorStyle": "file:../../build/index.css"
+}

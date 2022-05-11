@@ -23,53 +23,6 @@ const variations = [
 		attributes: {
 			className: 'tout button-tout',
 		},
-		example: {
-			attributes: {
-				className: 'tout button-tout',
-			},
-			innerBlocks: [
-				{
-					name: 'core/heading',
-					attributes: {
-						level: 2,
-						className: 'tout__heading',
-						content: __(
-							'Alone our debts are a burden.<br /> Together they make us <em>powerful</em>.',
-							'site-functionality'
-						),
-					},
-				},
-				{
-					name: 'core/paragraph',
-					attributes: {
-						className: 'tout__content',
-						content: __(
-							"We are a debtors' union fighting to cancel debts and defend millions of households. Join us to build a world where college is publicly funded, healthcare is universal and housing is guaranteed for all.",
-							'site-functionality'
-						),
-					},
-				},
-				{
-					name: 'core/image',
-					attributes: {
-						className: 'tout__image',
-						id: 134,
-						sizeSlug: 'full',
-						linkDestination: 'none',
-					},
-				},
-				{
-					name: 'core/button',
-					attributes: {
-						className: 'tout__button btn',
-						content: __(
-							"Button",
-							'site-functionality'
-						),
-					},
-				},
-			],
-		},
 		scope: [ 'block', 'inserter', 'transform' ],
 	},
 	{
