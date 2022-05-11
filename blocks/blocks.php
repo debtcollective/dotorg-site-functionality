@@ -25,6 +25,7 @@ require_once \plugin_dir_path( __FILE__ ) . 'src/buttonTout/index.php';
 require_once \plugin_dir_path( __FILE__ ) . 'src/userQuery/index.php';
 require_once \plugin_dir_path( __FILE__ ) . 'src/taxonomySelector/index.php';
 require_once \plugin_dir_path( __FILE__ ) . 'src/videoBanner/index.php';
+require_once \plugin_dir_path( __FILE__ ) . 'src/teamMember/index.php';
 
 
 const TEMPLATE_PARAMS = array(
@@ -121,7 +122,7 @@ function register_block_category( $block_categories, $block_editor_context ) {
 				'slug'  => 'misc',
 				'title' => \__( 'Misc', 'site-functionality' ),
 				'icon'  => 'triangle-alert',
-			),
+			)
 		)
 	);
 }
