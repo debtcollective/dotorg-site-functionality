@@ -11,6 +11,8 @@ import * as field from './field';
 import * as membershipWidget from './membershipWidget';
 import * as faqs from './faqs';
 import * as faq from './faq';
+import * as faqQuestion from './faqQuestion';
+import * as faqAnswer from './faqAnswer';
 import * as sidebarLinks from './sidebarLinks';
 import * as sidebarLink from './sidebarLink';
 import * as impactfulCallout from './impactfulCallout';
@@ -31,6 +33,8 @@ const blocks = [
 	membershipWidget,
 	faqs,
 	faq,
+	faqQuestion,
+	faqAnswer,
 	sidebarLinks,
 	sidebarLink,
 	impactfulCallout,
