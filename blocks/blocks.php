@@ -7,25 +7,27 @@
  */
 namespace Site_Functionality\Blocks;
 
-require_once \plugin_dir_path( __FILE__ ) . 'src/eventTout/index.php';
 // include_once( \plugin_dir_path( __FILE__ ) . 'src/dateTimeField/index.php' );
+include_once \plugin_dir_path( __FILE__ ) . 'src/eventTout/index.php';
 
-require_once \plugin_dir_path( __FILE__ ) . 'src/membershipWidget/index.php';
-require_once \plugin_dir_path( __FILE__ ) . 'src/donationWidget/index.php';
-require_once \plugin_dir_path( __FILE__ ) . 'src/faqs/index.php';
-require_once \plugin_dir_path( __FILE__ ) . 'src/faq/index.php';
-require_once \plugin_dir_path( __FILE__ ) . 'src/sidebarLinks/index.php';
-require_once \plugin_dir_path( __FILE__ ) . 'src/sidebarLink/index.php';
-require_once \plugin_dir_path( __FILE__ ) . 'src/field/index.php';
-require_once \plugin_dir_path( __FILE__ ) . 'src/impactfulCallout/index.php';
-require_once \plugin_dir_path( __FILE__ ) . 'src/postmeta/index.php';
-require_once \plugin_dir_path( __FILE__ ) . 'src/purchaseAgreements/index.php';
-require_once \plugin_dir_path( __FILE__ ) . 'src/tout/index.php';
-require_once \plugin_dir_path( __FILE__ ) . 'src/buttonTout/index.php';
-require_once \plugin_dir_path( __FILE__ ) . 'src/userQuery/index.php';
-require_once \plugin_dir_path( __FILE__ ) . 'src/taxonomySelector/index.php';
-require_once \plugin_dir_path( __FILE__ ) . 'src/videoBanner/index.php';
-require_once \plugin_dir_path( __FILE__ ) . 'src/teamMember/index.php';
+include_once \plugin_dir_path( __FILE__ ) . 'src/membershipWidget/index.php';
+include_once \plugin_dir_path( __FILE__ ) . 'src/donationWidget/index.php';
+include_once \plugin_dir_path( __FILE__ ) . 'src/faqs/index.php';
+include_once \plugin_dir_path( __FILE__ ) . 'src/faq/index.php';
+include_once \plugin_dir_path( __FILE__ ) . 'src/faqAnswer/index.php';
+include_once \plugin_dir_path( __FILE__ ) . 'src/faqQuestion/index.php';
+include_once \plugin_dir_path( __FILE__ ) . 'src/sidebarLinks/index.php';
+include_once \plugin_dir_path( __FILE__ ) . 'src/sidebarLink/index.php';
+include_once \plugin_dir_path( __FILE__ ) . 'src/field/index.php';
+include_once \plugin_dir_path( __FILE__ ) . 'src/impactfulCallout/index.php';
+include_once \plugin_dir_path( __FILE__ ) . 'src/postmeta/index.php';
+include_once \plugin_dir_path( __FILE__ ) . 'src/purchaseAgreements/index.php';
+include_once \plugin_dir_path( __FILE__ ) . 'src/tout/index.php';
+include_once \plugin_dir_path( __FILE__ ) . 'src/buttonTout/index.php';
+include_once \plugin_dir_path( __FILE__ ) . 'src/userQuery/index.php';
+include_once \plugin_dir_path( __FILE__ ) . 'src/taxonomySelector/index.php';
+include_once \plugin_dir_path( __FILE__ ) . 'src/videoBanner/index.php';
+include_once \plugin_dir_path( __FILE__ ) . 'src/teamMember/index.php';
 
 
 const TEMPLATE_PARAMS = array(

@@ -16,31 +16,30 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Render Block
  *
- * @param array $block_attributes
+ * @param array  $block_attributes
  * @param string $content
  * @return string
  */
 function render( $attributes, $content, $block ) {
-    $wrapper_attributes = \get_block_wrapper_attributes( 
-        [
-            'class' => 'faq-list',
-            'id'    => sprintf( 'tab-%s', ! empty( $attributes['anchor'] ) ? \esc_attr( $attributes['anchor'] ) : \esc_attr( $attributes['recordId'] ) ),
-        ]
-    );
+	$wrapper_attributes = \get_block_wrapper_attributes(
+		array(
+			'class' => 'faq-list',
+			'id'    => sprintf( 'tab-%s', ! empty( $attributes['anchor'] ) ? \esc_attr( $attributes['anchor'] ) : \esc_attr( $attributes['recordId'] ) ),
+		)
+	);
 
-    $return = '<div ' . $wrapper_attributes . '>';
+	$return = '<div ' . $wrapper_attributes . '>';
 
-    if( $block->inner_blocks ) {
+	if ( $block->inner_blocks ) {
 
-        foreach ( $block->inner_blocks as $inner_block ) { 
-            $return .= $inner_block->render(); 
-        }
-    
-    }
+		foreach ( $block->inner_blocks as $inner_block ) {
+			$return .= $inner_block->render();
+		}
+	}
 
-    $return .= '</div>';
+	$return .= '</div>';
 
-    return $return;
+	return $return;
 }
 
 /**
@@ -49,9 +48,9 @@ function render( $attributes, $content, $block ) {
 function register() {
 	\register_block_type(
 		__DIR__,
-		[
-			'render_callback' 	=> __NAMESPACE__ . '\render',
-		]
+		array(
+			'render_callback' => __NAMESPACE__ . '\render',
+		)
 	);
 }
 add_action( 'init', __NAMESPACE__ . '\register' );

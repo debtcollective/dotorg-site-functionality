@@ -1,0 +1,39 @@
+{
+    "apiVersion": 2,
+    "version": "1.0.0",
+    "textdomain": "site-functionality",
+    "name": "site-functionality/faq-question",
+    "title": "Question",
+    "icon": "editor-help",
+    "className": "faq",
+    "description": "FAQ question",
+    "parent": [ "site-functionality/faq" ],
+    "keywords": [
+        "faq",
+        "accordion"
+    ],
+    "supports": {
+        "align": false,
+        "anchor": false,
+        "color": {
+            "background": false,
+            "text": false,
+            "gradients": false,
+            "link": false
+        },
+        "customClassName": true,
+        "defaultStylePicker": false,
+        "__experimentalLayout": false
+    },
+    "attributes": {
+        "question": {
+            "type": "string"
+        }
+    },
+    "variations": [],
+    "styles": [],
+    "example": {},
+    "style": "file:../../build/style-index.css",
+    "editorScript": "site-functionality",
+	"editorStyle": "file:../../build/index.css"
+}

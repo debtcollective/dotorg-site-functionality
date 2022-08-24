@@ -4,14 +4,41 @@ import { __ } from '@wordpress/i18n';
 import classNames from 'classnames';
 import icon from './icon';
 
-const ALLOWED_FORMATS = [ 'core/bold', 'core/link' ];
+const TEMPLATE = [
+	[
+		'site-functionality/faq-question',
+		{
+			className: 'faq__question question',
+		},
+		[],
+	],
+	[
+		'site-functionality/faq-answer',
+		{
+			className: 'faq__answer answer',
+		},
+		[
+			[
+				'core/paragraph',
+				{
+					placeholder: __( 'Add answer text...', 'site-functionality' ),
+				},
+				[]
+			]
+		],
+	],
+];
+
+const ALLOWED_BLOCKS = [ 
+	'site-functionality/faq-question',
+	'site-functionality/faq-answer'
+];
+
 
 const Edit = ( props ) => {
 	const {
-		attributes: { question, answer, anchor },
+		attributes: { anchor },
 		className,
-		setAttributes,
-		isActive,
 		context,
 	} = props;
 
@@ -21,37 +48,11 @@ const Edit = ( props ) => {
 
 	return (
 		<article { ...blockProps }>
-			<div className="faq__question question">
-				<RichText
-					tagName="h3"
-					value={ question }
-					onChange={ ( value ) => {
-						setAttributes( { question: value } );
-					} }
-					isActive={ isActive }
-					placeholder={ __(
-						'Add Question...',
-						'site-functionality'
-					) }
-				/>
-				<a href="#" className="chevron">
-					{ icon }
-				</a>
-			</div>
-			<div className="faq__answer answer">
-				<RichText
-					tagName="div"
-					className="answer-wrapper"
-					value={ answer }
-					onChange={ ( value ) => {
-						setAttributes( { answer: value } );
-					} }
-					isActive={ isActive }
-					placeholder={ __( 'Add Answer...', 'site-functionality' ) }
-					multiline="p"
-					allowedFormats={ ALLOWED_FORMATS }
-				/>
-			</div>
+			<InnerBlocks
+				allowedBlocks={ ALLOWED_BLOCKS }
+				template={ TEMPLATE }
+				templateLock='all'
+			/>
 		</article>
 	);
 };
