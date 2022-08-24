@@ -26,6 +26,8 @@ require_once \plugin_dir_path( __FILE__ ) . 'src/userQuery/index.php';
 require_once \plugin_dir_path( __FILE__ ) . 'src/taxonomySelector/index.php';
 require_once \plugin_dir_path( __FILE__ ) . 'src/videoBanner/index.php';
 require_once \plugin_dir_path( __FILE__ ) . 'src/teamMember/index.php';
+include_once \plugin_dir_path( __FILE__ ) . 'src/faqAnswer/index.php';
+include_once \plugin_dir_path( __FILE__ ) . 'src/faqQuestion/index.php';
 
 
 const TEMPLATE_PARAMS = array(
