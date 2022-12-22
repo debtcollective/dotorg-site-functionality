@@ -24,7 +24,7 @@ import * as userQuery from './userQuery';
 import * as taxonomySelector from './taxonomySelector';
 import * as videoBanner from './videoBanner';
 import * as teamMember from './teamMember';
-
+import * as sectionNav from './sectionNav';
 
 const blocks = [
 	eventTout,
@@ -45,7 +45,8 @@ const blocks = [
 	userQuery,
 	taxonomySelector,
 	videoBanner,
-	teamMember
+	teamMember,
+	sectionNav
 ];
 
 /**
