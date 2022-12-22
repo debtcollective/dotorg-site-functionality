@@ -6,7 +6,7 @@
  * Author URI:          https://patrizia-lutz.tech
  * Text Domain:         site-functionality
  * Domain Path:         /languages
- * Version:             1.0.0
+ * Version:             1.0.1
  * Requires at least:   5.8
  * Requires PHP:        7.2
  *
@@ -33,7 +33,7 @@ if ( class_exists( '\Dotenv\Dotenv' ) ) {
 }
 
 const PLUGIN  = 'site-functionality';
-const VERSION = '1.0.0';
+const VERSION = '1.0.1';
 
 function site_functionality_init() {
 	load_plugin_textdomain( 'site-functionality', false, SITE_CORE_DIR . '/languages' );
