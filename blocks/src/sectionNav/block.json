@@ -1,0 +1,41 @@
+{
+    "apiVersion": 2,
+    "version": "1.0.0",
+    "textdomain": "site-functionality",
+    "name": "site-functionality/section-nav",
+    "title": "Section Navigation",
+    "category": "widgets",
+    "collection": "site-functionality",
+    "description": "Display section navigation.",
+    "keywords": [
+        "navigation",
+        "sidebar",
+        "section"
+    ],
+    "attributes": {
+        "className": {
+            "type": "string",
+            "default": "pagenav"
+        },
+        "type": {
+            "type": "string",
+            "default": "children"
+        }
+    },
+    "supports": {
+        "align": false,
+        "anchor": true,
+        "color": {
+            "background": false,
+            "text": false,
+            "gradients": false,
+            "link": false
+        },
+        "customClassName": true,
+        "defaultStylePicker": false,
+        "__experimentalLayout": false
+    },
+    "style": "file:../../build/style-index.css",
+    "editorScript": "site-functionality",
+	"editorStyle": "file:../../build/index.css"
+}
