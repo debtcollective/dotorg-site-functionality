@@ -6,13 +6,6 @@ import {
 	__experimentalLinkControlSearchInput as LinkControlSearchInput,
 } from '@wordpress/block-editor';
 
-import { ToolbarButton, Popover } from '@wordpress/components';
-
-import { useCallback, useEffect, useState, useRef } from '@wordpress/element';
-
-import { displayShortcut, isKeyboardEvent } from '@wordpress/keycodes';
-import { link, linkOff } from '@wordpress/icons';
-
 import { __ } from '@wordpress/i18n';
 
 import classNames from 'classnames';
@@ -22,14 +15,6 @@ import './editor.scss';
 // import './style.scss';
 
 const TEMPLATE = [
-	[
-		'site-functionality/taxonomy-term',
-		{
-			className: 'event-tout__tag',
-			taxonomy: 'event_tag',
-		},
-		[],
-	],
 	[
 		'core/heading',
 		{
@@ -82,9 +67,9 @@ const TEMPLATE = [
 ];
 
 const ALLOWED_BLOCKS = [
-	'site-functionality/taxonomy-term',
-	'site-functionality/field',
+	'core/html',
 	'core/heading',
+	'core/shortcode',
 	'core/paragraph',
 	'core/image',
 	'core/button',
@@ -111,7 +96,6 @@ const Edit = ( props ) => {
 			<InnerBlocks
 				allowedBlocks={ ALLOWED_BLOCKS }
 				template={ TEMPLATE }
-				templateLock="all"
 			/>
 		</div>
 	);

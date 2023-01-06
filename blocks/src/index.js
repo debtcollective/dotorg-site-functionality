@@ -11,6 +11,8 @@ import * as field from './field';
 import * as membershipWidget from './membershipWidget';
 import * as faqs from './faqs';
 import * as faq from './faq';
+import * as faqQuestion from './faqQuestion';
+import * as faqAnswer from './faqAnswer';
 import * as sidebarLinks from './sidebarLinks';
 import * as sidebarLink from './sidebarLink';
 import * as impactfulCallout from './impactfulCallout';
@@ -19,10 +21,10 @@ import * as purchaseAgreements from './purchaseAgreements';
 import * as tout from './tout';
 import * as buttonTout from './buttonTout';
 import * as userQuery from './userQuery';
-import * as taxonomySelector from './taxonomySelector';
+// import * as taxonomySelector from './taxonomySelector';
 import * as videoBanner from './videoBanner';
 import * as teamMember from './teamMember';
-
+import * as sectionNav from './sectionNav';
 
 const blocks = [
 	eventTout,
@@ -31,6 +33,8 @@ const blocks = [
 	membershipWidget,
 	faqs,
 	faq,
+	faqQuestion,
+	faqAnswer,
 	sidebarLinks,
 	sidebarLink,
 	impactfulCallout,
@@ -39,9 +43,10 @@ const blocks = [
 	tout,
 	buttonTout,
 	userQuery,
-	taxonomySelector,
+	// taxonomySelector,
 	videoBanner,
-	teamMember
+	teamMember,
+	sectionNav
 ];
 
 /**
