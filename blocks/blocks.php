@@ -26,7 +26,7 @@ include_once \plugin_dir_path( __FILE__ ) . 'src/purchaseAgreements/index.php';
 include_once \plugin_dir_path( __FILE__ ) . 'src/tout/index.php';
 include_once \plugin_dir_path( __FILE__ ) . 'src/buttonTout/index.php';
 include_once \plugin_dir_path( __FILE__ ) . 'src/userQuery/index.php';
-include_once \plugin_dir_path( __FILE__ ) . 'src/videoBanner/index.php';
+// include_once \plugin_dir_path( __FILE__ ) . 'src/videoBanner/index.php';
 include_once \plugin_dir_path( __FILE__ ) . 'src/teamMember/index.php';
 include_once \plugin_dir_path( __FILE__ ) . 'src/sectionNav/index.php';
 

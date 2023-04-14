@@ -22,7 +22,7 @@ import * as tout from './tout';
 import * as buttonTout from './buttonTout';
 import * as userQuery from './userQuery';
 // import * as taxonomySelector from './taxonomySelector';
-import * as videoBanner from './videoBanner';
+// import * as videoBanner from './videoBanner';
 import * as teamMember from './teamMember';
 import * as sectionNav from './sectionNav';
 
@@ -44,7 +44,7 @@ const blocks = [
 	buttonTout,
 	userQuery,
 	// taxonomySelector,
-	videoBanner,
+	// videoBanner,
 	teamMember,
 	sectionNav
 ];
